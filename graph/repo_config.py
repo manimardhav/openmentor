@@ -12,14 +12,19 @@ meet the criteria from the plan:
 """
 
 CANDIDATE_REPOS = [
-    "scikit-learn/scikit-learn",
     "matplotlib/matplotlib",
     "pandas-dev/pandas",
     "huggingface/datasets",
+    "networkx/networkx",
+    # scikit-learn/scikit-learn dropped — no active "good first issue" labels
+    # scikit-image/scikit-image also checked — same problem, also dropped
 ]
 
 FINAL_REPOS = [
-    "matplotlib/matplotlib",   # test this ONE first
+    "matplotlib/matplotlib",
+    "pandas-dev/pandas",
+    "huggingface/datasets",
+    "networkx/networkx",
 ]
 
 # Paths / storage roots — do not need to change these.
