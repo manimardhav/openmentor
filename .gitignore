@@ -25,3 +25,5 @@ data/*.json
 # Editor
 .vscode/
 .idea/
+
+graph/clones/
