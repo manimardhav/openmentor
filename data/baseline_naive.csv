@@ -1,0 +1,1155 @@
+rank,issue_id,repo_name,title,created_at
+1,4516,networkx/networkx,Add edge ID attribute to nx.readwrite.json_graph.cytoscape_data(G),2021-01-03T19:16:59+00:00
+2,4520,networkx/networkx,`from_nested_tuple` does not allow edge attributes,2021-01-05T02:41:47+00:00
+3,4523,networkx/networkx,Review core view object documentation,2021-01-05T03:28:33+00:00
+4,4525,networkx/networkx,transform keyword for `draw_networkx`,2021-01-05T11:20:48+00:00
+5,4535,networkx/networkx,view_pygraphviz doesn't escape labels,2021-01-12T12:46:46+00:00
+6,4601,networkx/networkx,"When drawing directed edges, account for node boundary width",2021-02-05T11:27:03+00:00
+7,4644,networkx/networkx,Matching routines use sets to represent edges. Should they?,2021-03-01T17:04:17+00:00
+8,4737,networkx/networkx,Export to GraphML does not work as defined in the tutorial,2021-04-09T15:20:50+00:00
+9,4765,networkx/networkx,Improve documentation for the View classes,2021-04-28T02:34:19+00:00
+10,4885,networkx/networkx,The implementation of `_fruchterman_reingold` significantly deviates from the original algorithm with adverse effects for every graph that is not fully symmetric,2021-06-09T21:04:33+00:00
+11,4895,networkx/networkx,Speedup in code close to core classes,2021-06-11T22:17:52+00:00
+12,4935,networkx/networkx,quotient_graph seems particularly slow,2021-06-28T16:52:20+00:00
+13,4936,networkx/networkx,refactor assortativity subpackage,2021-06-28T17:02:20+00:00
+14,4951,networkx/networkx,Edmonds implementation is biased towards placing low-index nodes higher in the tree,2021-07-03T11:13:04+00:00
+15,4973,networkx/networkx,Request for adding more centrality algorithms,2021-07-14T08:11:41+00:00
+16,4980,networkx/networkx,Shortest path doesn't work properly with multigraph,2021-07-23T16:29:28+00:00
+17,4993,networkx/networkx,directed_laplacian_matrix has a confusing name,2021-07-29T14:59:31+00:00
+18,5012,networkx/networkx,Implementation of newman_watts_strogatz_graph inconsistent with model,2021-08-09T23:55:32+00:00
+19,5013,networkx/networkx,Read pajek file with multiple arcs field,2021-08-10T05:03:34+00:00
+20,5016,networkx/networkx,transitive_closure in dag.py works on non-dags,2021-08-12T08:23:51+00:00
+21,5030,networkx/networkx,generate LFR benchmark graph and the use of configuration model,2021-08-24T02:43:25+00:00
+22,5034,networkx/networkx,`descendants` and `ancestors` functions are misplaced,2021-08-26T14:05:59+00:00
+23,5067,networkx/networkx,Documentation seems to imply that subgraph monomorphism is not supported,2021-09-07T13:45:43+00:00
+24,5076,networkx/networkx,Documentation: Left vs right eigenvector for eigenvector centrality,2021-09-10T09:55:15+00:00
+25,5189,networkx/networkx,Replace custom solvers in algebraicconnectivity with scipy.sparse.linalg equivalents,2021-11-19T05:53:30+00:00
+26,5195,networkx/networkx,Sparse implementation for attr_matrix,2021-11-20T07:35:43+00:00
+27,5206,networkx/networkx,Self loop drawing not working with custom layout,2021-11-30T16:07:57+00:00
+28,5239,networkx/networkx,"minimum_cut returns correct value, valid partition, but different from what it claims to return",2021-12-22T11:15:05+00:00
+29,5246,networkx/networkx,Improving the performance of triangles,2022-01-03T01:58:26+00:00
+30,5277,networkx/networkx, Using `networkx.readwrite.json_graph.tree_data` does not preserve Graph attributes,2022-01-25T01:41:42+00:00
+31,5295,networkx/networkx,Make a matching generic_edge_bfs to accompany generic_bfs_edge,2022-02-02T12:51:28+00:00
+32,5340,networkx/networkx,Speed up max_weight_matching,2022-02-18T19:48:04+00:00
+33,5377,networkx/networkx,"In docstrings, the parameter type ""container"" has ambiguous meaning",2022-03-08T18:47:23+00:00
+34,5436,networkx/networkx,Investigate `min_weighted_dominating_set` for directed graphs,2022-03-29T01:28:41+00:00
+35,5445,networkx/networkx,`graph6.py` module - possible refactor candidate,2022-03-31T01:05:23+00:00
+36,5472,networkx/networkx,Adding examples on functions related to graph covers,2022-04-05T10:00:54+00:00
+37,5596,networkx/networkx,TSP methods has different functional prescription and function traveling_salesman_problem doesn't count with that,2022-05-02T18:28:06+00:00
+38,5597,networkx/networkx,GEXF format restricts attribute lists to be a specific format for temporal graphs. Should it?,2022-05-03T12:49:09+00:00
+39,5609,networkx/networkx,drawing multiedges especially with labels does not work,2022-05-06T14:49:20+00:00
+40,5612,networkx/networkx,Consider options for decorator nodes_or_number,2022-05-07T04:24:42+00:00
+41,5618,networkx/networkx,MultiDiGraph loses oppositely directed edges when turned into Multigraph,2022-05-09T13:44:43+00:00
+42,5665,networkx/networkx,Node attributes of subgraph nodes are not accessible,2022-05-26T17:34:08+00:00
+43,5681,networkx/networkx,treewidth algos depend on node types,2022-06-01T20:10:56+00:00
+44,5823,networkx/networkx,API consistency between bipartite/non-bipartite matching algorithms.,2022-06-27T09:28:01+00:00
+45,5824,networkx/networkx,Project Idea: Visual map of functionality available in NetworkX,2022-06-27T09:43:26+00:00
+46,5825,networkx/networkx,`remove_edges_from` behavior for MultiGraphs,2022-06-27T10:20:36+00:00
+47,5833,networkx/networkx,Potential deprecation: `pygraphviz_layout` and `graphviz_layout` are the same function,2022-06-29T12:03:32+00:00
+48,5842,networkx/networkx,Truss number in k-truss is not implemented,2022-07-04T13:35:29+00:00
+49,5853,networkx/networkx,quotient_graph won't generate self-edges,2022-07-12T13:38:16+00:00
+50,5855,networkx/networkx,Add  subclass example using a sparse_array data factory,2022-07-12T13:57:12+00:00
+51,5916,networkx/networkx,find_negative_cycle error,2022-08-06T18:34:14+00:00
+52,6229,networkx/networkx,Graph edit distance accuracy for approximate methods,2022-11-20T16:48:14+00:00
+53,6233,networkx/networkx,Request for all_lowest_common_ancestor,2022-11-22T15:43:29+00:00
+54,6275,networkx/networkx,Ambiguity of `nbunch` ,2022-12-11T08:32:26+00:00
+55,6300,networkx/networkx,Add common_neighbors support for directed graphs,2022-12-26T03:03:37+00:00
+56,6332,networkx/networkx,Improve test coverage for  reportviews class,2023-01-05T00:02:36+00:00
+57,6342,networkx/networkx,Add option to choose the source/target nodes based on given probabilities (Approximate current flow betweenness centrality),2023-01-07T10:19:06+00:00
+58,6475,networkx/networkx,Implementation of Knotty Centrality measure,2023-03-09T11:29:53+00:00
+59,6479,networkx/networkx,dfs_postorder_nodes doesn't work with depth_limit,2023-03-10T11:18:04+00:00
+60,6517,networkx/networkx,Strange behaviour with dfs_tree and depth_limit,2023-03-18T14:06:47+00:00
+61,6666,networkx/networkx,Incorrect Steiner tree for a singleton nodes,2023-04-26T09:59:18+00:00
+62,6716,networkx/networkx,depth limited search labeled edges,2023-05-29T02:56:39+00:00
+63,6719,networkx/networkx,GraphML export attribute types are opaque and unintuitive,2023-05-30T14:21:59+00:00
+64,6762,networkx/networkx,LFR_benchmark_graph incorrect condition in loop,2023-06-25T08:28:33+00:00
+65,6763,networkx/networkx,LFR_benchmark_graph missing condition check,2023-06-25T08:37:49+00:00
+66,6777,networkx/networkx,Problem in lowest_common_ancestors functionality for DAGs,2023-07-03T19:12:39+00:00
+67,6809,networkx/networkx,LFR_benchmark_graph : graph generation does not preserve degree distribution,2023-07-26T12:55:44+00:00
+68,6822,networkx/networkx,LFR_benchmark_graph : community size validation can result in impossible values ,2023-07-31T15:14:36+00:00
+69,6144,huggingface/datasets,NIH exporter file not found,2023-08-11T19:05:25+00:00
+70,6150,huggingface/datasets,Allow dataset implement .take,2023-08-15T00:17:51+00:00
+71,6159,huggingface/datasets,Add `BoundingBox` feature,2023-08-17T20:49:51+00:00
+72,6162,huggingface/datasets,"load_dataset('json',...) from togethercomputer/RedPajama-Data-1T errors when jsonl rows contains different data fields",2023-08-18T07:19:39+00:00
+73,6163,huggingface/datasets,"Error type: ArrowInvalid Details: Failed to parse string: '[254,254]' as a scalar of type int32",2023-08-19T11:34:40+00:00
+74,6863,networkx/networkx,Input graph is not chordal for complete_to_chordal_graph,2023-08-21T07:21:53+00:00
+75,6870,networkx/networkx,Performance regression in connected components (maybe?),2023-08-22T11:59:09+00:00
+76,6169,huggingface/datasets,Configurations in yaml not working,2023-08-23T00:13:22+00:00
+77,6872,networkx/networkx,Junction tree / clique tree not over maximal cliques?,2023-08-23T03:04:28+00:00
+78,6873,networkx/networkx,Review maximum cardinality search algorithm in `complete_to_chordal_graph`,2023-08-23T04:50:04+00:00
+79,6172,huggingface/datasets,Make Dataset streaming queries retryable,2023-08-23T13:15:38+00:00
+80,6176,huggingface/datasets,how to limit the size of memory mapped file?,2023-08-24T05:33:45+00:00
+81,6179,huggingface/datasets,Map cache with tokenizer,2023-08-25T12:55:18+00:00
+82,6877,networkx/networkx,Poor draw_networkx_labels result,2023-08-25T17:25:59+00:00
+83,6185,huggingface/datasets,Error in saving the PIL image into *.arrow files using datasets.arrow_writer,2023-08-26T12:15:57+00:00
+84,6187,huggingface/datasets,Couldn't find a dataset script at /content/tsv/tsv.py or any data file in the same directory,2023-08-29T05:49:56+00:00
+85,6193,huggingface/datasets,Dataset loading script method does not work with .pyc file,2023-08-29T19:35:06+00:00
+86,6194,huggingface/datasets,Support custom fingerprinting with `Dataset.from_generator`,2023-08-29T22:43:13+00:00
+87,6199,huggingface/datasets,"Use load_dataset for local json files, but it not works",2023-08-31T09:42:34+00:00
+88,6212,huggingface/datasets,Tilde (~) is not supported for data_files,2023-09-04T14:23:49+00:00
+89,6217,huggingface/datasets,`Dataset.to_dict()` ignore `decode=True` with Image feature,2023-09-06T09:26:16+00:00
+90,6221,huggingface/datasets,Support saving datasets with custom formatting,2023-09-06T16:03:32+00:00
+91,6235,huggingface/datasets,Support multiprocessing for download/extract nestedly,2023-09-12T21:51:08+00:00
+92,6236,huggingface/datasets,Support buffer shuffle for to_tf_dataset,2023-09-13T03:19:44+00:00
+93,6267,huggingface/datasets,Multi label class encoding,2023-09-27T22:48:08+00:00
+94,6273,huggingface/datasets,Broken Link to PubMed Abstracts dataset .,2023-10-01T19:08:48+00:00
+95,6276,huggingface/datasets,I'm trying to fine tune the openai/whisper model from huggingface using jupyter notebook and i keep getting this error,2023-10-04T11:03:41+00:00
+96,6279,huggingface/datasets,Batched IterableDataset,2023-10-05T11:12:49+00:00
+97,6285,huggingface/datasets,"TypeError: expected str, bytes or os.PathLike object, not dict",2023-10-09T04:56:26+00:00
+98,6288,huggingface/datasets,Dataset.from_pandas with a DataFrame of PIL.Images,2023-10-10T10:29:16+00:00
+99,6290,huggingface/datasets,"Incremental dataset (e.g. `.push_to_hub(..., append=True)`)",2023-10-10T15:18:03+00:00
+100,6292,huggingface/datasets,how to load the image of dtype float32 or float64,2023-10-11T07:27:16+00:00
+101,6303,huggingface/datasets,Parquet uploads off-by-one naming scheme,2023-10-14T18:31:03+00:00
+102,6319,huggingface/datasets,Datasets.map is severely broken,2023-10-19T12:19:33+00:00
+103,6323,huggingface/datasets,Loading dataset from large GCS bucket very slow since 2.14,2023-10-20T12:59:55+00:00
+104,6345,huggingface/datasets,support squad structure datasets using a YAML parameter,2023-10-23T17:55:37+00:00
+105,7054,networkx/networkx,Using arrows in draw_networkx_edges removes legend labels.,2023-10-24T17:44:46+00:00
+106,6348,huggingface/datasets,Parquet stream-conversion fails to embed images/audio files from gated repos,2023-10-25T12:12:44+00:00
+107,6350,huggingface/datasets,Different objects are returned from calls that should be returning the same kind of object.,2023-10-25T17:08:39+00:00
+108,6354,huggingface/datasets,`IterableDataset.from_spark` does not support multiple workers in pytorch `Dataloader`,2023-10-26T12:43:36+00:00
+109,6357,huggingface/datasets,Allow passing a multiprocessing context to functions that support `num_proc`,2023-10-27T02:31:16+00:00
+110,6359,huggingface/datasets,"Stuck in ""Resolving data files...""",2023-10-27T12:01:51+00:00
+111,6382,huggingface/datasets,Add CheXpert dataset for vision,2023-11-04T15:36:11+00:00
+112,6388,huggingface/datasets,How to create 3d medical imgae dataset?,2023-11-07T11:27:36+00:00
+113,6389,huggingface/datasets,Index 339 out of range for dataset of size 339 <-- save_to_file(),2023-11-08T12:52:09+00:00
+114,7099,networkx/networkx,Tracking issue for future wishlist - good ideas - maybes (?),2023-11-08T20:26:45+00:00
+115,7105,networkx/networkx,no plot in networkx/examples/algorithms /plot_iterated_dynamical_systems.py - delete?,2023-11-09T19:13:30+00:00
+116,7106,networkx/networkx,Add k-Components Algorithm for Directed Graphs ,2023-11-09T21:47:25+00:00
+117,6399,huggingface/datasets,TypeError: Cannot convert pyarrow.lib.ChunkedArray to pyarrow.lib.Array,2023-11-10T20:48:46+00:00
+118,6407,huggingface/datasets,"Loading the dataset from private S3 bucket gives ""TypeError: cannot pickle '_contextvars.Context' object""",2023-11-13T21:27:43+00:00
+119,6408,huggingface/datasets,`IterableDataset` lost but not keep columns when map function adding columns with names in `remove_columns`,2023-11-14T03:12:08+00:00
+120,6410,huggingface/datasets,Datasets does not load HuggingFace Repository properly,2023-11-14T06:50:49+00:00
+121,6422,huggingface/datasets,Allow to choose the `writer_batch_size` when using `save_to_disk`,2023-11-15T11:18:34+00:00
+122,6432,huggingface/datasets,load_dataset does not load all of the data in my input file,2023-11-17T14:28:50+00:00
+123,6437,huggingface/datasets,Problem in training iterable dataset,2023-11-20T03:04:02+00:00
+124,6438,huggingface/datasets,Support GeoParquet,2023-11-20T11:54:58+00:00
+125,6439,huggingface/datasets,Download + preparation speed of datasets.load_dataset is 20x slower than huggingface hub snapshot and manual loding,2023-11-20T20:07:23+00:00
+126,6443,huggingface/datasets,Trouble loading files defined in YAML explicitly,2023-11-22T15:18:10+00:00
+127,6447,huggingface/datasets,Support one dataset loader per config when using YAML,2023-11-23T13:03:07+00:00
+128,6465,huggingface/datasets,`load_dataset` uses out-of-date cache instead of re-downloading a changed dataset,2023-12-02T21:35:17+00:00
+129,6470,huggingface/datasets,"If an image in a dataset is corrupted, we get unescapable error",2023-12-04T20:58:49+00:00
+130,6475,huggingface/datasets,laion2B-en failed to load on Windows with PrefetchVirtualMemory failed,2023-12-06T00:07:34+00:00
+131,6481,huggingface/datasets,"using torchrun, save_to_disk suddenly shows SIGTERM",2023-12-08T13:22:03+00:00
+132,6484,huggingface/datasets,[Feature Request] Dataset versioning,2023-12-08T16:01:35+00:00
+133,6488,huggingface/datasets,429 Client Error,2023-12-11T15:06:01+00:00
+134,6489,huggingface/datasets,load_dataset imageflder for aws s3 path ,2023-12-12T00:08:43+00:00
+135,6490,huggingface/datasets,"`load_dataset(...,save_infos=True)` not working without loading script",2023-12-12T08:09:18+00:00
+136,7154,networkx/networkx,Binary/array-based storage for network data structure,2023-12-12T15:45:34+00:00
+137,6495,huggingface/datasets,Newline characters don't behave as expected when calling dataset.info,2023-12-12T23:07:51+00:00
+138,6494,huggingface/datasets,Image Data loaded Twice,2023-12-13T13:11:42+00:00
+139,6496,huggingface/datasets,Error when writing a dataset to HF Hub: A commit has happened since. Please refresh and try again.,2023-12-14T11:24:54+00:00
+140,6501,huggingface/datasets, OverflowError: value too large to convert to int32_t ,2023-12-15T10:10:21+00:00
+141,6505,huggingface/datasets,Got stuck when I trying to load a dataset,2023-12-16T11:51:07+00:00
+142,6522,huggingface/datasets,Loading HF Hub Dataset (private org repo) fails to load all features,2023-12-21T12:26:35+00:00
+143,6529,huggingface/datasets,Impossible to only download a test split,2023-12-22T16:56:32+00:00
+144,6530,huggingface/datasets,Impossible to save a mapped dataset to disk,2023-12-23T15:18:27+00:00
+145,6532,huggingface/datasets,[Feature request] Indexing datasets by a customly-defined id field to enable random access dataset items via the id,2023-12-25T11:37:10+00:00
+146,6534,huggingface/datasets,How to configure multiple folders in the same zip package,2023-12-26T03:56:20+00:00
+147,6535,huggingface/datasets,IndexError: Invalid key: 47682 is out of bounds for size 0 while using PEFT,2023-12-26T10:14:33+00:00
+148,6537,huggingface/datasets,Adding support for netCDF (*.nc) files,2023-12-27T09:27:29+00:00
+149,6539,huggingface/datasets,'Repo card metadata block was not found' when loading a pragmeval dataset,2023-12-28T14:18:25+00:00
+150,6540,huggingface/datasets,Extreme inefficiency for `save_to_disk` when merging datasets,2023-12-29T00:44:35+00:00
+151,6548,huggingface/datasets,Skip if a dataset has issues,2023-12-31T12:41:26+00:00
+152,6549,huggingface/datasets,Loading from hf hub with clearer error message,2024-01-02T13:26:34+00:00
+153,6562,huggingface/datasets,datasets.DownloadMode.FORCE_REDOWNLOAD use cache to download dataset features with load_dataset function,2024-01-05T19:10:25+00:00
+154,6568,huggingface/datasets,keep_in_memory=True does not seem to work,2024-01-08T08:03:58+00:00
+155,6571,huggingface/datasets,Make DatasetDict.column_names return a list instead of dict,2024-01-09T10:45:17+00:00
+156,6584,huggingface/datasets,np.fromfile not supported,2024-01-12T09:46:17+00:00
+157,6585,huggingface/datasets,losing DatasetInfo in Dataset.map when num_proc > 1,2024-01-12T13:39:19+00:00
+158,6590,huggingface/datasets,Feature request: Multi-GPU dataset mapping for SDXL training,2024-01-15T13:06:06+00:00
+159,6594,huggingface/datasets,IterableDataset sharding logic needs improvement,2024-01-15T22:22:36+00:00
+160,6600,huggingface/datasets,Loading CSV exported dataset has unexpected format,2024-01-18T14:48:27+00:00
+161,6602,huggingface/datasets,Index error when data is large,2024-01-18T23:00:47+00:00
+162,6603,huggingface/datasets,datasets map `cache_file_name` does not work,2024-01-18T23:08:30+00:00
+163,6611,huggingface/datasets,`load_from_disk` with large dataset from S3 runs into `botocore.exceptions.ClientError`,2024-01-23T12:37:57+00:00
+164,7248,networkx/networkx,Unexpected test failures in `test_algebraic_connectivity.py`(in nx-parallel),2024-01-23T18:03:55+00:00
+165,6614,huggingface/datasets,`datasets/downloads` cleanup tool,2024-01-24T18:52:10+00:00
+166,6623,huggingface/datasets,streaming datasets doesn't work properly with multi-node,2024-01-27T23:46:13+00:00
+167,6640,huggingface/datasets,Sign Language Support,2024-02-02T21:54:51+00:00
+168,6643,huggingface/datasets,Faiss GPU index cannot be serialised when passed to trainer ,2024-02-06T16:41:00+00:00
+169,6650,huggingface/datasets,AttributeError: 'InMemoryTable' object has no attribute '_batches',2024-02-08T17:11:26+00:00
+170,6651,huggingface/datasets,Slice splits support for datasets.load_from_disk,2024-02-09T08:00:21+00:00
+171,6655,huggingface/datasets,Cannot load the dataset go_emotions,2024-02-09T12:15:39+00:00
+172,6656,huggingface/datasets,Error when loading a big local json file,2024-02-09T15:14:21+00:00
+173,6667,huggingface/datasets,Default config for squad is incorrect,2024-02-16T02:36:55+00:00
+174,6668,huggingface/datasets,Chapter 6 - Issue Loading `cnn_dailymail` dataset,2024-02-16T04:40:56+00:00
+175,6676,huggingface/datasets,Can't Read List of JSON Files Properly,2024-02-17T22:58:15+00:00
+176,6686,huggingface/datasets,Question: Is there any way for uploading a large image dataset?,2024-02-21T22:07:21+00:00
+177,6688,huggingface/datasets,Tensor type (e.g. from `return_tensors`) ignored in map,2024-02-22T09:27:57+00:00
+178,6699,huggingface/datasets,`Dataset` unexpected changed dict data and may cause error,2024-02-28T05:30:10+00:00
+179,7317,networkx/networkx,Follow-up to #7313 - replace explicit ref links to headers with automod,2024-02-28T20:01:55+00:00
+180,6717,huggingface/datasets,`remove_columns` method used with a streaming enable dataset mode produces a LibsndfileError on multichannel audio,2024-03-05T09:33:26+00:00
+181,6719,huggingface/datasets,Is there any way to solve hanging of IterableDataset using split by node + filtering during inference,2024-03-05T15:55:13+00:00
+182,6721,huggingface/datasets,"Hi,do you know how to load the dataset from local file now?",2024-03-07T13:58:40+00:00
+183,6724,huggingface/datasets,Dataset with loading script does not work in renamed repos,2024-03-07T17:38:38+00:00
+184,6725,huggingface/datasets,Request for a comparison of huggingface datasets compared with other data format especially webdataset,2024-03-08T08:23:01+00:00
+185,6726,huggingface/datasets,Profiling for HF Filesystem shows there are easy performance gains to be made,2024-03-09T07:08:45+00:00
+186,6733,huggingface/datasets,EmptyDatasetError when loading dataset downloaded with HuggingFace cli,2024-03-14T16:41:27+00:00
+187,6734,huggingface/datasets,Tokenization slows towards end of dataset,2024-03-15T03:27:36+00:00
+188,6736,huggingface/datasets,Mosaic Streaming (MDS) Support,2024-03-16T18:42:04+00:00
+189,7362,networkx/networkx,Goldberg-Radzik Algorithm Reports Negative Cycle Outside Connected Components,2024-03-20T07:30:52+00:00
+190,6744,huggingface/datasets,Option to disable file locking,2024-03-20T15:59:45+00:00
+191,6748,huggingface/datasets,Strange slicing behavior,2024-03-22T01:49:13+00:00
+192,6752,huggingface/datasets,Precision being changed from float16 to float32 unexpectedly,2024-03-23T20:53:56+00:00
+193,6759,huggingface/datasets,Persistent multi-process Pool,2024-03-26T17:35:25+00:00
+194,6760,huggingface/datasets,Load codeparrot/apps raising UnicodeDecodeError in datasets-2.18.0,2024-03-28T03:44:26+00:00
+195,6764,huggingface/datasets,load_dataset can't work with symbolic links,2024-03-29T17:49:28+00:00
+196,6769,huggingface/datasets,(Willing to PR) Datasets with custom python objects,2024-04-01T13:18:47+00:00
+197,6774,huggingface/datasets, Generating split is very slow when Image format is PNG,2024-04-03T07:47:31+00:00
+198,6775,huggingface/datasets,IndexError: Invalid key: 0 is out of bounds for size 0,2024-04-03T17:06:30+00:00
+199,7387,networkx/networkx,Dispatched nx-loopback tests performance degradation,2024-04-03T17:11:56+00:00
+200,6777,huggingface/datasets,.Jsonl metadata not detected,2024-04-04T06:31:53+00:00
+201,6778,huggingface/datasets,Dataset.to_csv() missing commas in columns with lists,2024-04-04T16:46:13+00:00
+202,6782,huggingface/datasets,"Image cast_storage very slow for arrays (e.g. numpy, tensors)",2024-04-05T13:46:54+00:00
+203,6787,huggingface/datasets,TimeoutError in map,2024-04-06T06:25:39+00:00
+204,6789,huggingface/datasets,Issue with map,2024-04-07T02:52:06+00:00
+205,6790,huggingface/datasets,PyArrow 'Memory mapping file failed: Cannot allocate memory' bug,2024-04-07T19:25:39+00:00
+206,6793,huggingface/datasets,Loading just one particular split is not possible for imagenet-1k,2024-04-08T14:39:14+00:00
+207,6800,huggingface/datasets,High overhead when loading lots of subsets from the same dataset,2024-04-10T21:08:57+00:00
+208,6814,huggingface/datasets,`map` with `num_proc` > 1 leads to OOM,2024-04-16T11:56:03+00:00
+209,6819,huggingface/datasets,Give more details in `DataFilesNotFoundError` when getting the config names,2024-04-17T11:19:47+00:00
+210,6823,huggingface/datasets,Loading problems of Datasets with a single shard,2024-04-18T13:59:00+00:00
+211,6827,huggingface/datasets,Loading a remote dataset fails in the last release (v2.19.0),2024-04-19T21:11:58+00:00
+212,6829,huggingface/datasets,Load and save from/to disk no longer accept pathlib.Path,2024-04-23T09:44:45+00:00
+213,6833,huggingface/datasets,Super slow iteration with trivial custom transform,2024-04-23T20:40:59+00:00
+214,6836,huggingface/datasets,ExpectedMoreSplits error on load_dataset when upgrading to 2.19.0,2024-04-24T21:52:35+00:00
+215,6837,huggingface/datasets,Cannot use cached dataset without Internet connection (or when servers are down),2024-04-25T10:48:20+00:00
+216,6840,huggingface/datasets,Delete uploaded files from the UI,2024-04-25T22:33:57+00:00
+217,6842,huggingface/datasets,Datasets with files with colon : in filenames cannot be used on Windows,2024-04-26T00:14:16+00:00
+218,6843,huggingface/datasets,IterableDataset raises exception instead of retrying,2024-04-26T10:00:43+00:00
+219,6845,huggingface/datasets,load_dataset doesn't support list column,2024-04-26T14:11:44+00:00
+220,6847,huggingface/datasets,[Streaming] Only load requested splits without resolving files for the other splits,2024-04-29T09:49:32+00:00
+221,6848,huggingface/datasets,Cant Downlaod Common Voice 17.0 hy-AM ,2024-04-29T10:06:02+00:00
+222,6851,huggingface/datasets,load_dataset('emotion')    UnicodeDecodeError,2024-04-30T09:25:01+00:00
+223,6853,huggingface/datasets,Support soft links for load_datasets imagefolder,2024-04-30T22:14:29+00:00
+224,6865,huggingface/datasets,Example on Semantic segmentation contains bug,2024-05-03T09:40:12+00:00
+225,6879,huggingface/datasets,Batched mapping does not raise an error if values for an existing column are empty,2024-05-07T11:02:40+00:00
+226,6880,huggingface/datasets,Webdataset: KeyError: 'png' on some datasets when streaming,2024-05-07T13:09:02+00:00
+227,6882,huggingface/datasets,Connection Error When Using By-pass Proxies,2024-05-08T06:40:14+00:00
+228,6886,huggingface/datasets,load_dataset with data_dir and cache_dir set fail with not supported,2024-05-08T19:52:35+00:00
+229,6887,huggingface/datasets,FAISS load to None,2024-05-09T02:43:50+00:00
+230,6890,huggingface/datasets,add `with_transform` and/or `set_transform` to IterableDataset,2024-05-10T01:00:12+00:00
+231,6896,huggingface/datasets,Regression bug: `NonMatchingSplitsSizesError` for (possibly) overwritten dataset,2024-05-13T15:41:57+00:00
+232,6899,huggingface/datasets,List of dictionary features get standardized,2024-05-15T14:11:35+00:00
+233,6903,huggingface/datasets,Add the option of saving in parquet instead of arrow ,2024-05-16T13:35:51+00:00
+234,6907,huggingface/datasets,Support the deserialization of json lines files comprised of lists,2024-05-18T05:07:23+00:00
+235,6912,huggingface/datasets,Add MedImg for streaming,2024-05-22T00:55:30+00:00
+236,6917,huggingface/datasets,WinError 32 The process cannot access the file during load_dataset,2024-05-24T07:54:51+00:00
+237,6919,huggingface/datasets,"Invalid YAML in README.md: unknown tag !<tag:yaml.org,2002:python/tuple>",2024-05-24T14:59:45+00:00
+238,6923,huggingface/datasets,Export Parquet Tablet Audio-Set is null bytes in Arrow ,2024-05-27T14:27:57+00:00
+239,6924,huggingface/datasets,Caching map result of DatasetDict.,2024-05-28T09:07:41+00:00
+240,6929,huggingface/datasets,Avoid downloading the whole dataset when only README.me has been touched on hub.,2024-05-29T10:36:06+00:00
+241,6930,huggingface/datasets,"ValueError: Couldn't infer the same data file format for all splits. Got {'train': ('json', {}), 'validation': (None, {})}",2024-05-29T12:40:05+00:00
+242,7468,networkx/networkx,"Refactor ""loopback"" testing backend to also serve as an example backend",2024-05-29T16:10:54+00:00
+243,6935,huggingface/datasets,Support for pathlib.Path in datasets 2.19.0,2024-05-30T12:53:36+00:00
+244,6936,huggingface/datasets,save_to_disk() freezes when saving on s3 bucket with multiprocessing,2024-05-30T16:48:39+00:00
+245,6937,huggingface/datasets,JSON loader implicitly coerces floats to integers,2024-05-31T08:09:12+00:00
+246,6940,huggingface/datasets,Enable Sharding to Equal Sized Shards,2024-05-31T21:55:50+00:00
+247,6941,huggingface/datasets,Supporting FFCV: Fast Forward Computer Vision,2024-06-01T05:34:52+00:00
+248,6948,huggingface/datasets,to_tf_dataset: Visible devices cannot be modified after being initialized,2024-06-03T18:10:57+00:00
+249,6961,huggingface/datasets,Manual downloads should count as downloads,2024-06-09T04:52:06+00:00
+250,6967,huggingface/datasets,Method to load Laion400m,2024-06-12T16:04:04+00:00
+251,6989,huggingface/datasets,cache in nfs error,2024-06-21T02:09:22+00:00
+252,6992,huggingface/datasets,Dataset with streaming doesn't work with proxy,2024-06-22T16:12:08+00:00
+253,7001,huggingface/datasets,Datasetbuilder Local Download FileNotFoundError,2024-06-25T15:02:34+00:00
+254,7016,huggingface/datasets,`drop_duplicates` method,2024-07-01T09:01:06+00:00
+255,7018,huggingface/datasets,`load_dataset` fails to load dataset saved by `save_to_disk`,2024-07-01T12:19:19+00:00
+256,7024,huggingface/datasets,Streaming dataset not returning data,2024-07-04T07:21:47+00:00
+257,7029,huggingface/datasets,"load_dataset on AWS lambda throws OSError(30, 'Read-only file system') error",2024-07-04T19:15:16+00:00
+258,7037,huggingface/datasets,A bug of Dataset.to_json() function,2024-07-10T09:11:22+00:00
+259,7040,huggingface/datasets,load `streaming=True` dataset with downloaded cache,2024-07-11T11:14:13+00:00
+260,7047,huggingface/datasets,Save Dataset as Sharded Parquet ,2024-07-12T23:47:51+00:00
+261,7058,huggingface/datasets,New feature type: Document,2024-07-22T10:49:20+00:00
+262,7059,huggingface/datasets,None values are skipped when reading jsonl in subobjects,2024-07-22T13:02:42+00:00
+263,7061,huggingface/datasets,Custom Dataset | Still Raise Error while handling errors in _generate_examples,2024-07-22T21:18:12+00:00
+264,7065,huggingface/datasets,Cannot get item after loading from disk and then converting to iterable.,2024-07-23T09:37:56+00:00
+265,7066,huggingface/datasets,One subset per file in repo ?,2024-07-23T12:43:59+00:00
+266,7070,huggingface/datasets,how set_transform affects batch size?,2024-07-25T15:19:34+00:00
+267,7071,huggingface/datasets,Filter hangs,2024-07-25T15:29:05+00:00
+268,7077,huggingface/datasets,column_names ignored by load_dataset() when loading CSV file,2024-07-26T14:18:04+00:00
+269,7579,networkx/networkx,Cycle basis for directed graphs,2024-07-27T15:24:30+00:00
+270,7080,huggingface/datasets,Generating train split takes a long time,2024-07-29T01:42:43+00:00
+271,7084,huggingface/datasets,More easily support streaming local files,2024-07-31T09:03:15+00:00
+272,7086,huggingface/datasets,"load_dataset ignores cached datasets and tries to hit HF Hub, resulting in API rate limit errors",2024-08-02T18:12:23+00:00
+273,7088,huggingface/datasets,Disable warning when using with_format format on tensors,2024-08-05T00:45:50+00:00
+274,7089,huggingface/datasets,"Missing pyspark dependency causes the testsuite to error out, instead of a few tests to be skipped",2024-08-05T21:05:11+00:00
+275,7090,huggingface/datasets,The test test_move_script_doesnt_change_hash fails because it runs the 'python' command while the python executable has a different name,2024-08-06T00:35:05+00:00
+276,7092,huggingface/datasets,load_dataset with multiple jsonlines files interprets datastructure too early,2024-08-06T17:42:55+00:00
+277,7093,huggingface/datasets,Add Arabic Docs to datasets,2024-08-07T21:48:05+00:00
+278,28690,matplotlib/matplotlib,[MNT]: Move norms to from colors.py to separate file norms.py,2024-08-09T08:20:05+00:00
+279,28693,matplotlib/matplotlib,DOC: Best practice when to use ax.set_thing(foo) vs ax.set(thing=foo),2024-08-09T14:09:54+00:00
+280,28694,matplotlib/matplotlib,[Bug]: mplot3d - axes3d has_data() type checking,2024-08-09T15:01:45+00:00
+281,7097,huggingface/datasets,Some of DownloadConfig's properties are always being overridden in load.py,2024-08-09T18:26:37+00:00
+282,28703,matplotlib/matplotlib,[BUG]: `Patch3D` does not correctly set `verts` on initialization,2024-08-10T21:09:03+00:00
+283,28708,matplotlib/matplotlib,[ENH]: Possible improvements for out-of-the-box interactivity,2024-08-12T13:01:12+00:00
+284,28712,matplotlib/matplotlib,[Bug]: Cygwin builds are broken,2024-08-13T06:47:50+00:00
+285,28717,matplotlib/matplotlib,[Bug]: Annotation clip path / box regression in 3.9,2024-08-13T14:51:45+00:00
+286,7100,huggingface/datasets,IterableDataset: cannot resolve features from list of numpy arrays,2024-08-14T11:01:51+00:00
+287,28722,matplotlib/matplotlib,"[Doc]: document ""out-of-the-box"" interactivity",2024-08-14T17:54:56+00:00
+288,7101,huggingface/datasets,`load_dataset` from Hub with `name` to specify `config` using incorrect builder type when multiple data formats are present,2024-08-14T18:12:25+00:00
+289,7102,huggingface/datasets,"Slow iteration speeds when using IterableDataset.shuffle with load_dataset(data_files=..., streaming=True)",2024-08-14T21:44:44+00:00
+290,7112,huggingface/datasets,"cudf-cu12 24.4.1, ibis-framework 8.0.0 requires pyarrow<15.0.0a0,>=14.0.1,pyarrow<16,>=2 and datasets 2.21.0 requires pyarrow>=15.0.0",2024-08-20T08:13:55+00:00
+291,7117,huggingface/datasets,Audio dataset load everything in RAM and is very slow,2024-08-20T21:18:12+00:00
+292,28745,matplotlib/matplotlib,[MNT]: document linestyle as an mpltype,2024-08-22T04:06:15+00:00
+293,7122,huggingface/datasets,[interleave_dataset] sample batches from a single source at a time,2024-08-23T07:21:15+00:00
+294,7123,huggingface/datasets,Make dataset viewer more flexible in displaying metadata alongside images,2024-08-23T22:56:01+00:00
+295,7127,huggingface/datasets,Caching shuffles by np.random.Generator results in unintiutive behavior,2024-08-26T10:29:48+00:00
+296,7128,huggingface/datasets,Filter Large Dataset Entry by Entry,2024-08-27T20:31:09+00:00
+297,28769,matplotlib/matplotlib,[Bug]: Gouraud shading for `plt.tripcolor` is slightly off,2024-08-30T06:04:52+00:00
+298,28770,matplotlib/matplotlib,[ENH]: Plot recipes for custom types,2024-08-30T11:56:55+00:00
+299,7134,huggingface/datasets,Attempting to return a rank 3 grayscale image from dataset.map results in extreme slowdown ,2024-09-01T13:55:41+00:00
+300,7135,huggingface/datasets,Bug: Type Mismatch in Dataset Mapping,2024-09-03T16:37:01+00:00
+301,7138,huggingface/datasets,Cache only changed columns?,2024-09-05T12:56:47+00:00
+302,7139,huggingface/datasets,Use load_dataset to load imagenet-1K But find a empty dataset,2024-09-05T15:12:22+00:00
+303,7623,networkx/networkx,Separation of Exception Handling/Input Validation from Algorithm's Core Implementation,2024-09-06T20:23:43+00:00
+304,28816,matplotlib/matplotlib,[MNT]: Refactor data limit handling,2024-09-13T12:49:04+00:00
+305,28833,matplotlib/matplotlib,[MNT]: Data size consistency checks in _CollectionsWithSizes,2024-09-18T09:04:25+00:00
+306,28834,matplotlib/matplotlib,[MNT]: Should we add priority tags to issues / features,2024-09-18T14:08:59+00:00
+307,28835,matplotlib/matplotlib,[Bug]: Matplotlib issue with mosaic and colorbars,2024-09-18T20:18:34+00:00
+308,28851,matplotlib/matplotlib,[MNT]: Define Axes.clear semantics,2024-09-20T08:29:51+00:00
+309,28854,matplotlib/matplotlib,[Bug]: Inconsistency as to whether Line2D.get_data() preserves types of input sequences,2024-09-20T16:30:31+00:00
+310,7156,huggingface/datasets,interleave_datasets resets shuffle state,2024-09-20T17:57:54+00:00
+311,28860,matplotlib/matplotlib,[ENH]: Add Independent xlabelpad and ylabelpad Options to rcParams,2024-09-21T18:47:02+00:00
+312,28865,matplotlib/matplotlib,[Bug]: Matplotlib clabels too close to the boundary,2024-09-23T08:12:40+00:00
+313,28891,matplotlib/matplotlib,"[Bug]: `GridSpecFromSubplotSpec` displayed incorrectly with `layout=""constrained""`",2024-09-26T01:08:57+00:00
+314,28894,matplotlib/matplotlib,"[Bug]: Padding at the edges of `GridSpecFromSubplotSpec` is double counted with `layout=""constrained""`",2024-09-26T17:09:48+00:00
+315,7187,huggingface/datasets,shard_data_sources() got an unexpected keyword argument 'worker_id',2024-10-02T01:26:35+00:00
+316,7189,huggingface/datasets,Audio preview in dataset viewer for audio array data without a path/filename,2024-10-02T16:38:38+00:00
+317,7190,huggingface/datasets,Datasets conflicts with fsspec 2024.9,2024-10-02T16:43:46+00:00
+318,7193,huggingface/datasets,Support of num_workers (multiprocessing) in map for IterableDataset,2024-10-02T18:34:04+00:00
+319,28929,matplotlib/matplotlib,"[MNT]: Clarify whether the values of an AxesImage are known as ""data"" or as ""array""",2024-10-03T09:36:23+00:00
+320,7195,huggingface/datasets,Add support for 3D datasets,2024-10-03T13:27:44+00:00
+321,7197,huggingface/datasets,ConnectionError: Couldn't reach 'allenai/c4' on the Hub (ConnectionError)数据集下不下来，怎么回事,2024-10-04T09:33:25+00:00
+322,7201,huggingface/datasets,`load_dataset()` of images from a single directory where `train.png` image exists,2024-10-07T09:14:17+00:00
+323,7202,huggingface/datasets,`from_parquet` return type annotation,2024-10-08T09:08:10+00:00
+324,7206,huggingface/datasets,Slow iteration for iterable dataset with numpy formatting for array data,2024-10-08T15:38:11+00:00
+325,28955,matplotlib/matplotlib,[ENH]: Ability to get a gridspec from a figure after it is added.,2024-10-08T22:47:25+00:00
+326,7210,huggingface/datasets,Convert Array features to numpy arrays rather than lists by default,2024-10-09T13:05:21+00:00
+327,7211,huggingface/datasets,Describe only selected fields in README,2024-10-09T16:25:47+00:00
+328,7212,huggingface/datasets,Windows do not supprot signal.alarm and singal.signal,2024-10-10T12:00:19+00:00
+329,7213,huggingface/datasets,Add with_rank to Dataset.from_generator,2024-10-10T12:15:29+00:00
+330,7214,huggingface/datasets,Formatted map + with_format(None) changes array dtype for iterable datasets,2024-10-10T12:45:16+00:00
+331,7215,huggingface/datasets,Iterable dataset map with explicit features causes slowdown for Sequence features,2024-10-10T22:08:20+00:00
+332,7217,huggingface/datasets,"ds.map(f, num_proc=10) is slower than df.apply",2024-10-11T11:04:05+00:00
+333,7220,huggingface/datasets,Custom features not compatible with special encoding/decoding logic,2024-10-11T19:20:11+00:00
+334,7222,huggingface/datasets,TypeError: Couldn't cast array of type string to null in long json,2024-10-12T08:14:59+00:00
+335,7223,huggingface/datasets,Fallback to arrow defaults when loading dataset with custom features that aren't registered locally,2024-10-12T16:08:20+00:00
+336,7225,huggingface/datasets,Huggingface GIT returns null as Content-Type instead of application/x-git-receive-pack-result,2024-10-14T14:33:06+00:00
+337,7226,huggingface/datasets,Add R as a How to use from the Polars (R) Library as an option,2024-10-14T19:56:07+00:00
+338,7228,huggingface/datasets,Composite (multi-column) features,2024-10-14T23:59:19+00:00
+339,28980,matplotlib/matplotlib,[Bug]: matplotlib plotly style reload library not working with Python3.11,2024-10-15T20:17:48+00:00
+340,7233,huggingface/datasets,数据集数量问题,2024-10-17T07:41:44+00:00
+341,7238,huggingface/datasets,incompatibily issue when using load_dataset with datasets==3.0.1,2024-10-18T21:25:23+00:00
+342,7243,huggingface/datasets,ArrayXD with None as leading dim incompatible with DatasetCardData,2024-10-21T15:08:13+00:00
+343,29004,matplotlib/matplotlib,Decide how to document SecondaryAxes,2024-10-21T18:05:04+00:00
+344,7247,huggingface/datasets,Adding column with dict struction when mapping lead to wrong order,2024-10-22T18:55:11+00:00
+345,7248,huggingface/datasets,ModuleNotFoundError: No module named 'datasets.tasks',2024-10-23T21:58:25+00:00
+346,7249,huggingface/datasets,How to debugging,2024-10-24T01:03:51+00:00
+347,29025,matplotlib/matplotlib,[ENH]:  Add markevery rcParam,2024-10-25T23:54:01+00:00
+348,7253,huggingface/datasets,Unable to upload a large dataset zip either from command line or UI,2024-10-26T13:17:06+00:00
+349,7254,huggingface/datasets,"mismatch for datatypes when providing `Features` with `Array2D` and user specified `dtype` and using with_format(""numpy"")",2024-10-26T22:06:27+00:00
+350,29029,matplotlib/matplotlib,Timer + long-running callback expectations,2024-10-28T17:08:06+00:00
+351,7260,huggingface/datasets,cache can't cleaned or disabled,2024-10-29T03:15:28+00:00
+352,7261,huggingface/datasets,Cannot load the cache when mapping the dataset,2024-10-29T08:29:40+00:00
+353,29040,matplotlib/matplotlib,[Bug]: Interactively switching plot to logit scale with some values out of range crashes UI and erases plot,2024-10-29T17:12:51+00:00
+354,7267,huggingface/datasets,Source installation fails on Macintosh with python 3.10,2024-10-31T10:18:45+00:00
+355,7268,huggingface/datasets,load_from_disk,2024-10-31T11:51:56+00:00
+356,7269,huggingface/datasets,Memory leak when streaming,2024-10-31T13:33:52+00:00
+357,29056,matplotlib/matplotlib,Sort out why the Qt editor widget needs to reset the unit states,2024-10-31T20:41:36+00:00
+358,7275,huggingface/datasets,load_dataset,2024-11-04T03:01:44+00:00
+359,7276,huggingface/datasets,Accessing audio dataset value throws Format not recognised error,2024-11-04T05:59:13+00:00
+360,7280,huggingface/datasets,Add filename in error message when ReadError or similar occur,2024-11-07T06:00:53+00:00
+361,7281,huggingface/datasets,File not found error,2024-11-07T09:04:49+00:00
+362,7282,huggingface/datasets,Faulty datasets.exceptions.ExpectedMoreSplitsError,2024-11-07T20:15:01+00:00
+363,29103,matplotlib/matplotlib,[ENH]: AutoMinorLocator should support unevenly spaced ticks,2024-11-08T20:18:00+00:00
+364,7287,huggingface/datasets,Support for identifier-based automated split construction,2024-11-10T07:45:19+00:00
+365,7290,huggingface/datasets,`Dataset.save_to_disk` hangs when using num_proc > 1,2024-11-14T05:25:13+00:00
+366,29141,matplotlib/matplotlib,[MNT]: Colormap refactoring,2024-11-14T14:53:03+00:00
+367,7291,huggingface/datasets,Why return_tensors='pt' doesn't work？,2024-11-15T15:01:23+00:00
+368,7295,huggingface/datasets,[BUG]: Streaming from S3 triggers `unexpected keyword argument 'requote_redirect_url'`,2024-11-19T12:23:36+00:00
+369,29158,matplotlib/matplotlib,[ENH]: ConnectionPatch support for 2d->3D axes,2024-11-19T23:04:34+00:00
+370,29160,matplotlib/matplotlib,[Bug]: ConciseDateFormatter doesn't handle DST changes correctly,2024-11-20T05:27:42+00:00
+371,29173,matplotlib/matplotlib,[Bug]:  Font fallback issue with CJK characters in text containing math formulas,2024-11-22T12:29:38+00:00
+372,7298,huggingface/datasets,loading dataset issue with load_dataset() when training controlnet,2024-11-26T10:50:18+00:00
+373,7299,huggingface/datasets,Efficient Image Augmentation in Hugging Face Datasets,2024-11-26T16:50:32+00:00
+374,29218,matplotlib/matplotlib,[MNT]: test failures in codespaces,2024-12-02T11:27:35+00:00
+375,29224,matplotlib/matplotlib,[Bug]: Matplotlib don't take into account savefig.pad_inches when plt.plot(... transform=fig.dpi_scale_trans),2024-12-03T18:42:04+00:00
+376,7305,huggingface/datasets," Build Documentation Test Fails Due to ""Bad Credentials"" Error",2024-12-03T20:22:54+00:00
+377,29234,matplotlib/matplotlib,TODO spotted: Separating xy2 and slope ,2024-12-05T07:14:55+00:00
+378,7306,huggingface/datasets,Creating new dataset from list loses information. (Audio Information Lost - either Datatype or Values).,2024-12-05T09:07:53+00:00
+379,7758,networkx/networkx,Unexpected behavior for subgraph monomorphisms with MultiGraph,2024-12-05T15:11:41+00:00
+380,7315,huggingface/datasets,Allow manual configuration of Dataset Viewer for datasets not created with the `datasets` library,2024-12-07T16:37:12+00:00
+381,7310,huggingface/datasets,Enable the Audio Feature to decode / read with an offset + duration,2024-12-07T22:01:44+00:00
+382,7311,huggingface/datasets,How to get the original dataset name with username?,2024-12-08T07:18:14+00:00
+383,29261,matplotlib/matplotlib,[MNT]: Confusing edgecolor behavior for Patch and Collection,2024-12-08T23:44:21+00:00
+384,7313,huggingface/datasets,Cannot create a dataset with relative audio path,2024-12-09T07:34:20+00:00
+385,7318,huggingface/datasets,Introduce support for PDFs,2024-12-10T16:59:48+00:00
+386,7321,huggingface/datasets,ImportError: cannot import name 'set_caching_enabled' from 'datasets' ,2024-12-11T01:58:46+00:00
+387,7322,huggingface/datasets,ArrowInvalid: JSON parse error: Column() changed from object to array in row 0,2024-12-11T08:41:39+00:00
+388,29282,matplotlib/matplotlib,[Doc]: Improvements /sorting content for Quickstart Guide / Matplotlib Application Interfaces,2024-12-11T13:52:21+00:00
+389,29294,matplotlib/matplotlib,[Doc]: Style methods documented as part of matplotlib but not pyplot,2024-12-12T18:20:05+00:00
+390,7326,huggingface/datasets,Remove upper bound for fsspec,2024-12-13T11:35:12+00:00
+391,7327,huggingface/datasets,.map() is not caching and ram goes OOM,2024-12-13T14:22:56+00:00
+392,7334,huggingface/datasets,TypeError: Value.__init__() missing 1 required positional argument: 'dtype',2024-12-15T04:08:46+00:00
+393,7335,huggingface/datasets,Too many open files: '/root/.cache/huggingface/token',2024-12-16T21:30:24+00:00
+394,7336,huggingface/datasets,Clarify documentation or Create DatasetCard,2024-12-17T12:01:00+00:00
+395,7337,huggingface/datasets,"One or several metadata.jsonl were found, but not in the same directory or in a parent directory of",2024-12-17T12:58:43+00:00
+396,29373,matplotlib/matplotlib,[Bug]: Poor rendering of Poly3DCollection with axlim clipping,2024-12-22T20:54:53+00:00
+397,29380,matplotlib/matplotlib,[MNT]: deprecate auto hatch fallback to patch.edgecolor when edgecolor='None',2024-12-25T00:19:58+00:00
+398,29383,matplotlib/matplotlib,[Bug]: inset colorbar colours and frame misaligned,2024-12-28T12:36:30+00:00
+399,7355,huggingface/datasets,Not available datasets[audio] on python 3.13,2025-01-04T18:37:08+00:00
+400,7357,huggingface/datasets,Python process aborded with GIL issue when using image dataset,2025-01-06T11:29:30+00:00
+401,7359,huggingface/datasets,"There are multiple 'mteb/arguana' configurations in the cache: default, corpus, queries with HF_HUB_OFFLINE=1",2025-01-06T17:42:49+00:00
+402,7360,huggingface/datasets,error when loading dataset in Hugging Face: NoneType error is not callable,2025-01-07T02:11:36+00:00
+403,29422,matplotlib/matplotlib,[MNT]: Remove the label API from Artist,2025-01-07T09:03:22+00:00
+404,29429,matplotlib/matplotlib,[ENH]: Giving artists optional ids,2025-01-07T22:53:02+00:00
+405,7363,huggingface/datasets,"ImportError: To support decoding images, please install 'Pillow'.",2025-01-08T02:22:57+00:00
+406,7787,networkx/networkx,Refactor: current `backends.py` and `configs.py` into `_backends`,2025-01-08T12:58:02+00:00
+407,29434,matplotlib/matplotlib,[Bug]: High memory usage in `Figure.savefig`,2025-01-08T21:18:05+00:00
+408,29439,matplotlib/matplotlib,[Bug]: np.nan in PolyCollection linewidths causes huge performance penalty,2025-01-09T09:54:06+00:00
+409,29440,matplotlib/matplotlib,[Bug]: Disabling autoscaling after autoscaling plots,2025-01-09T10:03:32+00:00
+410,29446,matplotlib/matplotlib,ENH: add entrys to legend explicitly,2025-01-09T20:36:00+00:00
+411,7365,huggingface/datasets,A parameter is specified but not used in datasets.arrow_dataset.Dataset.from_pandas(),2025-01-10T13:39:33+00:00
+412,7366,huggingface/datasets,Dataset.from_dict() can't handle large dict,2025-01-11T02:05:21+00:00
+413,29467,matplotlib/matplotlib,[Bug]: RectangleSelector Disappears and Becomes Difficult to Move in combination with Cursor Widget,2025-01-13T04:33:50+00:00
+414,29468,matplotlib/matplotlib,[MNT]: Unite property cycles for lines and patches,2025-01-13T09:16:37+00:00
+415,7369,huggingface/datasets,Importing dataset gives unhelpful error message when filenames in metadata.csv are not found in the directory,2025-01-14T13:53:21+00:00
+416,7371,huggingface/datasets,500 Server error with pushing a dataset,2025-01-15T18:23:02+00:00
+417,7372,huggingface/datasets,Inconsistent Behavior Between `load_dataset` and `load_from_disk` When Loading Sharded Datasets,2025-01-16T05:47:20+00:00
+418,7373,huggingface/datasets,Excessive RAM Usage After Dataset Concatenation concatenate_datasets,2025-01-16T16:33:10+00:00
+419,29482,matplotlib/matplotlib,[Bug]: 3D bar chart appears over axis when using zlim,2025-01-18T21:58:06+00:00
+420,7375,huggingface/datasets,vllm批量推理报错,2025-01-21T03:22:23+00:00
+421,7377,huggingface/datasets,Support for sparse arrays with the Arrow Sparse Tensor format?,2025-01-21T20:14:35+00:00
+422,7378,huggingface/datasets,Allow pushing config version to hub,2025-01-21T22:35:07+00:00
+423,29510,matplotlib/matplotlib,[ENH]: Log Scale for Violin Plots (by calculating Kernel Density Estimate in log space),2025-01-24T10:42:43+00:00
+424,29516,matplotlib/matplotlib,[Bug]: Cannot draw arrow from polar plot origin after setting rticks,2025-01-24T17:28:49+00:00
+425,29527,matplotlib/matplotlib,[Bug]: unaligned multiline text when using math mode,2025-01-27T09:30:42+00:00
+426,29567,matplotlib/matplotlib,[Bug]: ImageMagickWriter,2025-02-03T01:54:28+00:00
+427,29570,matplotlib/matplotlib,[ENH]: text with custom width,2025-02-03T15:08:47+00:00
+428,29573,matplotlib/matplotlib,[MNT]: Deprecate ImageMagickWriter in favor of pillow & ffmpeg?,2025-02-03T21:43:17+00:00
+429,29586,matplotlib/matplotlib,[ENH]: Arbitrary placement of 3D axes & panes,2025-02-06T21:22:51+00:00
+430,29594,matplotlib/matplotlib,[MNT]: Consolidate tick API,2025-02-08T09:38:33+00:00
+431,29596,matplotlib/matplotlib,[Bug]: Position and BBox of mathtext are slightly offset from the expected ones and inconsistent with normal text,2025-02-09T13:34:59+00:00
+432,7387,huggingface/datasets,Dynamic adjusting dataloader sampling weight,2025-02-10T03:18:47+00:00
+433,7390,huggingface/datasets,Re-add py.typed,2025-02-10T22:12:52+00:00
+434,7391,huggingface/datasets,AttributeError: module 'pyarrow.lib' has no attribute 'ListViewType',2025-02-11T12:02:26+00:00
+435,7392,huggingface/datasets,push_to_hub payload too large error when using large ClassLabel feature,2025-02-11T17:51:34+00:00
+436,7394,huggingface/datasets,Using load_dataset with data_files and split arguments yields an error,2025-02-12T04:50:11+00:00
+437,7400,huggingface/datasets,504 Gateway Timeout when uploading large dataset to Hugging Face Hub,2025-02-14T02:18:35+00:00
+438,7399,huggingface/datasets,Synchronize parameters for various datasets,2025-02-14T09:15:11+00:00
+439,29628,matplotlib/matplotlib,Newlines should not be scaped when using setting usetex=True,2025-02-16T08:16:47+00:00
+440,29630,matplotlib/matplotlib,[Bug]: Unable to use single Quantity for xerr in ax.errorbar,2025-02-16T13:48:09+00:00
+441,7405,huggingface/datasets,Lazy loading of environment variables,2025-02-16T22:31:41+00:00
+442,29634,matplotlib/matplotlib,[ENH]: Be able to ignore specific plots when autoscaling axes,2025-02-17T10:31:59+00:00
+443,29635,matplotlib/matplotlib,[MNT]: API consistency for figsize,2025-02-17T11:00:15+00:00
+444,29636,matplotlib/matplotlib,[MNT]: API consistency for Figure layout_engine,2025-02-17T11:02:56+00:00
+445,7412,huggingface/datasets,Index Error Invalid Ket is out of bounds for size 0 for code-search-net/code_search_net dataset,2025-02-18T05:58:33+00:00
+446,29643,matplotlib/matplotlib,[ENH]: improve the data structure of transformer pipeline base on the math structure of coordinate transformations,2025-02-18T09:32:29+00:00
+447,7413,huggingface/datasets,Documentation on multiple media files of the same type with WebDataset,2025-02-18T16:13:20+00:00
+448,29646,matplotlib/matplotlib,[Bug]: Markers with string-type integer values are converted to integers in cycler and matplotlibrc,2025-02-19T12:48:32+00:00
+449,7415,huggingface/datasets,Shard Dataset at specific indices,2025-02-20T10:43:10+00:00
+450,29653,matplotlib/matplotlib,[ENH]: Make fill_between 'step' argument consistent with plot,2025-02-21T11:25:49+00:00
+451,29659,matplotlib/matplotlib,[Bug]: Unnecessary double start of `Animation` in some circumstances,2025-02-22T07:02:28+00:00
+452,29671,matplotlib/matplotlib,[ENH]: Add long names for markers,2025-02-24T11:33:07+00:00
+453,7419,huggingface/datasets,Import order crashes script execution,2025-02-24T17:03:43+00:00
+454,7420,huggingface/datasets,better correspondence between cached and saved datasets created using from_generator,2025-02-24T22:14:37+00:00
+455,7421,huggingface/datasets,DVC integration broken,2025-02-25T13:14:31+00:00
+456,7874,networkx/networkx,"updating backends(`nx.config`, entry_points, etc.) in the same session/runtime",2025-02-25T17:47:30+00:00
+457,7425,huggingface/datasets,"load_dataset(""livecodebench/code_generation_lite"", version_tag=""release_v2"")  TypeError: 'NoneType' object is not callable",2025-02-27T07:36:02+00:00
+458,29687,matplotlib/matplotlib,[Bug]: possible race condition between TextBoxes with toolmanager and QtAgg,2025-02-27T17:03:51+00:00
+459,7427,huggingface/datasets,Error splitting the input into NAL units.,2025-02-28T02:30:15+00:00
+460,7431,huggingface/datasets,Issues with large Datasets,2025-02-28T14:05:22+00:00
+461,29699,matplotlib/matplotlib,"[ENH]: Add `zorder` (grid, scatter, line, etc) in `rcParams`",2025-03-03T14:40:52+00:00
+462,29704,matplotlib/matplotlib,Option to add FancyBboxPatch around quiverkey(),2025-03-04T22:49:45+00:00
+463,29706,matplotlib/matplotlib,[Bug]: Unexpected output when using `fill` with a polar projection plot,2025-03-05T15:40:42+00:00
+464,29711,matplotlib/matplotlib,[ENH]: directional antialiasing filter,2025-03-06T11:49:33+00:00
+465,7440,huggingface/datasets,IterableDataset raises FileNotFoundError instead of retrying,2025-03-07T19:14:18+00:00
+466,7441,huggingface/datasets,`drop_last_batch` does not drop the last batch using IterableDataset + interleave_datasets + multi_worker,2025-03-08T10:28:44+00:00
+467,7443,huggingface/datasets,index error when num_shards > len(dataset),2025-03-10T22:40:59+00:00
+468,29731,matplotlib/matplotlib,"[MNT]: in class cursor,when the mouse moves out of the ax, redrawing takes a long time",2025-03-11T04:39:52+00:00
+469,29732,matplotlib/matplotlib,[Bug]: Unit tests: MacOS 14 failures: gi-invoke-error-quark,2025-03-11T14:10:28+00:00
+470,7444,huggingface/datasets,Excessive warnings when resuming an IterableDataset+buffered shuffle+DDP.,2025-03-11T16:34:39+00:00
+471,29733,matplotlib/matplotlib,[Bug]: Matplotlib savefig and close break multiprocessing and numpy thread allocation,2025-03-11T18:59:08+00:00
+472,29739,matplotlib/matplotlib,"Error finding ""ninja"" when setting up development environment",2025-03-12T12:24:35+00:00
+473,29743,matplotlib/matplotlib,[Bug]: memory backing figure is not freed when figure is closed,2025-03-12T13:36:08+00:00
+474,7448,huggingface/datasets,`datasets.disable_caching` doesn't work,2025-03-13T06:40:12+00:00
+475,7455,huggingface/datasets,Problems with local dataset after upgrade from 3.3.2 to 3.4.0,2025-03-15T09:22:50+00:00
+476,7456,huggingface/datasets,.add_faiss_index and .add_elasticsearch_index returns ImportError at Google Colab,2025-03-16T00:51:49+00:00
+477,29761,matplotlib/matplotlib,[Bug]: pcolormesh passes alpha value down to colormap instead of alpha blending,2025-03-16T14:21:19+00:00
+478,7913,networkx/networkx,cytoscape JSON is not valid,2025-03-18T16:30:10+00:00
+479,29775,matplotlib/matplotlib,[Doc]: Improve install guidance,2025-03-18T23:35:39+00:00
+480,29778,matplotlib/matplotlib,"[Bug]: interpolation_stage=""data"" removes too many pixels in the vicinity of nans in upsampled, interpolated images",2025-03-19T00:06:01+00:00
+481,7468,huggingface/datasets,"function `load_dataset`  can't solve folder path with regex characters like ""[]""",2025-03-20T05:21:59+00:00
+482,29790,matplotlib/matplotlib,[Bug]: test_backend_pgf.py::test_rcupdate fails with texlive 2025,2025-03-21T14:26:01+00:00
+483,7477,huggingface/datasets,What is the canonical way to compress a Dataset?,2025-03-25T16:47:51+00:00
+484,7479,huggingface/datasets,Features.from_arrow_schema is destructive,2025-03-26T16:46:43+00:00
+485,7480,huggingface/datasets,HF_DATASETS_CACHE ignored?,2025-03-26T17:19:34+00:00
+486,29813,matplotlib/matplotlib,[MNT]: Cleanup internal import dependencies and initialization logic,2025-03-26T23:35:03+00:00
+487,29815,matplotlib/matplotlib,Decide support level for axes_grid,2025-03-26T23:51:45+00:00
+488,29822,matplotlib/matplotlib,"[MNT]: CI: either remove, or separate cairocffi CI paths",2025-03-28T15:34:50+00:00
+489,7951,networkx/networkx,multiple self loop edges overlapped,2025-04-01T10:14:22+00:00
+490,29852,matplotlib/matplotlib,[Bug]: Unable to install matplotlib (editable mode) in Github Codespace,2025-04-01T18:23:59+00:00
+491,29854,matplotlib/matplotlib,[Bug]: Build timeout in fresh repository if git index is not fresh,2025-04-01T19:24:54+00:00
+492,29856,matplotlib/matplotlib,[Doc]: Surprising behavior of FuncAnimation example in the first frames,2025-04-02T07:56:41+00:00
+493,7496,huggingface/datasets,Json builder: Allow features to override problematic Arrow types,2025-04-02T19:27:16+00:00
+494,7497,huggingface/datasets,How to convert videos to images?,2025-04-03T07:08:39+00:00
+495,7498,huggingface/datasets,Extreme memory bandwidth.,2025-04-03T11:09:08+00:00
+496,29866,matplotlib/matplotlib,[ENH]: Allow specifying a typeface instead of a font,2025-04-03T19:33:12+00:00
+497,29874,matplotlib/matplotlib,[Bug]: Backgroundcolor of text is set in a too wide range,2025-04-06T08:27:11+00:00
+498,7500,huggingface/datasets,Make `with_format` correctly indicate that a `Dataset` is compatible with PyTorch's `Dataset` class,2025-04-06T09:56:09+00:00
+499,29878,matplotlib/matplotlib,[ENH]: Surface plot does not support interpolation,2025-04-06T14:22:17+00:00
+500,7503,huggingface/datasets,Inconsistency between load_dataset and load_from_disk functionality,2025-04-08T03:46:22+00:00
+501,7504,huggingface/datasets,BuilderConfig ParquetConfig(...) doesn't have a 'use_auth_token' key.,2025-04-08T10:55:03+00:00
+502,7505,huggingface/datasets,HfHubHTTPError: 403 Forbidden: None. Cannot access content at: https://hf.co/api/s3proxy,2025-04-08T14:08:40+00:00
+503,7962,networkx/networkx,Cytoscape export of a cartesian graph is invalid,2025-04-08T16:13:17+00:00
+504,7506,huggingface/datasets,HfHubHTTPError: 429 Client Error: Too Many Requests for URL when trying to access Fineweb-10BT on 4A100 GPUs using SLURM,2025-04-09T06:32:04+00:00
+505,7507,huggingface/datasets,Front-end statistical data quantity deviation,2025-04-10T02:51:38+00:00
+506,7508,huggingface/datasets,Iterating over Image feature columns is extremely slow,2025-04-10T19:00:54+00:00
+507,29912,matplotlib/matplotlib,[Bug]: findfont: Font family '<font>' not found. despite being present and queriable via fontconfig; never makes it to ~/.cache/matplotlib/fontlist-v330.json either,2025-04-13T17:32:23+00:00
+508,7509,huggingface/datasets,Dataset uses excessive memory when loading files,2025-04-13T21:09:49+00:00
+509,29915,matplotlib/matplotlib,[Bug]: axes.prop_cycle behavior change,2025-04-14T14:33:52+00:00
+510,7512,huggingface/datasets,.map() fails if function uses pyvista,2025-04-14T19:43:02+00:00
+511,7518,huggingface/datasets,num_proc parallelization works only for first ~10s.,2025-04-15T11:44:03+00:00
+512,7520,huggingface/datasets,Update items in the dataset without `map`,2025-04-15T19:39:01+00:00
+513,29922,matplotlib/matplotlib,[ENH]: tab10 color sequence should return the tab-named colors,2025-04-16T01:28:50+00:00
+514,29926,matplotlib/matplotlib,"[ENH]: Make rotation_mode=""xtick"" the default for ticks",2025-04-16T07:40:51+00:00
+515,29928,matplotlib/matplotlib,[Doc]: Blitting minimal example missing draw_event callback,2025-04-16T11:38:34+00:00
+516,7526,huggingface/datasets,Faster downloads/uploads with Xet storage,2025-04-18T14:46:42+00:00
+517,7985,networkx/networkx,Iteration over MST and CDS and maybe other trees,2025-04-18T16:51:38+00:00
+518,7528,huggingface/datasets,Data Studio Error: Convert JSONL incorrectly,2025-04-19T13:21:44+00:00
+519,7531,huggingface/datasets,Deepspeed reward training hangs at end of training with Dataset.from_list,2025-04-21T17:29:20+00:00
+520,7992,networkx/networkx,Improve Girman-Newman speed,2025-04-22T03:08:57+00:00
+521,7534,huggingface/datasets,TensorFlow RaggedTensor Support (batch-level),2025-04-24T13:14:52+00:00
+522,7537,huggingface/datasets,"`datasets.map(..., num_proc=4)` multi-processing fails",2025-04-25T01:53:47+00:00
+523,29978,matplotlib/matplotlib,[Bug]: PGF file produces incorrect whitespace in the legend when using certain documentclass.,2025-04-28T11:12:13+00:00
+524,8005,networkx/networkx,`generate_random_paths` should be `generate_random_walks`,2025-04-28T16:26:06+00:00
+525,7545,huggingface/datasets,Networked Pull Through Cache,2025-04-30T15:16:33+00:00
+526,7548,huggingface/datasets,Python 3.13t (free threads) Compat,2025-05-02T09:20:09+00:00
+527,7549,huggingface/datasets,TypeError: Couldn't cast array of type string to null on webdataset format dataset,2025-05-02T15:18:07+00:00
+528,7551,huggingface/datasets,Issue with offline mode and partial dataset cached,2025-05-04T16:49:37+00:00
+529,8030,networkx/networkx,backends and not_implemented_for,2025-05-07T14:00:22+00:00
+530,30038,matplotlib/matplotlib,[Bug]: install in development mode fails,2025-05-11T17:28:50+00:00
+531,7566,huggingface/datasets,terminate called without an active exception; Aborted (core dumped),2025-05-11T23:05:54+00:00
+532,7568,huggingface/datasets,`IterableDatasetDict.map()` call removes `column_names` (in fact info.features),2025-05-13T15:45:42+00:00
+533,7569,huggingface/datasets,Dataset creation is broken if nesting a dict inside a dict inside a list,2025-05-13T21:06:45+00:00
+534,30071,matplotlib/matplotlib,[Doc]: new color documentation should go into user docs,2025-05-18T15:31:17+00:00
+535,30074,matplotlib/matplotlib,[Doc]: Too much stuff in top level navigation.,2025-05-18T22:12:08+00:00
+536,30075,matplotlib/matplotlib,[MNT]: Rename axis3d.Axis to Axis3D,2025-05-19T06:29:57+00:00
+537,7574,huggingface/datasets,Missing multilingual directions in IWSLT2017 dataset's processing script,2025-05-21T09:53:17+00:00
+538,7580,huggingface/datasets,"Requesting a specific split (eg: test) still downloads all (train, test, val) data when streaming=False.",2025-05-22T11:08:16+00:00
+539,7584,huggingface/datasets,Add LMDB format support,2025-05-26T07:10:13+00:00
+540,7586,huggingface/datasets,help is appreciated,2025-05-26T14:00:42+00:00
+541,8099,networkx/networkx,nx.optimal_edit_paths not finding optimal,2025-06-04T14:47:30+00:00
+542,7594,huggingface/datasets,Add option to ignore keys/columns when loading a dataset from jsonl(or any other data format),2025-06-05T11:12:45+00:00
+543,30147,matplotlib/matplotlib,twinx and twiny could gain more convenience helpers,2025-06-05T17:39:54+00:00
+544,30159,matplotlib/matplotlib,[Bug]: Calling axes.clear() on a shared y or x-axis issues an unexpected warning with log scale,2025-06-10T13:50:30+00:00
+545,30165,matplotlib/matplotlib,[Bug]: offset in transformed ellipse vertices,2025-06-11T14:03:43+00:00
+546,7610,huggingface/datasets,i cant confirm email,2025-06-12T18:58:49+00:00
+547,7612,huggingface/datasets,Provide an option of robust dataset iterator with error handling,2025-06-13T00:40:48+00:00
+548,7619,huggingface/datasets,`from_list` fails while `from_generator` works for large datasets,2025-06-17T10:58:55+00:00
+549,7630,huggingface/datasets,[bug] resume from ckpt skips samples if .map is applied,2025-06-21T01:50:03+00:00
+550,30203,matplotlib/matplotlib,[Bug]: Cannot share both axis when setting aspect ratio,2025-06-21T14:22:47+00:00
+551,7632,huggingface/datasets,"Graceful Error Handling for cast_column(""image"", Image(decode=True)) in Hugging Face Datasets",2025-06-23T13:49:24+00:00
+552,7633,huggingface/datasets,Proposal: Small Tamil Discourse Coherence Dataset.,2025-06-23T14:24:40+00:00
+553,7636,huggingface/datasets,"""open"" in globals()[""__builtins__""], an error occurs: ""TypeError: argument of type 'module' is not iterable""",2025-06-24T08:09:39+00:00
+554,7637,huggingface/datasets,Introduce subset_name as an alias of config_name,2025-06-24T12:49:01+00:00
+555,7647,huggingface/datasets,loading mozilla-foundation--common_voice_11_0 fails,2025-06-26T12:23:48+00:00
+556,7650,huggingface/datasets,`load_dataset` defaults to json file format for datasets with 1 shard,2025-06-27T12:54:25+00:00
+557,30219,matplotlib/matplotlib,[Bug]: tick_top and sharex do not work together,2025-06-27T16:50:22+00:00
+558,8128,networkx/networkx,ENH: `min_length` kwarg for `simple_cycles`,2025-06-29T12:33:37+00:00
+559,30230,matplotlib/matplotlib,"[BUG]: Neither explicit data limit is respected when `constrained_layout` is used together with `set_aspect(..., ""datalim"")`",2025-06-30T15:08:29+00:00
+560,7660,huggingface/datasets,AttributeError: type object 'tqdm' has no attribute '_lock',2025-06-30T15:57:16+00:00
+561,7662,huggingface/datasets,Applying map after transform with multiprocessing will cause OOM,2025-07-01T05:45:57+00:00
+562,30238,matplotlib/matplotlib,[ENH]: Add data parameter in Axes3D.plot like Axes.plot,2025-07-01T15:18:58+00:00
+563,7664,huggingface/datasets,Function load_dataset() misinterprets string field content as part of dataset schema when dealing with `.jsonl` files,2025-07-01T17:14:32+00:00
+564,30241,matplotlib/matplotlib,[ENH]: sharex=array for simple grouping,2025-07-01T19:33:03+00:00
+565,7668,huggingface/datasets,Broken EXIF crash the whole program,2025-07-03T11:24:15+00:00
+566,61772,pandas-dev/pandas,BUG: Calling dict(df.groupby(...)) raises TypeError: 'str' object is not callable despite valid inputs,2025-07-03T21:39:11+00:00
+567,7669,huggingface/datasets,How can I add my custom data to huggingface datasets,2025-07-04T19:19:54+00:00
+568,61782,pandas-dev/pandas,BUG: Errors using pyarrow datetime types on windows,2025-07-05T13:02:02+00:00
+569,61812,pandas-dev/pandas,BUG: Dataframe.aggregate drops pyarrow backend for lambda aggregation functions,2025-07-08T12:47:25+00:00
+570,61813,pandas-dev/pandas,ENH: Add Polars engine to read_csv,2025-07-08T14:31:02+00:00
+571,30276,matplotlib/matplotlib,"[Bug]: Annotation clipping to rect works, but not when setting xlim",2025-07-08T15:29:06+00:00
+572,7671,huggingface/datasets,Mapping function not working if the first example is returned as None,2025-07-08T17:07:47+00:00
+573,61819,pandas-dev/pandas,BUG: Series created from pre-2.1 legacy pickles lose their names during .copy operations,2025-07-09T16:28:53+00:00
+574,7675,huggingface/datasets,common_voice_11_0.py failure in dataset library,2025-07-09T17:47:59+00:00
+575,7676,huggingface/datasets,Many things broken since the new 4.0.0 release,2025-07-09T18:59:50+00:00
+576,30282,matplotlib/matplotlib,Figure out how to pass Text to Renderer.draw_text always,2025-07-10T04:11:13+00:00
+577,30290,matplotlib/matplotlib,plot_surface with facecolors distorts colors due to default shading=True,2025-07-11T07:07:53+00:00
+578,61838,pandas-dev/pandas,ENH: Include line number and number of fields when read_csv() callable raises ParserWarning,2025-07-12T03:26:27+00:00
+579,7680,huggingface/datasets,Question about iterable dataset and streaming,2025-07-12T04:48:30+00:00
+580,30305,matplotlib/matplotlib,[Bug]: antialiased=False rendering show dependencies to the drawing orders of Polygons in a collection,2025-07-13T18:39:07+00:00
+581,7681,huggingface/datasets,Probabilistic High Memory Usage and Freeze on Python 3.10,2025-07-14T01:57:16+00:00
+582,30306,matplotlib/matplotlib,[Doc]: Broken links to fix in docs,2025-07-14T13:15:33+00:00
+583,61856,pandas-dev/pandas,BUG: Inconsistent .values NA/NaN,2025-07-14T17:15:04+00:00
+584,7685,huggingface/datasets,Inconsistent range request behavior for parquet REST api,2025-07-16T18:39:44+00:00
+585,61881,pandas-dev/pandas,API: boolean ops with float dtype,2025-07-16T20:00:48+00:00
+586,7686,huggingface/datasets,load_dataset does not check .no_exist files in the hub cache,2025-07-16T20:04:00+00:00
+587,7687,huggingface/datasets,Datasets keeps rebuilding the dataset every time i call the python script,2025-07-17T09:03:38+00:00
+588,7688,huggingface/datasets,"No module named ""distributed""",2025-07-17T09:32:35+00:00
+589,61896,pandas-dev/pandas,BUG: `rank` gives incorrect outputs on Windows with PyArrow backend,2025-07-18T09:46:04+00:00
+590,7691,huggingface/datasets,Large WebDataset: pyarrow.lib.ArrowCapacityError on load() even with streaming,2025-07-19T18:40:27+00:00
+591,7692,huggingface/datasets,xopen: invalid start byte for streaming dataset with trust_remote_code=True,2025-07-20T11:08:20+00:00
+592,7693,huggingface/datasets,"Dataset scripts are no longer supported, but found superb.py",2025-07-20T13:48:06+00:00
+593,61914,pandas-dev/pandas,BUG: Convertors not running when reading a dataframe from excel using calamine engine,2025-07-20T22:18:12+00:00
+594,7694,huggingface/datasets,"Dataset.to_json consumes excessive memory, appears to not be a streaming operation",2025-07-21T07:51:25+00:00
+595,30342,matplotlib/matplotlib,[MNT]: Refactor data limits,2025-07-22T14:33:00+00:00
+596,7698,huggingface/datasets,NotImplementedError when using streaming=True in Google Colab environment,2025-07-23T08:04:53+00:00
+597,61930,pandas-dev/pandas,PERF: `DataFrame.copy(deep=True)` returns a view on the original pyarrow buffer,2025-07-23T14:37:26+00:00
+598,7699,huggingface/datasets,"Broken link in documentation for ""Create a video dataset""",2025-07-24T19:46:28+00:00
+599,61937,pandas-dev/pandas,BUG: `Index` accepts lists as values,2025-07-24T20:44:35+00:00
+600,61938,pandas-dev/pandas,"BUG: `metadata` on `np.ndarray` of `np.dtype(""O"")` dtype lost when roundtripped through `pandas.Series`",2025-07-24T20:57:13+00:00
+601,61943,pandas-dev/pandas,BUG: series.groupby(level=0) and series.groupby(pd.Grouper(level=0)) produce different orders,2025-07-25T01:47:26+00:00
+602,30355,matplotlib/matplotlib,[Bug]: violinplot with nan values fails silently,2025-07-25T13:48:24+00:00
+603,61951,pandas-dev/pandas,BUG: Implicit upcast to float64 for large series (more than 1000000 rows),2025-07-25T17:04:29+00:00
+604,7700,huggingface/datasets,[doc] map.num_proc needs clarification,2025-07-25T17:35:09+00:00
+605,30360,matplotlib/matplotlib,[Bug]: Recent test_determinism_check flakiness,2025-07-26T00:40:59+00:00
+606,7703,huggingface/datasets,[Docs] map() example uses undefined `tokenizer` — causes NameError,2025-07-26T13:35:11+00:00
+607,61973,pandas-dev/pandas,"BUG: The lines skipped by pd.read_csv(path, chunksize=n, on_bad_lines='skip') depends on `n`.",2025-07-27T14:03:17+00:00
+608,61978,pandas-dev/pandas,ENH: Function‑scoped bad‑line callback for read_csv that provides line_number (immediate per‑row handling without global side‑effects),2025-07-27T23:40:04+00:00
+609,7705,huggingface/datasets,Can Not read installed dataset in dataset.load(.),2025-07-28T09:43:54+00:00
+610,61980,pandas-dev/pandas,BUG: Boolean Column Indexing Issue in Pandas,2025-07-28T09:55:14+00:00
+611,7717,huggingface/datasets,Cached dataset is not used when explicitly passing the cache_dir parameter,2025-08-01T07:12:41+00:00
+612,30380,matplotlib/matplotlib,[TST]: Streamlining the `platform.machine() == 'x86_64'` check,2025-08-01T10:11:52+00:00
+613,7719,huggingface/datasets,Specify dataset columns types in typehint,2025-08-02T13:22:31+00:00
+614,7720,huggingface/datasets,Datasets 4.0 map function causing column not found,2025-08-03T12:52:34+00:00
+615,62033,pandas-dev/pandas,"BUG: Wrong inferred type in case of a mixture of boolean, float and integers",2025-08-03T13:15:29+00:00
+616,30388,matplotlib/matplotlib,[Bug]: `libc++abi: terminating due to uncaught exception of type NSException` crash when combining tkinter and matplotlib with the macosx backend,2025-08-04T13:11:33+00:00
+617,7721,huggingface/datasets,Bad split error message when using percentages,2025-08-04T13:20:25+00:00
+618,7722,huggingface/datasets,"Out of memory even though using load_dataset(..., streaming=True)",2025-08-04T14:41:55+00:00
+619,7723,huggingface/datasets,Don't remove `trust_remote_code` arg!!!,2025-08-04T15:42:07+00:00
+620,7724,huggingface/datasets,Can not stepinto load_dataset.py?,2025-08-05T09:28:51+00:00
+621,30393,matplotlib/matplotlib,[Bug]: RadioButtons.set_label_props is expecting values of a single list,2025-08-05T11:42:54+00:00
+622,62050,pandas-dev/pandas,ENH: String functions for df.aggregate(),2025-08-05T17:36:41+00:00
+623,62051,pandas-dev/pandas,BUG: ArrowEA.astype to categorical returning all-NaT,2025-08-05T18:15:40+00:00
+624,7727,huggingface/datasets,"config paths that start with ./ are not valid as hf:// accessed repos, but are valid when accessed locally",2025-08-06T08:21:37+00:00
+625,30397,matplotlib/matplotlib,[Doc]: Fix version for switching to version 9 of the documentation.,2025-08-06T09:46:26+00:00
+626,7728,huggingface/datasets,NonMatchingSplitsSizesError and ExpectedMoreSplitsError,2025-08-07T04:04:50+00:00
+627,7729,huggingface/datasets,OSError: libcudart.so.11.0: cannot open shared object file: No such file or directory,2025-08-07T14:07:23+00:00
+628,7731,huggingface/datasets,Add the possibility of a backend for audio decoding,2025-08-08T11:08:56+00:00
+629,62071,pandas-dev/pandas,BUG:Pandas: Custom Metadata in DataFrame Subclass Not Deep-Copied,2025-08-08T12:27:24+00:00
+630,62072,pandas-dev/pandas,BUG: DataFrame.to_json() does not accurately serialize floats such that they can be deserialized without lost information,2025-08-08T15:03:26+00:00
+631,7732,huggingface/datasets,webdataset: key errors when `field_name` has upper case characters,2025-08-08T16:56:42+00:00
+632,62089,pandas-dev/pandas,ENH: More compact printing of a DataFrame with MultiIndex columns,2025-08-11T19:42:40+00:00
+633,62097,pandas-dev/pandas,DEPR: rename 'unit' keyword in to_datetime etc,2025-08-12T19:27:16+00:00
+634,62098,pandas-dev/pandas,ENH: Remove the DataFrame.attrs saving to parquet metadata on Pandas' side,2025-08-12T21:30:17+00:00
+635,30419,matplotlib/matplotlib,[Bug]: Event handling with input in callback function,2025-08-13T00:31:09+00:00
+636,62109,pandas-dev/pandas,BUG: `pd.api.types.is_string_dtype()` returns inconsistent results for Categorical series vs dtype,2025-08-14T21:25:36+00:00
+637,30432,matplotlib/matplotlib,Help with building older Matplotlib versions,2025-08-15T01:46:10+00:00
+638,62129,pandas-dev/pandas,REF/API: Move ArrowDtype(pa.foo_string()) into StringDtype(...),2025-08-16T01:28:29+00:00
+639,7738,huggingface/datasets,Allow saving multi-dimensional ndarray with dynamic shapes,2025-08-18T02:23:51+00:00
+640,7739,huggingface/datasets,"Replacement of ""Sequence"" feature with ""List"" breaks backward compatibility",2025-08-18T17:28:38+00:00
+641,30442,matplotlib/matplotlib,[ENH]: Add OrientedRectangleSelector (interactive rotated rectangle selector),2025-08-19T08:01:19+00:00
+642,62144,pandas-dev/pandas,BUG / API: setitem on pandas object fails if underlying numpy array is read-only,2025-08-19T15:11:31+00:00
+643,62146,pandas-dev/pandas,"BUG: Fails to Build on Raspberry Pi 3 (tested both 2.1.4, 2.3.1 and main Branch)",2025-08-19T16:49:22+00:00
+644,7742,huggingface/datasets,module 'pyarrow' has no attribute 'PyExtensionType',2025-08-20T06:14:33+00:00
+645,62154,pandas-dev/pandas,BUG: resampling with origin=end_date includes extra elements in the bucket,2025-08-20T12:21:22+00:00
+646,7745,huggingface/datasets,"Audio mono argument no longer supported, despite class documentation",2025-08-22T12:15:41+00:00
+647,7746,huggingface/datasets,Fix: Canonical 'multi_news' dataset is broken and should be updated to a Parquet version,2025-08-22T12:52:03+00:00
+648,7751,huggingface/datasets,Dill version update,2025-08-27T07:38:30+00:00
+649,62207,pandas-dev/pandas,ENH: Infer enums as categories,2025-08-28T14:21:08+00:00
+650,62219,pandas-dev/pandas,API: `freq` or `step` for base class Index?,2025-08-29T22:13:01+00:00
+651,30500,matplotlib/matplotlib,[ENH]: ConciseDateFormatter option to control location of offset label,2025-09-01T01:00:55+00:00
+652,30503,matplotlib/matplotlib,Make Widget.useblit robust against underlying canvas changes,2025-09-02T09:26:54+00:00
+653,62235,pandas-dev/pandas,BUG: writing categorical of intervals (pd.cut() output) to Parquet is not supported,2025-09-02T12:36:34+00:00
+654,8220,networkx/networkx,ENH: `tree`: move `tree_broadcast_center` and `tree_broadcast_time` to `nx.tree`,2025-09-02T16:20:31+00:00
+655,7753,huggingface/datasets,"datasets massively slows data reads, even in memory",2025-09-04T01:45:24+00:00
+656,30515,matplotlib/matplotlib,[ENH]: Built-in crosshair tool through gui-native crosshair cursor,2025-09-04T22:26:39+00:00
+657,30519,matplotlib/matplotlib,[ENH]: Add mechanism for feature flags,2025-09-05T07:51:04+00:00
+658,7756,huggingface/datasets,"datasets.map(f, num_proc=N) hangs with N>1 when run on import",2025-09-05T10:32:01+00:00
+659,30527,matplotlib/matplotlib,Bivariate and multivariate colorbar,2025-09-08T12:38:26+00:00
+660,30528,matplotlib/matplotlib,Better bivariate and multivariate colormaps,2025-09-08T12:49:30+00:00
+661,30529,matplotlib/matplotlib,Examples using Bivariate and Multivariate color maps,2025-09-08T13:08:26+00:00
+662,7758,huggingface/datasets,Option for Anonymous Dataset link,2025-09-08T20:20:10+00:00
+663,7759,huggingface/datasets,Comment/feature request: Huggingface 502s from GHA,2025-09-09T11:59:20+00:00
+664,7760,huggingface/datasets,Hugging Face Hub Dataset Upload CAS Error,2025-09-10T10:01:19+00:00
+665,62311,pandas-dev/pandas,CI: Enable GitHub Actions CI for ppc64le (Power architecture) support,2025-09-10T10:27:28+00:00
+666,30546,matplotlib/matplotlib,[MNT]: Replace TextPath by Text().to_path(),2025-09-11T08:14:20+00:00
+667,30547,matplotlib/matplotlib,[MNT]: Revamp `draw_path_collection()` API,2025-09-11T10:01:47+00:00
+668,30549,matplotlib/matplotlib,[Bug]: Inconsistent line anti-aliasing in PolyCollection,2025-09-11T19:00:33+00:00
+669,7766,huggingface/datasets,cast columns to Image/Audio/Video with `storage_options`,2025-09-12T18:51:01+00:00
+670,7767,huggingface/datasets,Custom `dl_manager` in `load_dataset`,2025-09-12T19:06:23+00:00
+671,62337,pandas-dev/pandas,BUG: factorize does not preserve extension dtypes,2025-09-14T05:14:03+00:00
+672,30555,matplotlib/matplotlib,[ENH]: Update Slider Range (valmin and valmax),2025-09-14T13:00:30+00:00
+673,62340,pandas-dev/pandas,BUG: NaN categorical in multi-level column gets replaced in to_excel output,2025-09-14T20:52:53+00:00
+674,7772,huggingface/datasets,Error processing scalar columns using tensorflow.,2025-09-15T10:36:31+00:00
+675,30568,matplotlib/matplotlib,[MNT]: Drop support for type3 embedding in pdf?,2025-09-16T08:35:32+00:00
+676,8269,networkx/networkx,[Feature Request] Add Directed Steiner Tree Approximation (Charikar et al. 1999),2025-09-16T09:29:48+00:00
+677,8275,networkx/networkx,[Feature Request] Add the new fastest way to find the shortest paths in graph,2025-09-17T06:55:51+00:00
+678,62361,pandas-dev/pandas,BUG: `sort_index` failing on MultiIndex with label name when key is used,2025-09-17T10:36:56+00:00
+679,62365,pandas-dev/pandas,ENH: Add support for the standard library `compression.zstd` in Python 3.14,2025-09-17T15:29:54+00:00
+680,30578,matplotlib/matplotlib,[MNT]: Deferred colormap creation,2025-09-17T22:16:42+00:00
+681,30585,matplotlib/matplotlib,[ENH]: Separate autoscale_x_left and autoscale_x_right (and likewise for y),2025-09-18T17:02:18+00:00
+682,62414,pandas-dev/pandas,ENH: Disable sorting groups by default in `groupby`,2025-09-22T18:28:50+00:00
+683,62423,pandas-dev/pandas,"API/REF: consistent error messages, arithmetic rules",2025-09-23T15:24:08+00:00
+684,7788,huggingface/datasets,`Dataset.to_sql` doesn't utilize `num_proc`,2025-09-24T20:34:47+00:00
+685,62449,pandas-dev/pandas,ENH: Performance enhancements to nanops using `numba`,2025-09-25T15:29:49+00:00
+686,30602,matplotlib/matplotlib,[ENH]: Scrollable Sliders,2025-09-25T16:55:05+00:00
+687,62451,pandas-dev/pandas,"BUG: ""Field type has incompatible types"" in loading GCS parquet with read_parquet ",2025-09-25T16:59:43+00:00
+688,30604,matplotlib/matplotlib,[ENH]: Ability to set legend ncols parameter in mplstyle,2025-09-26T07:22:44+00:00
+689,62464,pandas-dev/pandas,ENH: Migrate from ujson to orjson,2025-09-26T12:11:33+00:00
+690,62468,pandas-dev/pandas,BUG: indexing large df silently fails non-deterministically,2025-09-26T20:24:01+00:00
+691,7793,huggingface/datasets,"Cannot load dataset, fails with nested data conversions not implemented for chunked array outputs",2025-09-27T01:03:12+00:00
+692,62473,pandas-dev/pandas,"BUG: ""boolean value of NA is ambiguous"" when doing iloc on nullable integer series",2025-09-27T06:56:37+00:00
+693,62477,pandas-dev/pandas,BUG: incorrect `cumsum` results for pyarrow on windows,2025-09-27T09:41:10+00:00
+694,62515,pandas-dev/pandas,Pandas 2.3.3 and rhel7 compatibility,2025-09-30T09:37:58+00:00
+695,30622,matplotlib/matplotlib,[MNT]: Stop event sources rather than setting them to None in Animation._stop(),2025-09-30T15:52:33+00:00
+696,62558,pandas-dev/pandas,ENH: Adding an empty level at the end of a multi index,2025-10-03T14:01:39+00:00
+697,7798,huggingface/datasets,Audio dataset is not decoding on 4.1.1,2025-10-05T06:37:50+00:00
+698,62601,pandas-dev/pandas,BUG: `DataFrame.resample()` fails across DST transitions with `NonExistentTimeError` in timezone-aware data,2025-10-06T15:37:24+00:00
+699,62602,pandas-dev/pandas,"BUG: `pandas.date_range()` raises `NonExistentTimeError` despite `nonexistent=""shift_forward""` when crossing DST boundaries",2025-10-06T16:00:40+00:00
+700,30642,matplotlib/matplotlib,[Bug]: InsetIndicator rectangle and connectors forced to share clip_on property,2025-10-08T03:50:53+00:00
+701,7802,huggingface/datasets,[Docs] Missing documentation for `Dataset.from_dict`,2025-10-09T02:54:41+00:00
+702,62635,pandas-dev/pandas,BUG: read_csv with pyarrow engine cannot handle single-line CSV files,2025-10-09T07:30:35+00:00
+703,7804,huggingface/datasets,Support scientific data formats,2025-10-09T10:18:24+00:00
+704,7811,huggingface/datasets,SIGSEGV when Python exits due to near null deref,2025-10-09T22:00:11+00:00
+705,30647,matplotlib/matplotlib,[Doc]: `xlim_changed` and `ylim_changed` not listed with other events,2025-10-10T07:13:50+00:00
+706,30649,matplotlib/matplotlib,"[ENH]: Improve how we manage the ""current version"" metadata",2025-10-10T15:05:03+00:00
+707,62651,pandas-dev/pandas,ENH: : Add header Autofilter and optional bold via engine_kwargs in to_excel,2025-10-11T01:25:47+00:00
+708,62682,pandas-dev/pandas,"BUG: self,_box_pa throws unique error when passed categorical or interval dtype",2025-10-13T19:32:13+00:00
+709,62687,pandas-dev/pandas,API/DEPR: disallow casting nan-float to bool,2025-10-14T01:41:01+00:00
+710,7819,huggingface/datasets,Cannot download opus dataset,2025-10-15T09:06:19+00:00
+711,62704,pandas-dev/pandas,ENH: Prevent filling in `unstack()`,2025-10-15T21:03:04+00:00
+712,7821,huggingface/datasets,Building a dataset with large variable size arrays results in error ArrowInvalid: Value X too large to fit in C integer type,2025-10-16T08:45:17+00:00
+713,62719,pandas-dev/pandas,ENH: Add Series.split and DataFrame.split,2025-10-16T20:51:37+00:00
+714,62723,pandas-dev/pandas,"BUG: assignment to `Series.iloc` with `dtype=""object""` converts dictionary to `Series`",2025-10-17T05:29:22+00:00
+715,62766,pandas-dev/pandas,BUG: boolean operations for Index return np.array instead of Index,2025-10-20T20:15:05+00:00
+716,62769,pandas-dev/pandas,BUG: pd.read_parquet raises exception filtering on Period type columns,2025-10-20T23:53:07+00:00
+717,30670,matplotlib/matplotlib,[MNT]: Inconsistent type annotation,2025-10-22T09:55:07+00:00
+718,62802,pandas-dev/pandas,BUG: StringArray with NA behaves different to numpy object array for elementwise comparisons,2025-10-22T23:41:03+00:00
+719,7829,huggingface/datasets,Memory leak / Large memory usage with num_workers = 0 and numerous dataset within DatasetDict,2025-10-24T09:51:38+00:00
+720,30679,matplotlib/matplotlib,"[ENH]: A ""CenteredAsinhNorm"" would be useful",2025-10-24T16:22:07+00:00
+721,62833,pandas-dev/pandas,ENH: Add convenience API to summarize null counts grouped by dtype (e.g. df.dtype_nulls.summary()),2025-10-25T07:21:22+00:00
+722,62883,pandas-dev/pandas,BUILD: arm32 cross compile issues,2025-10-27T20:35:11+00:00
+723,7834,huggingface/datasets,Audio.cast_column() or Audio.decode_example() causes Colab kernel crash (std::bad_alloc),2025-10-27T22:02:00+00:00
+724,62903,pandas-dev/pandas,BUG: `pd.concat()` produces invalid index when inputs have `Int64Dtype` index with `NA`s,2025-10-29T01:54:42+00:00
+725,62918,pandas-dev/pandas,DEPR: Series.combine with non-Series,2025-10-30T17:52:24+00:00
+726,62922,pandas-dev/pandas,BUG: read_parquet fails when passing a list of remote files (gcs),2025-10-30T19:49:16+00:00
+727,62926,pandas-dev/pandas,BUG: indexing a MultiIndex-ed DataFrame (only) with a scalar on a level and a slice on another doesn't drop a level,2025-10-30T21:53:37+00:00
+728,62930,pandas-dev/pandas,ENH: Update `testing.assert_frame_equal` message to list all cols with diffs,2025-10-31T00:14:48+00:00
+729,62936,pandas-dev/pandas,BUG: timeseries (tz-aware) .plot() fails if timeseries begin is at edge of DST change-over,2025-10-31T09:12:39+00:00
+730,62937,pandas-dev/pandas,BUG: rolling().corr() crash with time period,2025-10-31T13:44:07+00:00
+731,30718,matplotlib/matplotlib,[Bug]: Clip box property of ax.text(...) has no effect,2025-11-02T18:52:02+00:00
+732,30727,matplotlib/matplotlib,[ENH]: EngFormatter to print as significant figures,2025-11-04T23:41:19+00:00
+733,63007,pandas-dev/pandas,BUG: Inconsistency between `Series[float].__rfloordiv__([timedelta])` and `rfloordiv` and further,2025-11-06T09:03:29+00:00
+734,63014,pandas-dev/pandas,ENH: prefix support for pd.merge,2025-11-06T19:17:13+00:00
+735,63030,pandas-dev/pandas,ENH: Standardize calculation of Pearson correlation,2025-11-07T17:22:12+00:00
+736,63049,pandas-dev/pandas,ENH: Optional preservation of Sparse columns in Parquet/Feather via Arrow metadata,2025-11-09T02:01:16+00:00
+737,63064,pandas-dev/pandas,API: Series[bool with missing] + bool consistency,2025-11-10T17:27:44+00:00
+738,30738,matplotlib/matplotlib,[DOC] Plotting common 3D mesh files in matplotlib,2025-11-10T19:30:27+00:00
+739,30739,matplotlib/matplotlib,"[Bug]: grouped_bar can pass label and color twice, causing TypeError",2025-11-11T00:55:20+00:00
+740,7861,huggingface/datasets,Performance Issue: save_to_disk() 200-1200% slower due to unconditional flatten_indices(),2025-11-11T11:05:38+00:00
+741,63084,pandas-dev/pandas,DOC: missing docs for `pd.col` Expression objects,2025-11-11T22:40:31+00:00
+742,63094,pandas-dev/pandas,API: consistently preserve null values for `**0` in nullable dtypes,2025-11-12T10:10:42+00:00
+743,63095,pandas-dev/pandas,BUG: Inconsistency of `BooleanArray.__and__` with `pd.NA` and `[pd.NA]`,2025-11-12T10:17:43+00:00
+744,30747,matplotlib/matplotlib,[Bug]: Autoscale not synced between shared axes when interactively zooming,2025-11-12T13:33:33+00:00
+745,63099,pandas-dev/pandas,API: reconsider returning read-only arrays from DataFrame/Series .array/.values/__array__,2025-11-12T18:30:27+00:00
+746,7863,huggingface/datasets,Support hosting lance / vortex / iceberg / zarr datasets on huggingface hub,2025-11-13T00:51:07+00:00
+747,7864,huggingface/datasets,add_column and add_item erroneously(?) require new_fingerprint parameter,2025-11-13T02:56:49+00:00
+748,7867,huggingface/datasets,NonMatchingSplitsSizesError when loading partial dataset files,2025-11-13T12:03:23+00:00
+749,63105,pandas-dev/pandas,"String dtype: known differences and performance considerations for ""pyarrow"" vs ""python"" storage variants",2025-11-13T13:44:33+00:00
+750,63116,pandas-dev/pandas,ENH: Add mapping of nullable columns to pandas.to_sql,2025-11-14T22:37:43+00:00
+751,30765,matplotlib/matplotlib,[MNT]: Changing the release workflow for external builds,2025-11-18T23:52:54+00:00
+752,7872,huggingface/datasets,IterableDataset does not use features information in to_pandas,2025-11-19T17:12:59+00:00
+753,30772,matplotlib/matplotlib,[ENH]: Adding Zoom Option in Interactive 3D plot,2025-11-21T09:30:07+00:00
+754,63168,pandas-dev/pandas,BUG: read_csv failure to convert dtype is not considered a 'bad line',2025-11-21T12:48:26+00:00
+755,7879,huggingface/datasets,python core dump when downloading dataset,2025-11-24T06:22:53+00:00
+756,63187,pandas-dev/pandas,"BUG: `.loc[:, [*labels]]` inconsistently reorders `MultiIndex`ed `Series` and `DataFrame`s",2025-11-24T09:35:15+00:00
+757,63207,pandas-dev/pandas,PDEP-8 inplace keyword deprecation - implementation tracker issue,2025-11-26T09:38:31+00:00
+758,7880,huggingface/datasets,Spurious label column created when audiofolder/imagefolder directories match split names,2025-11-26T13:36:24+00:00
+759,7882,huggingface/datasets,Inconsistent loading of LFS-hosted files in epfml/FineWeb-HQ dataset,2025-11-26T14:06:02+00:00
+760,63215,pandas-dev/pandas,API: provide (advanced) utility to update (swap) the underlying array of a Series in-place,2025-11-26T22:23:28+00:00
+761,63221,pandas-dev/pandas,BUG: PyArrow string: list indexing and negative indices fail after str.split(),2025-11-27T19:51:01+00:00
+762,63225,pandas-dev/pandas,"BUG: Trying to add an object with __iter__ but no __len__ using .loc[row, col] fails",2025-11-28T02:27:00+00:00
+763,63250,pandas-dev/pandas,BUG: Inconsistency between `Series[bool].__truediv__(list[bool])` and `Series[bool].truediv(list[bool])`,2025-12-02T09:56:23+00:00
+764,7894,huggingface/datasets,embed_table_storage crashes (SIGKILL) on sharded datasets with Sequence() nested types,2025-12-03T04:20:06+00:00
+765,63270,pandas-dev/pandas,ENH: Add `unit` argument to `to_datetime` and `to_timedelta` to avoid value-dependent parsing,2025-12-05T02:34:04+00:00
+766,63271,pandas-dev/pandas,"BUG: Unexpected behaviour in .loc method when looking for ""None"" values",2025-12-05T09:31:31+00:00
+767,63275,pandas-dev/pandas,API: default to microseconds for Timestamp/Timedelta creation from numeric input,2025-12-05T15:18:24+00:00
+768,63277,pandas-dev/pandas,ENH: Support `pd.col` in `.loc` for Series,2025-12-05T18:09:48+00:00
+769,63288,pandas-dev/pandas,BUG: Adding pyarrow column to missing column changes to NaN in DataFrame addition,2025-12-06T21:22:25+00:00
+770,30828,matplotlib/matplotlib,[MNT]: Collect style properties in a dedicated object,2025-12-09T11:12:59+00:00
+771,7900,huggingface/datasets,`Permission denied` when sharing cache between users,2025-12-09T16:41:47+00:00
+772,63315,pandas-dev/pandas,BUG: OSError 22 (Invalid argument) in tzconversion tests on Windows/Python 3.11,2025-12-09T20:04:46+00:00
+773,63317,pandas-dev/pandas,BUG: `DataFrame.apply(axis='columns')` loses pyarrow-backed dtypes / does not preserve dtype_backend,2025-12-09T22:46:44+00:00
+774,30833,matplotlib/matplotlib,Tests in Distribution Files,2025-12-10T17:39:35+00:00
+775,63328,pandas-dev/pandas,BUG: inconsistency with missing values comparison,2025-12-11T08:05:28+00:00
+776,7901,huggingface/datasets,ShuffledDataSourcesArrowExamplesIterable cannot properly resume from checkpoint,2025-12-12T06:57:32+00:00
+777,7902,huggingface/datasets,The child process retrieves the dataset directly from the main process instead of executing `memory_mapped_arrow_table_from_file`.,2025-12-12T12:37:44+00:00
+778,30851,matplotlib/matplotlib,[Bug]: Random timeout failures in CI,2025-12-13T09:31:53+00:00
+779,7904,huggingface/datasets,"Request: Review pending neuroimaging PRs (#7886 BIDS loader, #7887 lazy loading)",2025-12-14T20:34:31+00:00
+780,63371,pandas-dev/pandas,BUG: (pandas 3.0rc0) `str.cat` is not retaining `index` dtype,2025-12-15T19:45:25+00:00
+781,63374,pandas-dev/pandas,ENH: Vectorization (e.g. SIMD) in pandas' Hashtable Operations for Performance Improvement,2025-12-16T03:58:47+00:00
+782,8390,networkx/networkx,ENH: Add support for callables to capacity attributes in flow algorithms,2025-12-16T23:36:40+00:00
+783,63393,pandas-dev/pandas,REGR: registered accessors are no longer cached per DataFrame,2025-12-17T09:45:47+00:00
+784,30877,matplotlib/matplotlib,[DOC] [BLD] Building / developing matplotlib with uv & pixi,2025-12-18T04:59:10+00:00
+785,63417,pandas-dev/pandas,PERF/API: arithmetic result.index.dtype with mismatched-dtype equal-values indexes,2025-12-18T23:33:33+00:00
+786,30883,matplotlib/matplotlib,[MNT]: More efficient CI usage,2025-12-19T10:42:20+00:00
+787,63433,pandas-dev/pandas,BUG: DataFrame.astype leave the dataframe extremely fragmented (one block per column),2025-12-19T16:11:59+00:00
+788,7909,huggingface/datasets,Support cast_kwargs in cast_columns,2025-12-20T10:02:07+00:00
+789,30890,matplotlib/matplotlib,[ENH]: Built-in support for multi-color and multi-style text.,2025-12-22T04:10:33+00:00
+790,63465,pandas-dev/pandas,ENH: display.timedelta_format similar to display.float_format,2025-12-22T22:07:48+00:00
+791,63472,pandas-dev/pandas,BUG: specifying unit in to_datetime when parsing strings causes different error behaviour,2025-12-23T14:22:14+00:00
+792,7914,huggingface/datasets,[ROCm] please install 'torchcodec',2025-12-24T19:39:17+00:00
+793,30898,matplotlib/matplotlib,[Bug]: Blitting + draw_event behaves inconsistently between QtAgg and TkAgg backends #29928,2025-12-25T13:13:24+00:00
+794,7915,huggingface/datasets,GDPval dataset Word docs corrupted,2025-12-25T13:56:55+00:00
+795,7917,huggingface/datasets,IterableDataset supports automatic sharding,2025-12-27T16:48:29+00:00
+796,30911,matplotlib/matplotlib,[MNT]: move Windows tests to GitHub Actions?,2025-12-30T12:47:46+00:00
+797,63511,pandas-dev/pandas,ENH: first-class UUID support,2025-12-30T13:36:13+00:00
+798,63526,pandas-dev/pandas,BUG: `.loc` slicing fails on PyArrow-backed date index,2025-12-31T21:44:11+00:00
+799,63527,pandas-dev/pandas,BUG: PyArrow-backed datetime index missing numpy-like attributes,2025-12-31T22:50:48+00:00
+800,7927,huggingface/datasets,Using Stateful Dataloader with Split Dataset By Node and DCP for DDP,2026-01-01T22:27:07+00:00
+801,7928,huggingface/datasets,`load_dataset` `revision` param not respected when fetching from cache,2026-01-02T08:20:47+00:00
+802,63559,pandas-dev/pandas,DEPR: Series.round and Series.clip on non-numeric and non-object dtypes,2026-01-03T12:50:21+00:00
+803,30933,matplotlib/matplotlib,[MNT]: Lazy imports in python 3.15+,2026-01-04T17:30:30+00:00
+804,63572,pandas-dev/pandas,"BUG: pd.read_json fails with ""Value is too big!"" on large integers, while json.load + DataFrame works",2026-01-05T02:48:47+00:00
+805,63574,pandas-dev/pandas,BUG: pd.read_sql returns fewer rows than manual cursor execution for the same query and connection,2026-01-05T09:54:48+00:00
+806,63592,pandas-dev/pandas,DOC: Improve flow of '10 minutes to pandas' by adding an intro to the Merge section,2026-01-06T16:16:19+00:00
+807,63608,pandas-dev/pandas,DOC: document BaseMaskedDtype.from_numpy_dtype,2026-01-08T11:04:31+00:00
+808,7934,huggingface/datasets,xPath cannot handle hdfs:///xxxx properly,2026-01-08T12:14:11+00:00
+809,30944,matplotlib/matplotlib,[ENH]: `Line2D.contains()` to return additional details,2026-01-08T18:35:24+00:00
+810,8456,networkx/networkx,ENH: Add support for hiding edges for callable capacity or weight parameter,2026-01-09T03:10:31+00:00
+811,63633,pandas-dev/pandas,CI: Consider usage of scipy_doctest,2026-01-10T16:50:37+00:00
+812,30953,matplotlib/matplotlib,[ENH]: Plot overlay,2026-01-12T10:27:06+00:00
+813,8471,networkx/networkx,Desired semantics: chordal graphs with self-loops,2026-01-13T00:54:07+00:00
+814,7939,huggingface/datasets,datasets.load_from_disk progress bar optional manual control,2026-01-13T03:19:13+00:00
+815,30961,matplotlib/matplotlib,[Doc]: Setting up development environment guide doesn't work for Ubuntu 24.04 LTS,2026-01-14T03:23:57+00:00
+816,63683,pandas-dev/pandas,String dtype: differences in regex operations because of engine (Python vs RE2),2026-01-14T15:10:26+00:00
+817,63684,pandas-dev/pandas,ENH: `read_excel` function fill merged_area content with left top cell content,2026-01-14T15:26:03+00:00
+818,7946,huggingface/datasets,Question: Is there a faster way to push_to_hub for large image datasets?,2026-01-15T13:54:37+00:00
+819,63712,pandas-dev/pandas,"ENH: Add high-level ""themes"" or ""presets"" to Styler API",2026-01-16T18:50:55+00:00
+820,7947,huggingface/datasets,MMLU get_dataset_config_names provides different lists of subsets in online and offline modes,2026-01-16T19:20:08+00:00
+821,30987,matplotlib/matplotlib,[Bug]: Inconsistent behavior of ax.minorticks_on and ax.grid,2026-01-17T21:55:00+00:00
+822,63732,pandas-dev/pandas,"BUG: Inconsistent NaN detection based on Series dtype, to_numeric dtype_backend, None vs np.nan, strings in orig list",2026-01-18T08:12:37+00:00
+823,63757,pandas-dev/pandas,BUG: inconsistent date string conversion leads to large downstream performance degradation.  ,2026-01-19T16:20:16+00:00
+824,63769,pandas-dev/pandas,BUG: rolling on time-based index wrongly,2026-01-20T02:53:26+00:00
+825,63791,pandas-dev/pandas,BUG: inferred_freq is infers the wrong freq 2BQS-OCT instead of 2BQS-JAN,2026-01-21T10:35:01+00:00
+826,7956,huggingface/datasets,Is the 10k files / folder limit a hard limit for a dataset repo?,2026-01-21T16:37:38+00:00
+827,31008,matplotlib/matplotlib,Discussion: Use of masked arrays internally,2026-01-21T19:20:06+00:00
+828,63803,pandas-dev/pandas,TST: remove PANDAS_FUTURE_INFER_STRING=0 test workflow,2026-01-22T00:08:30+00:00
+829,63830,pandas-dev/pandas,BUG: read_excel with pyarrow backend does not infer correct data type with mixed values inside column,2026-01-23T09:05:26+00:00
+830,63833,pandas-dev/pandas,RLS: 3.0.x releases,2026-01-23T18:25:27+00:00
+831,63842,pandas-dev/pandas,"BUG: `DataFrame[StringDtype].where(DataFrame[bool], list[str])` returns object type instead of StringDtype.",2026-01-24T01:10:02+00:00
+832,31027,matplotlib/matplotlib,[MNT]: Handling of tools defaults,2026-01-24T08:38:50+00:00
+833,63855,pandas-dev/pandas,BUG: ExponentialMovingWindow.agg/aggregate fails when passing a callable,2026-01-24T22:32:50+00:00
+834,63901,pandas-dev/pandas,BUG: string regex operation with unicode escape sequence failing,2026-01-27T15:53:34+00:00
+835,7970,huggingface/datasets,"cast_column(..., Audio) fails with load_dataset(""csv"",)",2026-01-29T09:33:35+00:00
+836,63938,pandas-dev/pandas,BUG: Odd behavior of `Index.searchsorted`,2026-01-29T17:02:17+00:00
+837,31049,matplotlib/matplotlib,TST: Any loaded backend may break CallbackRegistry exception tests,2026-01-30T00:15:51+00:00
+838,31055,matplotlib/matplotlib,[MNT]: Revisit architecture and handling of Artist properties,2026-02-02T09:01:44+00:00
+839,64005,pandas-dev/pandas,"ENH: Determination of result ""flavor"" when based on multiple input flavors",2026-02-03T12:10:33+00:00
+840,7984,huggingface/datasets,Data,2026-02-03T14:01:48+00:00
+841,7986,huggingface/datasets,`Dataset.map()` causes cache miss/fingerprint change when closure captures self containing non-deterministic state.,2026-02-03T19:16:49+00:00
+842,64012,pandas-dev/pandas,BUG: to_datetime does not recast units when passing a DatetimeIndex,2026-02-03T22:23:07+00:00
+843,7990,huggingface/datasets,Dataset.map crashes when first examples return None and later examples return dict — writer not initialized,2026-02-04T10:43:20+00:00
+844,31083,matplotlib/matplotlib,[MNT]: Feed all Qt tests to a single subprocess,2026-02-05T06:13:21+00:00
+845,31097,matplotlib/matplotlib,[MNT]: Add get_shared_z_axes() and get_shared_view_axes(),2026-02-06T06:30:36+00:00
+846,31104,matplotlib/matplotlib,[ENH]: OpenType fonts for mathematical formulas,2026-02-06T08:56:38+00:00
+847,31105,matplotlib/matplotlib,[MNT]: Color normalization in GraphicsContextBase,2026-02-06T11:12:47+00:00
+848,64054,pandas-dev/pandas,ENH: add ability to style index names in to_excel,2026-02-06T12:21:02+00:00
+849,31114,matplotlib/matplotlib,"[Bug]: TkAgg leaves behind ""zombie"" window in IPython sessions with MacOS Tahoe",2026-02-07T17:03:13+00:00
+850,31118,matplotlib/matplotlib,"[MNT]: Analyse, define and document Artist.axes",2026-02-08T08:37:40+00:00
+851,64074,pandas-dev/pandas,ENH: Nearest_in_time fill for time series data,2026-02-08T09:06:28+00:00
+852,31120,matplotlib/matplotlib,[MNT]: verbose toggle for CI,2026-02-08T22:52:27+00:00
+853,7999,huggingface/datasets,Too many dataloader workers: 4 (max is dataset.num_shards=3). Stopping 1 dataloader workers.,2026-02-09T09:26:37+00:00
+854,64107,pandas-dev/pandas,API/BUG: support for operations with custom objects / object dtype,2026-02-10T16:36:57+00:00
+855,31147,matplotlib/matplotlib,[Bug]: Initial save ignores text in a figure with constrained layout,2026-02-13T06:20:25+00:00
+856,8002,huggingface/datasets,"The `Sequence` class in features do not have ""dtype""",2026-02-13T12:45:19+00:00
+857,8005,huggingface/datasets,"Multi-channel audio is automatically cast to mono, num_channels is ignored",2026-02-14T17:28:03+00:00
+858,64150,pandas-dev/pandas,"BUG: DataFrame.unstack(0, sort=False) creates fake column names",2026-02-14T18:01:14+00:00
+859,64152,pandas-dev/pandas,QST: Understanding list-like functions in transform and apply command in pandas,2026-02-14T18:35:59+00:00
+860,8007,huggingface/datasets,Add option for loading audio with video,2026-02-16T09:11:02+00:00
+861,64173,pandas-dev/pandas,API: Period subtraction,2026-02-16T21:44:54+00:00
+862,64174,pandas-dev/pandas,"DEPR: Period ""freq"" -> ""unit""",2026-02-16T22:07:19+00:00
+863,64196,pandas-dev/pandas,BUG: For `infer_dtype` `skipna` is ignored for Period / Interval,2026-02-17T15:32:58+00:00
+864,64198,pandas-dev/pandas,BUG:  `read_excel` with `usecols` still mangles column names when duplicates exist elsewhere in spreadsheet,2026-02-17T16:41:52+00:00
+865,31173,matplotlib/matplotlib,Make downloading pre-built PDF docs easier,2026-02-18T19:03:47+00:00
+866,31175,matplotlib/matplotlib,[ENH]: mutation_aspect for Round BoxStyle type,2026-02-18T21:36:50+00:00
+867,31177,matplotlib/matplotlib,[BUG]: Screen scaling is not properly considered with Tk on X11,2026-02-19T10:53:19+00:00
+868,64238,pandas-dev/pandas,"BUG: convert_dtype with dtype_backend=""numpy_nullable"" return an object with pyarrow storage",2026-02-19T15:20:53+00:00
+869,64239,pandas-dev/pandas,BUG: convert_dtypes does not correctly set the storage in the dtype repr,2026-02-19T15:26:10+00:00
+870,64252,pandas-dev/pandas,BUG: inconsitant parsing of dates with us to ns resolution,2026-02-20T11:03:03+00:00
+871,64253,pandas-dev/pandas,BUG: The order of items in `pd.concat` matters for the resulting `.index.freq`.,2026-02-20T11:45:45+00:00
+872,64255,pandas-dev/pandas,ENH: `series.argsort(stable=True)` currently does nothing,2026-02-20T18:01:56+00:00
+873,64266,pandas-dev/pandas,ENH: Methods to potentially change for future.python_scalars,2026-02-21T18:48:13+00:00
+874,8015,huggingface/datasets,Iterating a streaming dataset correctly in random order,2026-02-22T11:34:06+00:00
+875,64280,pandas-dev/pandas,BUG: pandas.array accepts multidimensional arguments,2026-02-23T01:54:05+00:00
+876,31195,matplotlib/matplotlib,[ENH]: Design considerations for discrete colormapping,2026-02-24T17:02:41+00:00
+877,64297,pandas-dev/pandas,`IntervalDtype.__from_arrow__` raises a TypeError when subtype is a nullable ExtensionDtype,2026-02-24T17:53:13+00:00
+878,64298,pandas-dev/pandas,BUG: pandas discarding index when loading from parquet,2026-02-24T18:23:26+00:00
+879,64300,pandas-dev/pandas,ENH: Plotting support for ExtensionArrays,2026-02-24T19:06:52+00:00
+880,31199,matplotlib/matplotlib,[Doc]: better document discrete colormapping,2026-02-25T12:27:09+00:00
+881,64308,pandas-dev/pandas,ENH: add Expression for index,2026-02-25T15:36:35+00:00
+882,31206,matplotlib/matplotlib,[ENH] Support for multicolour fonts,2026-02-27T09:36:05+00:00
+883,31207,matplotlib/matplotlib,[ENH] Support for CBDT/CBLC-encoded colour glyphs,2026-02-27T09:41:48+00:00
+884,31208,matplotlib/matplotlib,[ENH] Support for SBIX-encoded colour glyphs,2026-02-27T10:11:22+00:00
+885,31209,matplotlib/matplotlib,[ENH] Support for COLRv0-encoded colour glyphs,2026-02-27T10:20:20+00:00
+886,31210,matplotlib/matplotlib,[ENH] Support for COLRv1-encoded colour glyphs,2026-02-27T10:26:14+00:00
+887,31211,matplotlib/matplotlib,[ENH] Support for SVG-encoded colour glyphs,2026-02-27T10:30:15+00:00
+888,64337,pandas-dev/pandas,BUG: Dataframe.to_sql() overrides registered date and time converters in SQLite,2026-02-27T12:20:59+00:00
+889,8029,huggingface/datasets,`cache_dir` option in `download_config` in `load_dataset` is not respected,2026-02-27T16:05:30+00:00
+890,31213,matplotlib/matplotlib,[MNT]: 3D z axis margin is handled differently than x and z,2026-02-27T23:20:56+00:00
+891,64345,pandas-dev/pandas,DISC: pd.option_context thread-safety,2026-02-28T03:12:45+00:00
+892,8034,huggingface/datasets,[BUG] load_datasets() cannot use the generated Arrow cache correctly,2026-02-28T08:11:23+00:00
+893,31227,matplotlib/matplotlib,[ENH]: Allow contour levels to be decreasing,2026-03-02T20:50:02+00:00
+894,31232,matplotlib/matplotlib,[Bug]: Resetting aspect to auto does not work for axes with twinx,2026-03-04T11:05:10+00:00
+895,64391,pandas-dev/pandas,BUG: `eval` not working with string containment,2026-03-04T13:30:13+00:00
+896,31233,matplotlib/matplotlib,[Bug]: Adjusting the facecolors of Poly3DCollection accidentally shuffles the color order,2026-03-04T13:30:21+00:00
+897,31239,matplotlib/matplotlib,[MNT]: hexbin upper-case `C` as keyword-argument,2026-03-05T08:51:04+00:00
+898,64429,pandas-dev/pandas,PERF: Avoid intermediate `ndarray[object]` array when constructing a pyarrow-backed string data from untyped data,2026-03-06T17:53:26+00:00
+899,64454,pandas-dev/pandas,Add ARM64 (AArch64) benchmark coverage (ASV runner) to monitor perf regressions and gaps (incl. Kunpeng),2026-03-07T16:24:36+00:00
+900,31257,matplotlib/matplotlib,[Bug]: Update of markers' fillstyle removes rotation transform,2026-03-09T08:21:20+00:00
+901,64528,pandas-dev/pandas,ENH: Check type of objects in assert_series_equal,2026-03-11T11:35:37+00:00
+902,31289,matplotlib/matplotlib,[Bug]: QtAgg backend does not preserve linestyles refined by dash tuples after editing parameters,2026-03-12T08:17:42+00:00
+903,64560,pandas-dev/pandas,API: how to treat numpy string dtype (and aliases) as dtype argument in constructors?,2026-03-12T15:41:45+00:00
+904,64578,pandas-dev/pandas,BUG: constructing string ArrowExtensionArray with NaNs fails,2026-03-13T07:56:35+00:00
+905,8065,huggingface/datasets,ARM audio support broken,2026-03-13T22:06:36+00:00
+906,64588,pandas-dev/pandas,ENH: pd.interpolate() add skip interpolation when gap exceeds limit.,2026-03-14T00:32:10+00:00
+907,31312,matplotlib/matplotlib,[ENH]: Use deterministic solver instead of constrained_layout?,2026-03-16T04:08:42+00:00
+908,64663,pandas-dev/pandas,BUG: to_typst creates empty cells for hidden items,2026-03-17T19:21:17+00:00
+909,8575,networkx/networkx,Review the threshold graph tools in NetworkX,2026-03-18T12:28:33+00:00
+910,31328,matplotlib/matplotlib,[ENH]: Support third-party layout engine string names,2026-03-18T20:20:04+00:00
+911,31335,matplotlib/matplotlib,[Bug]: Changing the color of a contour plot messes up the contour lines and fill colors,2026-03-19T08:59:27+00:00
+912,64703,pandas-dev/pandas,Hosting of the pandas website and documentation,2026-03-19T10:39:08+00:00
+913,64733,pandas-dev/pandas,ENH: Make NaN repr for `Index` match `Series/DataFrame`,2026-03-20T00:27:07+00:00
+914,31339,matplotlib/matplotlib,[ENH]: add `loc` parameter to the `fig.suptitle()`,2026-03-20T12:19:42+00:00
+915,8577,networkx/networkx,Some thoughts after using Panther/Panther++,2026-03-21T13:57:34+00:00
+916,31346,matplotlib/matplotlib,[Sec]: Disable auto-loading custom matplotlibrc files,2026-03-21T17:26:35+00:00
+917,64824,pandas-dev/pandas,BUG: inconsistent behaviour of min_rows and max_rows in dataframe to_string in pd 3.0.1,2026-03-24T11:18:29+00:00
+918,31378,matplotlib/matplotlib,DOC: Systemic fix for missing thumbnails in user_interfaces gallery examples,2026-03-25T07:15:39+00:00
+919,64847,pandas-dev/pandas,CI: Migrate Conda/Mamba usage in CI with Pixi,2026-03-25T23:25:03+00:00
+920,64872,pandas-dev/pandas,BUG: `str.replace` inconsistency between `pyarrow` and `python` types,2026-03-26T02:00:45+00:00
+921,31396,matplotlib/matplotlib,[MNT]: Consider consolidating the Formatter API,2026-03-26T17:11:46+00:00
+922,64885,pandas-dev/pandas,CI: Increased instability in Github Actions,2026-03-26T20:28:52+00:00
+923,64889,pandas-dev/pandas,BUG: `Index(ArrowExtensionArray(...))` cannot be `get_indexer`ed,2026-03-27T12:06:13+00:00
+924,64915,pandas-dev/pandas,ENH: Recursive Struct Explode,2026-03-29T20:14:10+00:00
+925,31424,matplotlib/matplotlib,[Bug]: Umbrella issue: matplotlib C/C++ Extension Analysis Report,2026-03-29T22:43:33+00:00
+926,64969,pandas-dev/pandas,BUG: dtype check fails for `object` due to being `NumpyEADtype` in `frame.to_series`,2026-03-31T18:59:03+00:00
+927,64979,pandas-dev/pandas,Consider hardening XMLParser configuration in read_xml (XXE risk with untrusted input),2026-04-01T13:22:57+00:00
+928,64980,pandas-dev/pandas,BUG: unintended side-effect of colorbar in plot(),2026-04-01T13:34:29+00:00
+929,65034,pandas-dev/pandas,BUG: `dtype_backend='pyarrow'` doesn't work for all types,2026-04-02T21:03:12+00:00
+930,65050,pandas-dev/pandas,DOC: Clarify rolling window behavior with negative offset strings and froward rolling windows,2026-04-03T10:24:35+00:00
+931,31467,matplotlib/matplotlib,[ENH]: add a thinner minor grid to 3D plots,2026-04-07T20:01:15+00:00
+932,8125,huggingface/datasets,Feature request: being able to disable chmod for flat permission filesystems,2026-04-08T08:17:14+00:00
+933,31474,matplotlib/matplotlib,[Doc]: Improve documentation of animations in jupyter notebooks,2026-04-08T09:05:17+00:00
+934,31493,matplotlib/matplotlib,[Bug]: contour/contourf silently produces nonsense levels when Z is constant (zmin == zmax),2026-04-13T07:18:06+00:00
+935,31496,matplotlib/matplotlib,[Doc]: Define: User Guide > Plotting data,2026-04-13T16:26:46+00:00
+936,65237,pandas-dev/pandas,"BUG: read_csv() into FloatingArrays converts np.nan into pd.NA, even with distinguish_nan_and_na=True",2026-04-14T22:29:44+00:00
+937,31506,matplotlib/matplotlib,[Doc]: fontweight options not documented correctly,2026-04-16T11:04:41+00:00
+938,65308,pandas-dev/pandas,BUG: pyarrow engine timestamp conversion fails when doing pd.read_csv,2026-04-20T08:00:08+00:00
+939,31537,matplotlib/matplotlib,[Bug]: Erroneous text wrapping when text vertical position is 1.0,2026-04-20T16:16:49+00:00
+940,65324,pandas-dev/pandas,"MultiIndex: inconsistent 'mixed depth' squeezing behavior across axes, NA types, and operations",2026-04-21T23:46:38+00:00
+941,65326,pandas-dev/pandas,API/BUG: .loc tuple ambiguity with MultiIndex when nlevels == ndim,2026-04-21T23:57:48+00:00
+942,65345,pandas-dev/pandas,"BUG: interpolate(method=""linear"", limit_direction=""forward"") leaves NAs unchanged for pyarrow dtype",2026-04-23T12:34:36+00:00
+943,8149,huggingface/datasets,[Optimization] Prevent per-thread instantiation of Cloud Storage FileSystem during Data loading initialization,2026-04-23T13:09:19+00:00
+944,31559,matplotlib/matplotlib,[ENH]: Add label vertical alignment to rcparams,2026-04-23T21:56:49+00:00
+945,65381,pandas-dev/pandas,PERF: Replace dateutil-based parser fallback with a regex-based parser in tslibs.parsing,2026-04-27T17:29:35+00:00
+946,8159,huggingface/datasets,"tests/conftest.py, tests/_test_patching.py, tests/fixtures/fsspec.py and other files are missing from the PYPI distribution",2026-04-28T20:01:05+00:00
+947,31586,matplotlib/matplotlib,[MNT]: Replace the use of FancyArrowPatch in streamplot by a simpler marker container,2026-04-29T13:39:52+00:00
+948,65419,pandas-dev/pandas,BUG: Index.get_indexer matches pd.NA against NaN for list input but not ndarray input,2026-04-29T20:38:08+00:00
+949,8165,huggingface/datasets,IterableDataset: corrupted EXIF image silently terminates streaming iterator instead of skipping the sample,2026-04-30T02:20:54+00:00
+950,31597,matplotlib/matplotlib,[Doc]: incorporate artist architecture content from matplotlib papers,2026-05-01T15:05:32+00:00
+951,31607,matplotlib/matplotlib,[ENH]: Mixed shading in pcolor/pcolormesh,2026-05-02T13:26:37+00:00
+952,65452,pandas-dev/pandas,API: tracker for single-element listlike RHS inconsistency in setitem,2026-05-03T15:51:56+00:00
+953,8178,huggingface/datasets,The full dataset viewer is not available (click to read why). Only showing a preview of the rows. Job manager crashed while running this job (missing heartbeats). Error code:   JobManagerCrashedError,2026-05-07T08:33:48+00:00
+954,65524,pandas-dev/pandas,BUG: read_excel with index_col and parse_dates=True fails to create a DatetimeIndex when used with the pyarrow backend,2026-05-08T10:41:30+00:00
+955,31655,matplotlib/matplotlib,[ENH]: Optional axes-aware text wrapping for wrap=True,2026-05-11T04:17:29+00:00
+956,65608,pandas-dev/pandas,BUG: Timedeltas less than 1 second truncate to 0,2026-05-12T00:12:53+00:00
+957,8197,huggingface/datasets,Feature Request / Discussion: Skip origin_metadata fetch when streaming=True?,2026-05-15T07:43:57+00:00
+958,65649,pandas-dev/pandas,BUG: assert_index_equal does not raised on extra unused levels,2026-05-15T11:04:58+00:00
+959,8201,huggingface/datasets,Encountered an error when loading data in WebDataset format using `load_datasets` during multi-matchines training.,2026-05-15T19:21:24+00:00
+960,8204,huggingface/datasets,Please enable Private Vulnerability Reporting,2026-05-16T13:28:01+00:00
+961,31715,matplotlib/matplotlib,[Bug]: Backend falls back to Agg even though TkAgg will work,2026-05-20T03:30:45+00:00
+962,31730,matplotlib/matplotlib,[Bug]: Figure.add_artist() fails to re-render an image previously added via Figure.figimage() after .remove(),2026-05-22T12:50:56+00:00
+963,65712,pandas-dev/pandas,API: how to handle time zone (DST) transitions in the distant future?,2026-05-22T16:33:03+00:00
+964,65734,pandas-dev/pandas,"DOC: Add ""Try it in your browser!"" interactive button to documentation",2026-05-25T17:12:16+00:00
+965,31748,matplotlib/matplotlib,[Bug]: Re-adding annotation texts to the axes causes them to be obscured,2026-05-26T04:03:11+00:00
+966,65735,pandas-dev/pandas,BUG: Incoherent dynamic dtype changes in `.map()`,2026-05-26T13:37:47+00:00
+967,65740,pandas-dev/pandas,"BUG: pd.resample() is returning wrong result since pandas 2.2, padding with NaN and changing types",2026-05-27T12:09:38+00:00
+968,31770,matplotlib/matplotlib,[MNT]: macOS backend lacks standard keyboard shortcuts,2026-05-28T19:01:14+00:00
+969,31791,matplotlib/matplotlib,[MNT]: Remove backend state handling from rcParams,2026-05-31T08:52:42+00:00
+970,31793,matplotlib/matplotlib,[MNT]: Inline ContourLabeler into ContourSet,2026-05-31T10:06:56+00:00
+971,65765,pandas-dev/pandas,BUG: pivot_table with multiple values and margins=True return result of margins not correct,2026-05-31T12:45:17+00:00
+972,31802,matplotlib/matplotlib,[Bug]: LaTeX X-Tick Labels are Vertically Misaligned When DPI is Set,2026-06-02T16:53:36+00:00
+973,65805,pandas-dev/pandas,"BUG:  DataFrame.add(fill_value=...) promotes nullable integer dtypes to Float64, inconsistent with Series",2026-06-03T17:01:53+00:00
+974,31809,matplotlib/matplotlib,[Bug]: figure.canvas.manager is set to None in between sequences of matplotlib calls,2026-06-03T17:57:33+00:00
+975,31813,matplotlib/matplotlib,[MNT]: macOS backend uses un-prefixed class names,2026-06-03T18:53:33+00:00
+976,8242,huggingface/datasets,"""eval_strategy"": ""no"" perform evaluation",2026-06-05T18:08:17+00:00
+977,8246,huggingface/datasets,RecursionError when loading GLB file with deeply nested JSON in Mesh feature,2026-06-07T07:10:22+00:00
+978,8247,huggingface/datasets,VORTEXRAG benchmarked on 6 HuggingFace datasets — new open-source RAG framework,2026-06-07T11:14:50+00:00
+979,31858,matplotlib/matplotlib,[Bug]: Event loop behavior differs across backends,2026-06-09T02:18:06+00:00
+980,8253,huggingface/datasets,Feature request: Add a streaming_shard operator for early sample-level sharding when file-level sharding is insufficient,2026-06-09T03:14:46+00:00
+981,8256,huggingface/datasets,Dataset Viewer fails on TSFile datasets,2026-06-10T03:15:32+00:00
+982,31869,matplotlib/matplotlib,[Doc]: coords_demo is not rendered correctly when downloaded as a Jupyter notebook,2026-06-10T11:53:33+00:00
+983,31875,matplotlib/matplotlib,[MNT]: macOS backend likely double-draws renderer output,2026-06-12T03:26:11+00:00
+984,8261,huggingface/datasets,Feature Proposal: Add FunASR Chinese/Multilingual ASR Benchmark Datasets,2026-06-12T10:23:14+00:00
+985,31883,matplotlib/matplotlib,[ENH]: Start Animation in a paused state,2026-06-12T20:00:41+00:00
+986,8269,huggingface/datasets,MetadataConfigs drops parquet shards when exported config rows are non-consecutive,2026-06-14T04:07:09+00:00
+987,31895,matplotlib/matplotlib,[ENH]: macOS backend should match system app icons,2026-06-14T19:20:08+00:00
+988,31899,matplotlib/matplotlib,[Bug]: macOS backend reports wrong button for button_release_event,2026-06-15T03:48:23+00:00
+989,31901,matplotlib/matplotlib,[Bug]: pip install matplotlib flagged as Security Threat,2026-06-15T06:48:23+00:00
+990,65891,pandas-dev/pandas,DOC: Page not found error for versions 1.4 and below,2026-06-16T12:39:05+00:00
+991,65892,pandas-dev/pandas,BUG: Inconsistent nan to None behaviour in replace() with scalar vs list value,2026-06-16T14:36:31+00:00
+992,65899,pandas-dev/pandas,BUG: merge with NaN-labeled join key produces duplicate columns,2026-06-17T21:19:01+00:00
+993,31919,matplotlib/matplotlib,[Bug]: Manually created markers for legends are vertically raised and have sharp edges,2026-06-18T07:43:24+00:00
+994,65915,pandas-dev/pandas,BUG: Plotting with timezone-aware and normalized `DatetimeIndex` drops tz-info,2026-06-20T02:57:28+00:00
+995,31933,matplotlib/matplotlib,[Bug]: macOS backend UI doesn't update on 'o' and 'p' shortcuts,2026-06-21T03:36:23+00:00
+996,31935,matplotlib/matplotlib,[Doc]: examples/api directory?,2026-06-22T10:31:12+00:00
+997,31936,matplotlib/matplotlib,[Bug]: Figure size change on macos in matplotlib 3.11.0 macosx backend,2026-06-22T13:03:11+00:00
+998,31949,matplotlib/matplotlib,"[Bug]: qtagg ""Export Values"" window isn't clickable/visible",2026-06-26T18:23:50+00:00
+999,66080,pandas-dev/pandas,BUG:,2026-06-28T11:54:31+00:00
+1000,31968,matplotlib/matplotlib,[Bug]: macosx backend crashes when used on a worker thread,2026-06-29T16:14:29+00:00
+1001,8293,huggingface/datasets,Support concatenating multiple streaming datasets while preserving the sum of shards,2026-06-30T05:44:23+00:00
+1002,31971,matplotlib/matplotlib,[Bug]: Changing GridSpec column/row ratios after axes creation does not update the figure layout,2026-06-30T07:55:52+00:00
+1003,8296,huggingface/datasets,[security] Symlink-Following Arbitrary File Write via Archive Extraction in huggingface/datasets,2026-06-30T18:46:34+00:00
+1004,31976,matplotlib/matplotlib,[ENH]: Consider using a layout engine by default,2026-07-01T09:56:14+00:00
+1005,31979,matplotlib/matplotlib,[Bug]: pyplot.subplot_tool doesn't always return a SubplotTool,2026-07-02T02:52:14+00:00
+1006,31983,matplotlib/matplotlib,[Bug]: Can not fallback to `kpsewhich` when `luatex` does not work,2026-07-02T09:52:41+00:00
+1007,8302,huggingface/datasets,Turkish DIK-style Syntactic Structure Benchmark Dataset,2026-07-03T15:33:39+00:00
+1008,31991,matplotlib/matplotlib,[Bug]: macOS backend flickers/flashes due to use of timers,2026-07-03T17:30:08+00:00
+1009,66140,pandas-dev/pandas,ENH: Enable LSan in CI,2026-07-03T22:20:23+00:00
+1010,66151,pandas-dev/pandas,BUG: `pivot_table` with `margins=True` raises KeyError when dict aggfunc doesn't cover every aggregated column,2026-07-05T19:12:54+00:00
+1011,8737,networkx/networkx,Exponential running time of simple_cycles with length_bound (_bounded_cycle_search),2026-07-06T08:11:28+00:00
+1012,66177,pandas-dev/pandas,DEPR: read_feather,2026-07-06T20:22:22+00:00
+1013,32005,matplotlib/matplotlib,[Bug]: Axis.get_tick_space could take tick label rotation into account,2026-07-06T21:14:44+00:00
+1014,66203,pandas-dev/pandas,PERF: High overhead in DataFrame.apply(raw=True) due to np.apply_along_axis,2026-07-07T19:19:26+00:00
+1015,32016,matplotlib/matplotlib,[Bug]: macOS: qtagg backend crashes on Control-C after input(),2026-07-08T03:28:43+00:00
+1016,32017,matplotlib/matplotlib,[Bug]: macOS: tkagg backend crashes on Control-C after input(),2026-07-08T03:34:42+00:00
+1017,66255,pandas-dev/pandas,BUG: Float64 vs float64 incorrect result when using empty slice,2026-07-09T23:48:50+00:00
+1018,66263,pandas-dev/pandas,PERF: Skip full array allocation in RangeIndex.isin for small query inputs,2026-07-10T10:19:56+00:00
+1019,66281,pandas-dev/pandas,ENH: Optimize Series.apply User-Defined Functions (UDFs) via JIT Compilation Engine Option,2026-07-10T18:41:46+00:00
+1020,66287,pandas-dev/pandas,"BUG: MultiIndex.set_levels/set_codes give self-contradictory ""must be list-like"" error for a nested value with a scalar level",2026-07-11T01:08:18+00:00
+1021,66289,pandas-dev/pandas,"BUG: merge_asof says ""tolerance must be positive"" but accepts tolerance=0",2026-07-11T07:35:49+00:00
+1022,32039,matplotlib/matplotlib,[MNT]: Use more-inclusive language in _trirefine.py,2026-07-13T03:25:15+00:00
+1023,66329,pandas-dev/pandas,pandas.pydata.org serves no /.well-known/security.txt (RFC 9116),2026-07-14T11:29:49+00:00
+1024,66333,pandas-dev/pandas,DOC: Clarify PeriodIndex.from_fields scalar input requirements,2026-07-14T15:40:24+00:00
+1025,32041,matplotlib/matplotlib,[MNT]: macosx event_loop_is_running is a deceptive name,2026-07-14T18:34:52+00:00
+1026,32044,matplotlib/matplotlib,[Doc]: document provisional flag in API guidelines,2026-07-15T14:59:44+00:00
+1027,32053,matplotlib/matplotlib,[Bug]: Pickle round-tripping a figure incorrectly restores its original DPI instead of a DPI explicitly changed via Figure.set_dpi().,2026-07-17T10:07:26+00:00
+1028,32063,matplotlib/matplotlib,[Bug]: Font fallback bugs,2026-07-18T10:23:18+00:00
+1029,32071,matplotlib/matplotlib,[Doc]: :rc: directive without defaults,2026-07-19T01:54:42+00:00
+1030,66368,pandas-dev/pandas,BUG: `str.split()`/`rsplit()` with no separator on `ArrowDtype` keeps empty whitespace tokens,2026-07-19T07:50:44+00:00
+1031,66372,pandas-dev/pandas,"BUG: `read_excel`: `ValueError: Length of new names must be 1, got 2`",2026-07-19T10:02:31+00:00
+1032,66374,pandas-dev/pandas,BUG: `MultiIndex.__repr__`: inconsistent output,2026-07-19T10:28:33+00:00
+1033,66376,pandas-dev/pandas,"BUG: `read_{csv,excel}(<...>, header=[0,1], index_col=[0,1])` take different `.columns.names`",2026-07-19T11:20:45+00:00
+1034,66377,pandas-dev/pandas,API: `read_excel`: `.index.names` vs `.columns.names`,2026-07-19T12:38:33+00:00
+1035,66378,pandas-dev/pandas,"DOC: `read_{csv,excel}` skip rows (columns) above (before) header (index columns)",2026-07-19T13:03:43+00:00
+1036,32073,matplotlib/matplotlib,[Bug]: Umbrella issue: matplotlib Free-threaded Extension Analysis Report,2026-07-19T13:52:10+00:00
+1037,32074,matplotlib/matplotlib,[ENH]: Per-font size scaling (-> math text),2026-07-19T15:08:11+00:00
+1038,66382,pandas-dev/pandas,"BUG: read_csv(dtype=""category"") ignores dtype_backend for the c and python engines",2026-07-19T22:29:59+00:00
+1039,32076,matplotlib/matplotlib,SubFigure hspace=None incorrectly applies default vertical spacing when wspace is specified,2026-07-20T09:55:53+00:00
+1040,66389,pandas-dev/pandas,ENH: Support `tz_convert` on naive timestamps when naive tz specified,2026-07-20T11:15:22+00:00
+1041,66390,pandas-dev/pandas,BUG: ArrowDtype timestamp comparison with datetime.date scalar loses null propagation,2026-07-20T11:33:27+00:00
+1042,32079,matplotlib/matplotlib,[Bug]: TeX line rendering,2026-07-20T12:46:01+00:00
+1043,66410,pandas-dev/pandas,BUG: Cannot build `pandas` with MSVC,2026-07-21T17:18:06+00:00
+1044,66420,pandas-dev/pandas,ENH: Ability to specify locale in Datetime and strftime for format,2026-07-22T06:31:49+00:00
+1045,66474,pandas-dev/pandas,ENH: Provide a Consistent Round-Trip Contract for Axis Metadata Across Excel and Other IO Formats,2026-07-26T11:31:43+00:00
+1046,32122,matplotlib/matplotlib,[Bug]: Cannot install due to missing `pybind11` headers,2026-07-26T14:08:01+00:00
+1047,32125,matplotlib/matplotlib,Governance of MPL basemap,2026-07-27T02:57:58+00:00
+1048,66490,pandas-dev/pandas,BUG: `factorize(use_na_sentinel=True)` ignores `use_na_sentinel` for pre-encoded PyArrow `DictionaryArray`s,2026-07-27T20:11:43+00:00
+1049,66499,pandas-dev/pandas,BUG: DataFrame.eq() incorrectly rejects scalar strings in type annotations,2026-07-28T06:11:08+00:00
+1050,32127,matplotlib/matplotlib,"[Bug]: Line3D.draw requires .shape on _verts3d, but set_data_3d accepts and stores any array-like",2026-07-28T08:03:34+00:00
+1051,32129,matplotlib/matplotlib,[Bug]: a scalar-only custom scale silently blanks all 3D data instead of drawing it,2026-07-28T08:24:47+00:00
+1052,66514,pandas-dev/pandas,BUG: object of type 'list_iterator' has no len(),2026-07-28T21:37:45+00:00
+1053,66522,pandas-dev/pandas,BUG: DataFrame.ewm(...).online().mean() ignores the decay for single-column frames,2026-07-29T03:34:32+00:00
+1054,66523,pandas-dev/pandas,"BUG/API: ewm with equally spaced times disagrees with no-times for adjust=False, ignore_na=False on NaN data",2026-07-29T03:35:02+00:00
+1055,66527,pandas-dev/pandas,BUG: DataFrame.loc assignment with boolean column indexer raises NotImplementedError for single-column DataFrame,2026-07-29T06:42:14+00:00
+1056,8373,huggingface/datasets,TypeError in _dill.py _batch_setitems with Python 3.14,2026-07-29T15:00:19+00:00
+1057,8375,huggingface/datasets,"`PandasArrayExtensionDtype._metadata` should be a tuple, not a string",2026-07-31T01:50:02+00:00
+1058,32146,matplotlib/matplotlib,[Doc]: Rework Hyperlinks example,2026-07-31T09:31:25+00:00
+1059,32157,matplotlib/matplotlib,[Tracker] : Improve type annotation coverage,2026-07-31T21:19:18+00:00
+1060,66571,pandas-dev/pandas,BUG: partial-string slicing on a PeriodIndex with an anchored freq resolves bounds one period early,2026-07-31T22:49:25+00:00
+1061,66593,pandas-dev/pandas,BUG: memory_usage(deep=True) under-reports by ~4x for arrow-backed string Index once the engine is built,2026-08-01T18:41:35+00:00
+1062,66605,pandas-dev/pandas,BUG: cumsum/cumprod raises ArrowInvalid: overflow on integer ArrowDtypes instead of upcasting,2026-08-02T19:02:44+00:00
+1063,32164,matplotlib/matplotlib,[Bug]: Font lookup when rendering math text,2026-08-03T17:58:17+00:00
+1064,32165,matplotlib/matplotlib,[MNT]: Clarify web browser policy,2026-08-03T18:01:09+00:00
+1065,8381,huggingface/datasets,IterableDataset.to_dict() and to_polars() return an empty generator instead of the data,2026-08-03T18:35:13+00:00
+1066,66615,pandas-dev/pandas,BUG: Inconsistent date time handling with serialized data,2026-08-04T02:48:38+00:00
+1067,8386,huggingface/datasets,"map(batched=True, drop_last_batch=True) returns the input unchanged when the dataset is smaller than batch_size",2026-08-04T03:21:59+00:00
+1068,8390,huggingface/datasets,to_json cannot round-trip temporal columns: all timestamps written as epoch milliseconds,2026-08-04T05:36:00+00:00
+1069,8391,huggingface/datasets,"Nanosecond timestamps are silently truncated even when Value(""timestamp[ns]"") is requested",2026-08-04T05:36:19+00:00
+1070,66626,pandas-dev/pandas,NumPy/object fallbacks in Arrow-backed arrays,2026-08-05T06:34:51+00:00
+1071,32174,matplotlib/matplotlib,[Bug]: Using `rasterized=True` with `zorder` makes the generated SVG have wrong axes layer hierarchy,2026-08-06T08:12:54+00:00
+1072,8410,huggingface/datasets,"_legacy_no_dict_keys_sorting has no reader since #7817, so the 2.15.0 legacy cache lookup computes the wrong config_id",2026-08-06T18:40:14+00:00
+1073,32176,matplotlib/matplotlib,macOS Rework Umbrella,2026-08-07T03:47:41+00:00
+1074,66656,pandas-dev/pandas,BUG: Passing a tuple at creation for 1-d  index in df is fine but rename_axis with tuple fails,2026-08-08T01:35:13+00:00
+1075,8829,networkx/networkx,Feature Request: Address the zero-similarity problem in `simrank_similarity`,2026-08-08T19:56:28+00:00
+1076,66673,pandas-dev/pandas,BUG: DataFrame.unstack(sort=False) mislabels columns when the unstacked level has unused entries,2026-08-09T18:21:29+00:00
+1077,66674,pandas-dev/pandas,RLS: 3.1,2026-08-09T18:35:23+00:00
+1078,66688,pandas-dev/pandas,"API: astype to CategoricalDtype matches by lookup instead of casting, so legitimate casts silently become NaN",2026-08-10T01:09:03+00:00
+1079,8458,huggingface/datasets,Replace httpx with httpx2,2026-08-10T13:01:44+00:00
+1080,66703,pandas-dev/pandas,BUG: boolean-mask operations on a null-dtype ArrowDtype column abort the process (SIGABRT),2026-08-10T16:54:51+00:00
+1081,8463,huggingface/datasets,very bad quality images in most of them,2026-08-12T03:49:23+00:00
+1082,8465,huggingface/datasets,"PandasArrayExtensionArray.take coerces fill_value before checking whether anything is filled, breaking boolean masks on integer array columns",2026-08-12T06:38:18+00:00
+1083,8467,huggingface/datasets,"PandasArrayExtensionDtype has no construct_from_string, so comparing the dtype to any string raises AssertionError",2026-08-12T07:24:51+00:00
+1084,8469,huggingface/datasets,Empty column loses its dtype under numpy format (always float32),2026-08-12T07:37:13+00:00
+1085,8472,huggingface/datasets,batch(0) silently returns one batch with the whole dataset instead of raising,2026-08-12T07:52:28+00:00
+1086,66740,pandas-dev/pandas,TRACKER: support for Python 3.15,2026-08-12T15:28:32+00:00
+1087,66742,pandas-dev/pandas,DOC: Update `DataFrame` and `Index` docs to say that `dicts` are accepted and the keys are used,2026-08-12T19:07:47+00:00
+1088,66743,pandas-dev/pandas,DISCUSSION:  Should `pandas` allow any non-string iterable for various arguments?,2026-08-12T19:22:59+00:00
+1089,8473,huggingface/datasets,Negative percent split boundary silently anchors to the start when it rounds to 0 (`train[-1%:]` returns the whole split),2026-08-13T02:56:52+00:00
+1090,8475,huggingface/datasets,`Dataset.select` raises a raw OverflowError on in-range negative indices that its own validation allows,2026-08-13T03:02:44+00:00
+1091,8481,huggingface/datasets,ClassLabel.str2int and int2str do not validate the elements of an iterable,2026-08-15T08:43:11+00:00
+1092,8483,huggingface/datasets,"Dataset.take(n) raises IndexError when n > len(dataset), but IterableDataset.take(n) returns what it has",2026-08-15T16:32:03+00:00
+1093,8491,huggingface/datasets,`Dataset.map(num_proc=N)` worker crashes with `ValueError: I/O operation on closed file` when `finalize()` is interrupted,2026-08-17T06:05:58+00:00
+1094,8494,huggingface/datasets,cast_column to ClassLabel silently accepts out-of-range label indices,2026-08-18T08:11:05+00:00
+1095,8499,huggingface/datasets,TsFile format filter uses an inconsistent URL and is not available initially,2026-08-19T11:35:39+00:00
+1096,66850,pandas-dev/pandas,"ENH: add `DatetimeIndexResampler`, `PeriodIndexResampler` and `TimedeltaIndexResampler` to `pandas.api.typing`",2026-08-19T14:27:40+00:00
+1097,8500,huggingface/datasets,"with_format(""numpy"") returns bool/datetime values as 0-d unhashable arrays and casts duration columns to int64",2026-08-19T23:48:11+00:00
+1098,66877,pandas-dev/pandas,BUG: rollforward/rollback accept date but their type hints reject it,2026-08-20T15:56:49+00:00
+1099,66893,pandas-dev/pandas,BUG: `groupby(...).indices` / `get_group()` return the wrong group with `sort=False` + Categorical key + multiple keys,2026-08-21T01:27:54+00:00
+1100,8505,huggingface/datasets,Request to correct language name for ISO code 'blk' from 'Pa'o Karen' to 'Pa'O',2026-08-23T12:05:19+00:00
+1101,8507,huggingface/datasets,ArrayXD silently reshapes inputs with incompatible nested dimensions,2026-08-23T18:42:56+00:00
+1102,66966,pandas-dev/pandas,ENH: Allow assign() lambdas to optionally receive the target column as a second argument,2026-08-23T19:03:58+00:00
+1103,8511,huggingface/datasets,`Image.cast_storage` warns about downcasting int64 to uint8 for storage that is already uint8,2026-08-24T09:23:22+00:00
+1104,67005,pandas-dev/pandas,BUG: read_csv with integer `names` treats integer `dtype` keys as both label and position,2026-08-26T13:58:30+00:00
+1105,67008,pandas-dev/pandas,"BUG: read_csv with engine=""pyarrow"", header=None and usecols relabels columns positionally instead of keeping file positions",2026-08-26T18:34:36+00:00
+1106,67010,pandas-dev/pandas,"BUG: read_csv with engine=""pyarrow"" and usecols orders columns as given in usecols instead of file order",2026-08-26T19:00:31+00:00
+1107,67012,pandas-dev/pandas,"DOC, API: `read_*` methods alignment",2026-08-26T19:43:37+00:00
+1108,67014,pandas-dev/pandas,API: Restrictions on EA scalar types,2026-08-26T22:20:02+00:00
+1109,67024,pandas-dev/pandas,"BUG: `Series.str.extract` with `ArrowDtype` raises on unnamed capture groups, and drops them when mixed with named ones",2026-08-27T12:55:16+00:00
+1110,32246,matplotlib/matplotlib,[ENH]: Use a valid font cache from a read-only MPLCONFIGDIR instead of rebuilding in a temp dir,2026-08-27T16:08:44+00:00
+1111,67055,pandas-dev/pandas,BUG: Pandas 3: RangeIndex values can be modified from the outside,2026-08-28T09:21:47+00:00
+1112,8522,huggingface/datasets,Docs proposal: relabel left/right segmentation classes during horizontal flips,2026-08-28T10:39:42+00:00
+1113,67064,pandas-dev/pandas,DOC: user guide SQL section lacks PostgreSQL (psycopg 3) recipes,2026-08-28T21:04:59+00:00
+1114,67065,pandas-dev/pandas,"BUG: HDFStore.select with where=""cat == None"" returns empty DataFrame for Categorical columns instead of matching missing/NaN rows",2026-08-28T21:25:14+00:00
+1115,67066,pandas-dev/pandas,BUG: zoneinfo transition times causes incorrect localization of some Timestamps on 32 bit platforms,2026-08-28T21:49:38+00:00
+1116,32258,matplotlib/matplotlib,Always send an opaque buffer to interactive backends,2026-08-29T17:19:44+00:00
+1117,8537,huggingface/datasets,JPEG XL support,2026-08-30T12:13:56+00:00
+1118,67470,pandas-dev/pandas,"ENH: include cell location in ExcelWriter warning for values exceeding the 32,767 character limit",2026-08-30T16:25:19+00:00
+1119,32269,matplotlib/matplotlib,"tripcolor shading=""gouraud"" streaks/glitch on macOS arm64; shading=""flat"" is fine",2026-08-31T00:36:30+00:00
+1120,32272,matplotlib/matplotlib,"[Bug]: Ragged Poly3DCollection projects uninitialized padding, causing nondeterministic overflow",2026-08-31T16:49:30+00:00
+1121,32276,matplotlib/matplotlib,[MNT]: Deprecate internal Cairo backends,2026-09-01T03:46:35+00:00
+1122,67726,pandas-dev/pandas,BUG: IndexError with certain subplot order in stacked barchart,2026-09-01T06:54:10+00:00
+1123,8543,huggingface/datasets,xPath.glob passes double-wrapped storage options to url_to_fs,2026-09-01T06:58:36+00:00
+1124,67727,pandas-dev/pandas,BUG: barcharts grouped in subplots behave incorrectly with stacked=False,2026-09-01T07:04:43+00:00
+1125,67751,pandas-dev/pandas,DOC: Opening a Pull Request Instructions Incorrect,2026-09-01T13:33:50+00:00
+1126,8885,networkx/networkx,ISMAGS raises ValueError if no nodes are compatible,2026-09-01T14:12:45+00:00
+1127,67753,pandas-dev/pandas,"BUG: IntervalArray.__arrow_array__ rejects ExtensionDtype subtypes, and ArrowIntervalType metadata cannot round-trip them",2026-09-01T16:10:26+00:00
+1128,67754,pandas-dev/pandas,BUG: IntervalDtype.__from_arrow__ ignores the struct-level validity bitmap,2026-09-01T16:10:28+00:00
+1129,67755,pandas-dev/pandas,"BUG: DataFrame.plot.bar raises ""Must supply freq for datetime value"" with datetime x column",2026-09-01T16:53:27+00:00
+1130,8891,networkx/networkx,GraphMatcher.isomorphsism_iter() can yield isomorphisms for non-isomorphic graphs,2026-09-02T12:53:12+00:00
+1131,32280,matplotlib/matplotlib,pip install matplot fails (on windows) for Python 3.15.0rc2,2026-09-02T17:10:59+00:00
+1132,67928,pandas-dev/pandas,API: Add reduction methods to ExtensionArray,2026-09-02T20:55:02+00:00
+1133,67949,pandas-dev/pandas,"BUG: pd.to_numeric with errors=""coerce"" fails to produce actual NA values when applied to dtype string[pyarrow] values",2026-09-03T08:16:31+00:00
+1134,67967,pandas-dev/pandas,PERF: avoid redundant allocations in StringArray duplicated and value_counts,2026-09-03T20:57:53+00:00
+1135,8560,huggingface/datasets,Bump fsspec to 2026.7.0,2026-09-03T22:02:32+00:00
+1136,67969,pandas-dev/pandas,PERF: avoid temporary allocations in multi-block DataFrame axis=1 reductions,2026-09-03T22:06:57+00:00
+1137,67970,pandas-dev/pandas,PERF: avoid per-element group labels in nullable DataFrame axis=1 reductions,2026-09-03T22:44:53+00:00
+1138,67982,pandas-dev/pandas,CI: pixi-version is pinned in three places and dependabot bumps none of them,2026-09-04T01:41:55+00:00
+1139,67984,pandas-dev/pandas,TST: set LC_TIME in the test body instead of skipping under skip_if_not_english_lc_time,2026-09-04T01:42:22+00:00
+1140,67985,pandas-dev/pandas,BUG: validate_test_dependencies.py is blind to pixi [target.*.dependencies],2026-09-04T01:42:37+00:00
+1141,67986,pandas-dev/pandas,"CI: sanitizers environment has no pyarrow, so the read_csv pyarrow string path is never sanitized",2026-09-04T01:56:48+00:00
+1142,67991,pandas-dev/pandas,TST: test_duplicated_hashtable_impl monkeypatches _SIZE_CUTOFF on a path that never reads it,2026-09-04T02:16:14+00:00
+1143,67992,pandas-dev/pandas,BUG: find_stack_level treats third-party `pandas*` packages as pandas-internal,2026-09-04T02:16:15+00:00
+1144,67993,pandas-dev/pandas,TST: pandas/tests/api/test_api.py::TestApi::test_api fails when that directory is run on its own,2026-09-04T02:16:21+00:00
+1145,67994,pandas-dev/pandas,BUILD: pyproject.toml banned-api comment is wrong — TID251 does resolve np.random through the alias,2026-09-04T02:16:22+00:00
+1146,67995,pandas-dev/pandas,BUILD: window/meson.build never passes --shared=pandas._libs._cyutility to its extensions,2026-09-04T02:16:23+00:00
+1147,68009,pandas-dev/pandas,BUG: addition of non-UTC DatetimeArray with large Timedelta returns None,2026-09-04T09:06:16+00:00
+1148,68026,pandas-dev/pandas,BUG: to_xml() export not valid for bool dtype,2026-09-04T16:15:29+00:00
+1149,68041,pandas-dev/pandas,BUG: read_csv fails to finalize index when engine='pyarrow' and dtype is scalar (or dict without an index specified),2026-09-04T22:29:23+00:00
+1150,8898,networkx/networkx,_hits_numpy(normalized=False) can return inf/NaN after switching to eigh,2026-09-05T04:28:44+00:00
+1151,32304,matplotlib/matplotlib,[Bug]: boxplot errors when `x` and `tick_labels` are empty,2026-09-05T18:11:03+00:00
+1152,8568,huggingface/datasets,skip() after split_dataset_by_node gives every rank the whole dataset,2026-09-06T04:19:57+00:00
+1153,68199,pandas-dev/pandas,BUG: Series/DataFrame.replace with a callable value silently stores the function instead of applying or rejecting it,2026-09-06T04:24:27+00:00
+1154,8570,huggingface/datasets,[zh] Add Simplified Chinese translation for README,2026-09-06T05:02:49+00:00

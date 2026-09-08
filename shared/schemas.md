@@ -1,7 +1,12 @@
 # Data Contract
 
 ## Member 3 → data/graph_metrics.csv
-file_path, betweenness, pagerank, degree, repo_name
+## graph_metrics.csv
+- file_path: which file inside the repo this row is about
+- betweenness: how much this file acts as a "bridge" between other files (higher = more central)
+- pagerank: overall importance score of the file (higher = more important)
+- degree: how many other files this one is directly connected to
+- repo_name: which of our chosen repos this row came from
 
 ## Member 3 → data/issues.csv
 issue_id, repo_name, title, body, labels, linked_pr, resolver, close_date,
