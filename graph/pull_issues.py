@@ -41,13 +41,45 @@ def get_github_client() -> Github:
     token = os.getenv("GITHUB_TOKEN")
     if not token:
         raise RuntimeError("GITHUB_TOKEN not found — check your .env file.")
-    return Github(token)
+    # timeout=60: wait longer before giving up on a slow/flaky connection
+    # retry=3: automatically retry a failed request up to 3 times before erroring
+    return Github(token, timeout=60, retry=3)
 
 
 def days_between(start, end) -> float:
     if start is None or end is None:
         return None
     return round((end - start).total_seconds() / 86400, 2)
+
+
+import re
+
+# Patterns for common leaked-secret formats that sometimes appear pasted
+# (accidentally) inside GitHub issue text. We redact these before saving,
+# since committing someone else's real token would be a genuine security
+# problem, not just a GitHub push-protection annoyance.
+SECRET_PATTERNS = [
+    re.compile(r"hf_[A-Za-z0-9]{20,}"),           # Hugging Face tokens
+    re.compile(r"ghp_[A-Za-z0-9]{20,}"),          # GitHub personal access tokens
+    re.compile(r"github_pat_[A-Za-z0-9_]{20,}"),  # GitHub fine-grained tokens
+    re.compile(r"sk-[A-Za-z0-9]{20,}"),           # OpenAI-style keys
+    re.compile(r"AKIA[A-Z0-9]{16}"),              # AWS access key IDs
+    re.compile(r"xox[baprs]-[A-Za-z0-9-]{10,}"),  # Slack tokens
+]
+
+
+def redact_secrets(text: str) -> str:
+    for pattern in SECRET_PATTERNS:
+        text = pattern.sub("[REDACTED_SECRET]", text)
+    return text
+
+
+def truncate_body(text, cap=2000):
+    if not text:
+        return ""
+    text = text.replace("\r\n", " ").replace("\n", " ").strip()
+    text = redact_secrets(text)
+    return text[:cap]
 
 
 def pull_issues_for_repo(gh: Github, repo_name: str) -> list[dict]:
@@ -68,23 +100,30 @@ def pull_issues_for_repo(gh: Github, repo_name: str) -> list[dict]:
             print(f"  Reached MAX_ISSUES_PER_REPO ({MAX_ISSUES_PER_REPO}), stopping early.")
             break
 
-        closer = issue.closed_by.login if issue.closed_by else None
+        resolver = issue.closed_by.login if issue.closed_by else None
         is_first_time = None
-        if closer:
-            is_first_time = closer not in seen_closers
-            seen_closers.add(closer)
+        if resolver:
+            is_first_time = resolver not in seen_closers
+            seen_closers.add(resolver)
 
         rows.append({
             "issue_id": issue.number,
             "repo_name": repo_name,
             "title": issue.title,
+            "body": truncate_body(issue.body),
             "labels": ";".join(label.name for label in issue.labels),
+            # filled in later by enrich_issue_links.py, only for closed issues:
+            "linked_pr": "",
+            "resolver": resolver,
+            "close_date": issue.closed_at.isoformat() if issue.closed_at else None,
+            "resolver_is_first_time": is_first_time,
+            "affected_files": "",
+            "centrality_of_affected_files": "",
+            # extra columns kept for our own Week 5 scripts (not required by
+            # shared/schemas.md, but harmless — Member 1 can ignore them):
             "state": issue.state,
             "created_at": issue.created_at.isoformat() if issue.created_at else None,
-            "closed_at": issue.closed_at.isoformat() if issue.closed_at else None,
-            "closed_by": closer,
             "days_to_close": days_between(issue.created_at, issue.closed_at),
-            "resolver_is_first_time": is_first_time,
         })
 
         if count % 100 == 0:
@@ -94,28 +133,70 @@ def pull_issues_for_repo(gh: Github, repo_name: str) -> list[dict]:
     return rows
 
 
+FIELDNAMES = ["issue_id", "repo_name", "title", "body", "labels",
+              "linked_pr", "resolver", "close_date", "resolver_is_first_time",
+              "affected_files", "centrality_of_affected_files",
+              "state", "created_at", "days_to_close"]
+
+
 def export_issues_csv(all_rows: list[dict], output_path: Path):
-    fieldnames = ["issue_id", "repo_name", "title", "labels", "state",
-                  "created_at", "closed_at", "closed_by", "days_to_close",
-                  "resolver_is_first_time"]
     with open(output_path, "w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer = csv.DictWriter(f, fieldnames=FIELDNAMES)
         writer.writeheader()
         writer.writerows(all_rows)
     print(f"\nWrote {len(all_rows)} rows to {output_path}")
 
 
+def load_already_done_repos(output_path: Path) -> tuple[list[dict], set]:
+    """
+    RESUME SUPPORT: if issues.csv already exists from a previous (possibly
+    crashed) run, load it and figure out which repos are already fully done,
+    so we don't waste time/API-calls re-pulling them.
+
+    SAFETY CHECK: only trust the existing file if it actually has the
+    CURRENT expected columns. An older file (from before body/linked_pr/etc.
+    were added) has the same repo names in it, but the wrong schema — so we
+    detect that and treat the whole file as stale, forcing a fresh pull,
+    rather than silently skipping repos that need to be redone.
+    """
+    if not output_path.exists():
+        return [], set()
+
+    with open(output_path, newline="", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        header = reader.fieldnames or []
+        rows = list(reader)
+
+    if set(FIELDNAMES) - set(header):
+        missing = set(FIELDNAMES) - set(header)
+        print(f"Existing issues.csv has an OUTDATED schema (missing columns: "
+              f"{', '.join(missing)}). Ignoring it and pulling all repos fresh.")
+        return [], set()
+
+    done_repos = set(r["repo_name"] for r in rows)
+    print(f"Found existing issues.csv (current schema) with data for: {', '.join(done_repos) or '(none)'}")
+    return rows, done_repos
+
+
 def main():
     gh = get_github_client()
-    all_rows = []
+    output_path = Path(OUTPUT_DIR) / "issues.csv"
+    output_path.parent.mkdir(exist_ok=True)
+
+    all_rows, done_repos = load_already_done_repos(output_path)
 
     for repo_name in FINAL_REPOS:
+        if repo_name in done_repos:
+            print(f"Skipping {repo_name} — already pulled in a previous run.")
+            continue
+
         rows = pull_issues_for_repo(gh, repo_name)
         all_rows.extend(rows)
 
-    output_path = Path(OUTPUT_DIR) / "issues.csv"
-    output_path.parent.mkdir(exist_ok=True)
-    export_issues_csv(all_rows, output_path)
+        # SAVE IMMEDIATELY after each repo finishes — so if the NEXT repo
+        # crashes (network blip, rate limit, etc.), everything up to here
+        # is already safely on disk and won't need to be re-pulled.
+        export_issues_csv(all_rows, output_path)
 
 
 if __name__ == "__main__":

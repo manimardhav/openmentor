@@ -1,0 +1,18 @@
+issue_id,repo_name,title,created_at
+26292,matplotlib/matplotlib,[Bug]: macOS backend run by non-logged-in user crashes in Ventura,2023-07-12T05:15:08+00:00
+23548,matplotlib/matplotlib,Create fully pinned requirements file for bug-fix branches,2022-08-03T21:57:18+00:00
+22803,matplotlib/matplotlib,[Bug]: Large file size when using fill_between(),2022-04-08T15:05:54+00:00
+20355,matplotlib/matplotlib,PowerNorm should have a scale...,2021-06-03T14:54:41+00:00
+20243,matplotlib/matplotlib,matplotlib eventplot not shows all the binary data for big number of events,2021-05-16T20:38:34+00:00
+18305,matplotlib/matplotlib,Support simple axes shares in subplot_mosaic,2020-08-20T09:50:46+00:00
+18050,matplotlib/matplotlib,WXCairo backend not rendering nicely on retina,2020-07-24T15:09:10+00:00
+17775,matplotlib/matplotlib,clone more legend settings when regenerating in Qt figure options dialog,2020-06-27T00:09:01+00:00
+17479,matplotlib/matplotlib,Add thumbnails for tutorials/gallery where missing,2020-05-21T21:50:20+00:00
+17402,matplotlib/matplotlib,SymLog scale has too few ticks,2020-05-13T19:26:05+00:00
+11797,matplotlib/matplotlib,About linestyles: tuple not accepted in rc param file and other inconsistencies,2018-07-29T22:06:50+00:00
+11109,matplotlib/matplotlib,ENH: Add legend toggle to figure options dialog box,2018-04-23T12:04:59+00:00
+8422,matplotlib/matplotlib,plt.pcolormesh shape mismatch when shading='gouraud',2017-04-03T22:02:26+00:00
+6724,matplotlib/matplotlib,Inconsistent behavior of backends when rendering latex colors,2016-07-11T19:43:03+00:00
+5806,huggingface/datasets,Return the name of the currently loaded file in the load_dataset function.,2023-04-28T13:50:15+00:00
+5354,huggingface/datasets,"Consider using ""Sequence"" instead of ""List""",2022-12-12T15:39:45+00:00
+4709,huggingface/datasets,WMT21 & WMT22,2022-07-18T21:05:33+00:00
