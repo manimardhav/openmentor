@@ -1,0 +1,22 @@
+{
+  "_comment": "Shared skill taxonomy. Add new skills here as repos require them — do not hardcode skills in Python files. Any team member can extend this list.",
+  "core_skills": [
+    "REST API",
+    "async/await",
+    "database",
+    "testing",
+    "frontend-CSS",
+    "authentication",
+    "documentation",
+    "CLI tooling",
+    "build/CI",
+    "GraphQL",
+    "state management",
+    "caching",
+    "concurrency",
+    "logging/observability",
+    "dependency management"
+  ],
+  "allow_llm_proposed_skills": true,
+  "_note_on_extensibility": "When a repository needs skills not in core_skills, the extraction prompt is allowed to propose new ones under a separate 'proposed_skills' field rather than forcing a bad fit into the fixed list. A human (any team member) reviews proposed_skills periodically and promotes good ones into core_skills."
+}
