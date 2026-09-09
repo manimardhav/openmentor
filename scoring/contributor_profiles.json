@@ -1,0 +1,9 @@
+{
+  "demo_user": {
+    "skills": [
+      "HTTP/networking",
+      "plugins/extensibility"
+    ],
+    "level": 0.25
+  }
+}

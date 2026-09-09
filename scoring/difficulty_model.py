@@ -12,9 +12,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import StratifiedKFold, cross_val_predict
 from sklearn.metrics import classification_report, roc_auc_score
 
-FEATURE_COLUMNS = ["centrality", "text_length", "comment_count", "help_wanted_label", "referenced_files"]
-
-
+FEATURE_COLUMNS = ["centrality", "text_length", "issue_age_days", "first_contribution_label", "referenced_files"]
 # ---------------------------------------------------------------------------
 # Week 2: hand-tuned weighted formula
 # ---------------------------------------------------------------------------
@@ -24,8 +22,8 @@ FEATURE_COLUMNS = ["centrality", "text_length", "comment_count", "help_wanted_la
 DEFAULT_WEIGHTS = {
     "centrality": 0.35,
     "text_length": 0.15,
-    "comment_count": 0.15,
-    "help_wanted_label": -0.20,   # presence of the label should LOWER predicted difficulty
+    "issue_age_days": 0.15,
+    "first_contribution_label": -0.20,   # presence of the label should LOWER predicted difficulty
     "referenced_files": 0.25,
 }
 
@@ -115,8 +113,8 @@ if __name__ == "__main__":
     synthetic = pd.DataFrame({
         "centrality": rng.random(n),
         "text_length": rng.random(n),
-        "comment_count": rng.random(n),
-        "help_wanted_label": rng.integers(0, 2, n),
+        "issue_age_days": rng.random(n),
+        "first_contribution_label": rng.integers(0, 2, n),
         "referenced_files": rng.random(n),
     })
     # Fake ground truth correlated with centrality + referenced_files for the smoke test
