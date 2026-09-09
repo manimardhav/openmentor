@@ -1,120 +1,85 @@
 """
-features.py — Week 2/3: Feature extraction for the difficulty-scoring model.
+features.py — feature extraction for the difficulty-scoring model, rebuilt
+for real matplotlib issue data.
 
-Turns a raw GitHub issue (+ the repo's dependency graph) into a numeric
-feature vector. Keep every feature normalized to roughly [0, 1] so the
-weighted-sum formula (Week 2) and the logistic regression (Week 3) both
-behave sensibly without one feature dominating.
+Changes from the mock-data version:
+- centrality: now reads the REAL precomputed centrality_of_affected_files
+  from issues.csv directly. Falls back to graph_metrics_loader.py's lookup
+  only when that value is missing.
+- referenced_files: now counts REAL affected_files, not a regex guess.
+- first_contribution_label: matplotlib's real GFI-equivalent tag is
+  "first-contribution" (confirmed from real label data).
+- comment_count is GONE — no comment-count column exists in this data.
+  Replaced by issue_age_days (from created_at), which IS real data.
 """
 
-import re
-import networkx as nx
 import pandas as pd
+from graph_metrics_loader import load_graph_metrics, lookup_centrality
+
+FEATURE_COLUMNS = ["centrality", "text_length", "issue_age_days", "first_contribution_label", "referenced_files"]
 
 
-# ---------------------------------------------------------------------------
-# 1. Graph-centrality features
-# ---------------------------------------------------------------------------
-
-def compute_centrality_scores(dependency_graph: nx.Graph) -> dict:
-    """
-    Precompute centrality once for the whole repo graph (expensive), then
-    look values up per-issue. Returns {node_name: centrality_score}.
-
-    Betweenness centrality tends to capture "structurally important" files
-    better than degree centrality, but is O(V*E) — for large repos, swap in
-    nx.betweenness_centrality(G, k=100) to sample instead of computing exactly.
-    """
-    if dependency_graph.number_of_nodes() == 0:
-        return {}
-    betweenness = nx.betweenness_centrality(dependency_graph)
-    # Normalize to [0, 1] via min-max (betweenness is already ~bounded, but
-    # repo-specific rescaling makes cross-repo comparisons fairer).
-    values = list(betweenness.values())
-    lo, hi = min(values), max(values)
-    if hi == lo:
-        return {k: 0.0 for k in betweenness}
-    return {k: (v - lo) / (hi - lo) for k, v in betweenness.items()}
+def centrality_feature(issue: dict, graph_metrics_df: pd.DataFrame = None, cap: float = 0.05) -> float:
+    value = issue.get("centrality_of_affected_files")
+    if value is None and graph_metrics_df is not None:
+        value = lookup_centrality(issue.get("affected_files", []), graph_metrics_df)
+    value = value or 0.0
+    return min(value, cap) / cap
 
 
-def issue_centrality_feature(issue_files: list, centrality_scores: dict) -> float:
-    """
-    An issue may touch multiple files. Use the MAX centrality among touched
-    files as the feature — an issue that touches one highly-central file is
-    harder than one touching several peripheral ones, even if the average
-    looks similar.
-    """
-    if not issue_files:
-        return 0.0
-    scores = [centrality_scores.get(f, 0.0) for f in issue_files]
-    return max(scores) if scores else 0.0
-
-
-# ---------------------------------------------------------------------------
-# 2. Text / metadata features
-# ---------------------------------------------------------------------------
-
-def text_length_feature(issue_body: str, cap: int = 2000) -> float:
-    """Normalized issue-body length. Cap avoids outlier essays dominating."""
-    length = len(issue_body or "")
+def text_length_feature(body: str, cap: int = 2000) -> float:
+    length = len(body or "")
     return min(length, cap) / cap
 
 
-def comment_count_feature(num_comments: int, cap: int = 20) -> float:
-    """More discussion often (not always) signals more complexity/disagreement."""
-    return min(num_comments, cap) / cap
+def issue_age_feature(created_at, reference_date, cap_days: int = 365) -> float:
+    if pd.isna(created_at):
+        return 0.0
+    created = pd.to_datetime(created_at, utc=True)
+    reference = pd.to_datetime(reference_date, utc=True)
+    age_days = max((reference - created).days, 0)
+    return min(age_days, cap_days) / cap_days
 
 
-def has_help_wanted_label(labels: list) -> float:
+def first_contribution_label_feature(labels: list) -> float:
     labels_lower = [l.lower() for l in (labels or [])]
-    return 1.0 if any("help wanted" in l or "good first issue" in l for l in labels_lower) else 0.0
+    return 1.0 if any(
+        "first-contribution" in l or "good first issue" in l or "help wanted" in l
+        for l in labels_lower
+    ) else 0.0
 
 
-def referenced_files_feature(issue_body: str, cap: int = 10) -> float:
-    """
-    Rough heuristic: count filepath-like tokens (e.g. `src/foo.py`) mentioned
-    in the issue body as a proxy for "how much of the codebase is implicated."
-    """
-    pattern = r"[\w\-/]+\.\w{1,5}"  # crude filepath matcher
-    matches = re.findall(pattern, issue_body or "")
-    return min(len(matches), cap) / cap
+def referenced_files_feature(affected_files: list, cap: int = 10) -> float:
+    return min(len(affected_files or []), cap) / cap
 
 
-# ---------------------------------------------------------------------------
-# 3. Assemble full feature row for one issue
-# ---------------------------------------------------------------------------
-
-def build_feature_row(issue: dict, centrality_scores: dict) -> dict:
-    """
-    issue: dict with keys — id, body, comments, labels, files_touched
-    Returns a flat dict ready to append into a DataFrame.
-    """
+def build_feature_row(issue: dict, reference_date, graph_metrics_df: pd.DataFrame = None) -> dict:
     return {
         "issue_id": issue["id"],
-        "centrality": issue_centrality_feature(issue.get("files_touched", []), centrality_scores),
+        "centrality": centrality_feature(issue, graph_metrics_df),
         "text_length": text_length_feature(issue.get("body", "")),
-        "comment_count": comment_count_feature(issue.get("comments", 0)),
-        "help_wanted_label": has_help_wanted_label(issue.get("labels", [])),
-        "referenced_files": referenced_files_feature(issue.get("body", "")),
+        "issue_age_days": issue_age_feature(issue.get("created_at"), reference_date),
+        "first_contribution_label": first_contribution_label_feature(issue.get("labels", [])),
+        "referenced_files": referenced_files_feature(issue.get("affected_files", [])),
     }
 
 
-def build_feature_dataframe(issues: list, dependency_graph: nx.Graph) -> pd.DataFrame:
-    """Batch version: run this once per repo pull."""
-    centrality_scores = compute_centrality_scores(dependency_graph)
-    rows = [build_feature_row(issue, centrality_scores) for issue in issues]
+def build_feature_dataframe(issues: list, graph_metrics_df: pd.DataFrame = None) -> pd.DataFrame:
+    created_dates = [i.get("created_at") for i in issues if pd.notna(i.get("created_at"))]
+    reference_date = max(pd.to_datetime(created_dates, utc=True)) if created_dates else pd.Timestamp.now(tz="UTC")
+
+    rows = [build_feature_row(issue, reference_date, graph_metrics_df) for issue in issues]
     return pd.DataFrame(rows)
 
 
 if __name__ == "__main__":
-    # Tiny smoke test with a toy graph + toy issues
-    G = nx.Graph()
-    G.add_edges_from([("api.py", "auth.py"), ("api.py", "db.py"), ("db.py", "utils.py")])
+    from issue_loader import load_issues
+    issues = load_issues()
+    try:
+        metrics = load_graph_metrics()
+    except FileNotFoundError:
+        metrics = None
+        print("graph_metrics.csv not found — proceeding without fallback lookup")
 
-    toy_issues = [
-        {"id": 1, "body": "Fix typo in README.md", "comments": 0, "labels": ["good first issue"], "files_touched": ["README.md"]},
-        {"id": 2, "body": "Refactor db.py connection pooling, touches api.py and auth.py too, see src/db.py:120", "comments": 12, "labels": ["bug"], "files_touched": ["db.py", "api.py"]},
-    ]
-
-    df = build_feature_dataframe(toy_issues, G)
+    df = build_feature_dataframe(issues, metrics)
     print(df)

@@ -1,58 +1,40 @@
 """
-experience_stratified_eval.py — Week 6: stratify evaluation results by
-contributor experience level (first-time vs. returning).
-
-MOCK DATA NOTE: MOCK_RESOLVER_HISTORY is entirely fabricated. Replace it
-wholesale once Person C's real tester data lands — the stratify_by_experience()
-function itself doesn't need to change.
+experience_stratified_eval.py — stratifies evaluation by contributor
+experience level, using REAL resolver_is_first_time data. No fabrication
+needed anymore.
 """
 
 import pandas as pd
-from full_pipeline import run_full_pipeline
-
-MOCK_RESOLVER_HISTORY = [
-    {"contributor": "alice", "experience": "first-time", "resolved_issue_id": 1603, "skills": {"HTTP/networking"}, "level": 0.1},
-    {"contributor": "bob",   "experience": "first-time", "resolved_issue_id": 1574, "skills": {"CLI/argparse"}, "level": 0.0},
-    {"contributor": "carol", "experience": "returning",  "resolved_issue_id": 1555, "skills": {"CLI/argparse"}, "level": 0.8},
-    {"contributor": "dave",  "experience": "returning",  "resolved_issue_id": 1637, "skills": {"HTTP/networking", "testing"}, "level": 0.75},
-]
+from issue_loader import load_issues
+from train_difficulty_model import build_training_data
+from difficulty_model import DifficultyModel
 
 
-def stratify_by_experience(resolver_history: list = None) -> pd.DataFrame:
-    resolver_history = resolver_history or MOCK_RESOLVER_HISTORY
-    rows = []
+def stratify_by_experience(issues: list = None) -> pd.DataFrame:
+    issues = issues if issues is not None else load_issues()
 
-    for record in resolver_history:
-        ranking = run_full_pipeline(
-            contributor_skills=record["skills"],
-            contributor_level=record["level"],
-        )
-        ranking = ranking.reset_index(drop=True)
-        ranking["rank"] = ranking.index + 1
+    df = build_training_data(issues)
+    model = DifficultyModel().fit(df)
+    df["predicted_difficulty"] = model.predict_proba(df)
 
-        match = ranking[ranking["issue_id"] == record["resolved_issue_id"]]
-        rank_of_resolved_issue = int(match["rank"].iloc[0]) if not match.empty else None
+    lookup = {i["id"]: i for i in issues}
+    df["resolver_is_first_time"] = df["issue_id"].map(lambda i: lookup[i].get("resolver_is_first_time"))
 
-        rows.append({
-            "contributor": record["contributor"],
-            "experience": record["experience"],
-            "resolved_issue_id": record["resolved_issue_id"],
-            "rank_system_gave_it": rank_of_resolved_issue,
-        })
-
-    return pd.DataFrame(rows)
+    return df[["issue_id", "title", "resolver_is_first_time", "predicted_difficulty"]]
 
 
 def summarize_by_group(stratified_df: pd.DataFrame) -> pd.DataFrame:
-    return stratified_df.groupby("experience")["rank_system_gave_it"].agg(["mean", "count"]).reset_index()
+    return (stratified_df.groupby("resolver_is_first_time")["predicted_difficulty"]
+            .agg(["mean", "count"]).reset_index())
 
 
 if __name__ == "__main__":
-    print("(Reminder: MOCK_RESOLVER_HISTORY is fabricated — real analysis awaits Person C's tester data.)\n")
+    pd.set_option("display.width", 140)
+    pd.set_option("display.max_colwidth", 50)
 
     stratified = stratify_by_experience()
-    print("Per-contributor results:")
+    print("Per-issue results (closed issues only, real resolver data):")
     print(stratified.to_string(index=False))
 
-    print("\nSummary by experience level:")
+    print("\nSummary by resolver experience:")
     print(summarize_by_group(stratified).to_string(index=False))

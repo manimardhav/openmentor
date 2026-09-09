@@ -1,36 +1,34 @@
 """
-baselines.py — the two comparison baselines defined in the plan:
-  1. GitHub's native "good first issue"/"help wanted" label.
-  2. A naive single-feature baseline (comment count only).
-A random baseline is included too, as a cheap floor check.
+baselines.py — comparison baselines, rebuilt for real data.
+
+- gfi_label_baseline: uses ground_truth.csv's authoritative had_gfi_label.
+- single_feature_baseline: comment count doesn't exist in this data —
+  switched to issue age (from created_at).
 """
 
 import random
 import pandas as pd
-from features import has_help_wanted_label
+from ground_truth_loader import load_ground_truth
 
 
-def gfi_label_baseline(issues: list) -> pd.DataFrame:
-    """Ranks issues by whether they carry a "good first issue" label."""
+def gfi_label_baseline(ground_truth_df: pd.DataFrame = None) -> pd.DataFrame:
+    ground_truth_df = ground_truth_df if ground_truth_df is not None else load_ground_truth()
+    return (ground_truth_df[["issue_id", "had_gfi_label"]]
+            .sort_values("had_gfi_label", ascending=False, kind="stable")
+            .reset_index(drop=True))
+
+
+def single_feature_baseline(issues: list, feature: str = "issue_age_days") -> pd.DataFrame:
     rows = []
     for issue in issues:
-        has_label = has_help_wanted_label(issue.get("labels", []))
-        rows.append({"issue_id": issue["id"], "gfi_labeled": has_label})
+        created = issue.get("created_at")
+        rows.append({"issue_id": issue["id"], "created_at": created})
     df = pd.DataFrame(rows)
-    return df.sort_values("gfi_labeled", ascending=False, kind="stable").reset_index(drop=True)
-
-
-def single_feature_baseline(issues: list, feature: str = "comments") -> pd.DataFrame:
-    """Naive baseline: rank by ONE raw feature only, no model."""
-    rows = []
-    for issue in issues:
-        rows.append({"issue_id": issue["id"], feature: issue.get(feature, 0)})
-    df = pd.DataFrame(rows)
-    return df.sort_values(feature, ascending=True, kind="stable").reset_index(drop=True)
+    df["created_at"] = pd.to_datetime(df["created_at"], utc=True)
+    return df.sort_values("created_at", ascending=True, kind="stable").reset_index(drop=True)
 
 
 def random_baseline(issues: list, seed: int = 42) -> pd.DataFrame:
-    """Floor baseline — if the real system can't beat random, nothing else matters."""
     ids = [issue["id"] for issue in issues]
     rng = random.Random(seed)
     rng.shuffle(ids)
@@ -38,13 +36,14 @@ def random_baseline(issues: list, seed: int = 42) -> pd.DataFrame:
 
 
 if __name__ == "__main__":
-    from sanity_check import REAL_ISSUES
+    from issue_loader import load_issues
+    issues = load_issues()
 
-    print("GFI label baseline ranking:")
-    print(gfi_label_baseline(REAL_ISSUES).to_string(index=False))
+    print("Real GFI label baseline ranking:")
+    print(gfi_label_baseline().to_string(index=False))
 
-    print("\nSingle-feature (comment count) baseline ranking:")
-    print(single_feature_baseline(REAL_ISSUES).to_string(index=False))
+    print("\nIssue-age baseline ranking:")
+    print(single_feature_baseline(issues).to_string(index=False))
 
     print("\nRandom baseline ranking:")
-    print(random_baseline(REAL_ISSUES).to_string(index=False))
+    print(random_baseline(issues).to_string(index=False))
