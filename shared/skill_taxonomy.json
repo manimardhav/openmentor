@@ -1,22 +1,25 @@
 {
   "_comment": "Shared skill taxonomy. Add new skills here as repos require them — do not hardcode skills in Python files. Any team member can extend this list.",
+  "_updated_by_member_2": "Replaced the old generic list (Machine Learning, REST API, database...) with scoring.skill_matching.SKILL_TAXONOMY's real, validated tags, so the LLM extraction prompt and the actual ranking/skill-match scoring agree on what a 'skill' is. The old list never overlapped with what skill_matching.py used (only 'documentation' was shared), so skill-match scores and the sidebar's overlap badge were structurally disconnected from each other. Validated hit rates across the 4 pilot repos (validate_taxonomy.py): matplotlib 87.5%, pandas 93.2%, datasets 82.8%, networkx 69.1% issues matched at least one tag.",
   "core_skills": [
-    "REST API",
-    "async/await",
-    "database",
-    "testing",
-    "frontend-CSS",
-    "authentication",
+    "rendering/backends",
+    "text/font rendering",
+    "3D plotting",
+    "plotting/charts",
+    "widgets/interactive",
+    "animation",
+    "packaging/build",
+    "testing/CI",
     "documentation",
-    "CLI tooling",
-    "build/CI",
-    "GraphQL",
-    "state management",
-    "caching",
-    "concurrency",
-    "logging/observability",
-    "dependency management"
+    "legend/colormap",
+    "dataframe/series ops",
+    "data IO/serialization",
+    "dataset loading/sharding",
+    "graph algorithms",
+    "graph IO/formats",
+    "performance/regression",
+    "Cython/C extensions"
   ],
   "allow_llm_proposed_skills": true,
-  "_note_on_extensibility": "When a repository needs skills not in core_skills, the extraction prompt is allowed to propose new ones under a separate 'proposed_skills' field rather than forcing a bad fit into the fixed list. A human (any team member) reviews proposed_skills periodically and promotes good ones into core_skills."
+  "_note_on_extensibility": "When a repository needs skills not in core_skills, the extraction prompt is allowed to propose new ones under a separate 'proposed_skills' field rather than forcing a bad fit into the fixed list. A human (any team member) reviews proposed_skills periodically and promotes good ones into core_skills. If you add or rename a tag here, also add it to scoring/skill_matching.SKILL_TAXONOMY with matching keywords, or the two will drift apart again."
 }

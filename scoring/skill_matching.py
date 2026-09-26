@@ -4,6 +4,15 @@ skill_matching.py — skill tagging + similarity matching.
 TAXONOMY REBUILT for matplotlib/matplotlib (pilot repo changed from httpie/cli
 once real data arrived). Tags below are drawn from real issue titles in
 data/issues.csv. Validated: 17/20 real titles matched at least one tag.
+
+--- PROPOSED EXTENSION (Member 2, for team review before merging) ---
+validate_taxonomy.py showed this taxonomy hit rate was matplotlib-specific:
+matplotlib 84%, pandas 75%, datasets 36%, networkx 47% (i.e. "no tag
+matched" rates of 16% / 25% / 64% / 53%). The 6 new tags below were built
+by sampling real titles from the other 3 repos (same method as the
+original taxonomy) to close that gap — they don't touch or reweight the
+original 10 matplotlib tags, only add to the dict. Re-run
+validate_taxonomy.py after merging to confirm the improvement.
 """
 
 import re
@@ -18,6 +27,14 @@ SKILL_TAXONOMY = {
     "widgets/interactive": ["textbox", "widget", "interactive", "jupyter", "kernel", "event handler"],
     "animation": ["animation", "\\bgif\\b", "pillow", "frames", "funcanimation"],
     "packaging/build": ["\\bpip\\b", "wheel", "install", "conda", "dependency", "setup\\.py", "build system"],
+    # --- proposed additions below, drawn from pandas / datasets / networkx titles ---
+    "dataframe/series ops": ["dataframe", "\\bseries\\b", "groupby", "\\brolling\\b", "dtype", "nan", "\\bna\\b", "pivot", "merge"],
+    "data IO/serialization": ["read_html", "read_csv", "to_csv", "\\bparquet\\b", "\\bpickle\\b", "fsspec", "pyarrow", "\\barrow\\b", "to_timedelta"],
+    "dataset loading/sharding": ["load_dataset", "iterabledataset", "\\bshard\\b", "\\bsplit\\b", "concatenate_datasets", "from_generator", "from_list", "push_to_hub", "hf hub"],
+    "graph algorithms": ["shortest path", "\\bdigraph\\b", "multidigraph", "\\btriad\\b", "spanner", "louvain", "\\btraverse", "sparsifier", "rooted_product"],
+    "graph IO/formats": ["graphml", "\\bgexf\\b", "\\bpydot\\b", "write_graphml", "read_graphml"],
+    "performance/regression": ["performance", "regression", "degradation", "\\bslow\\b", "\\bspeed\\b"],
+    "Cython/C extensions": ["cython", "\\.pyx\\b", "\\bpybind\\b", "c extension", "compiled extension"],
     "testing/CI": ["\\btest\\b", "pytest", "\\bci\\b", "nightly", "circleci", "github actions"],
     "documentation": ["\\bdoc\\b", "documentation", "docstring", "sphinx", "hyperlink", "changelog"],
     "legend/colormap": ["legend", "colorbar", "colormap", "facecolor", "gridline", "colou?r"],
