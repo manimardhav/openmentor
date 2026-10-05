@@ -109,6 +109,7 @@ def pull_issues_for_repo(gh: Github, repo_name: str) -> list[dict]:
         rows.append({
             "issue_id": issue.number,
             "repo_name": repo_name,
+            "unique_id": f"{repo_name}#{issue.number}",
             "title": issue.title,
             "body": truncate_body(issue.body),
             "labels": ";".join(label.name for label in issue.labels),
@@ -133,7 +134,7 @@ def pull_issues_for_repo(gh: Github, repo_name: str) -> list[dict]:
     return rows
 
 
-FIELDNAMES = ["issue_id", "repo_name", "title", "body", "labels",
+FIELDNAMES = ["issue_id", "repo_name", "unique_id", "title", "body", "labels",
               "linked_pr", "resolver", "close_date", "resolver_is_first_time",
               "affected_files", "centrality_of_affected_files",
               "state", "created_at", "days_to_close"]

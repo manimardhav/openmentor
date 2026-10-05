@@ -55,6 +55,7 @@ def build_ground_truth(issues: list[dict]) -> list[dict]:
         rows.append({
             "issue_id": issue["issue_id"],
             "repo_name": issue["repo_name"],
+            "unique_id": f"{issue['repo_name']}#{issue['issue_id']}",
             "title": issue["title"],
             "had_gfi_label": is_good_first_issue(issue["labels"]),
             "resolved_by_newcomer": issue["resolver_is_first_time"],
@@ -89,6 +90,7 @@ def build_baseline_gfi_live(gh: Github) -> list[dict]:
                 rows.append({
                     "issue_id": issue.number,
                     "repo_name": repo_name,
+                    "unique_id": f"{repo_name}#{issue.number}",
                     "title": issue.title,
                     "created_at": issue.created_at.isoformat() if issue.created_at else None,
                 })
@@ -106,6 +108,7 @@ def build_baseline_naive(issues: list[dict]) -> list[dict]:
             "rank": rank,
             "issue_id": issue["issue_id"],
             "repo_name": issue["repo_name"],
+            "unique_id": f"{issue['repo_name']}#{issue['issue_id']}",
             "title": issue["title"],
             "created_at": issue["created_at"],
         })
@@ -135,7 +138,7 @@ def main():
     write_csv(
         ground_truth,
         Path(OUTPUT_DIR) / "ground_truth.csv",
-        ["issue_id", "repo_name", "title", "had_gfi_label",
+        ["issue_id", "repo_name", "unique_id", "title", "had_gfi_label",
          "resolved_by_newcomer", "days_to_close"],
     )
 
@@ -144,14 +147,14 @@ def main():
     write_csv(
         baseline_gfi,
         Path(OUTPUT_DIR) / "baseline_gfi.csv",
-        ["issue_id", "repo_name", "title", "created_at"],
+        ["issue_id", "repo_name", "unique_id", "title", "created_at"],
     )
 
     baseline_naive = build_baseline_naive(issues)
     write_csv(
         baseline_naive,
         Path(OUTPUT_DIR) / "baseline_naive.csv",
-        ["rank", "issue_id", "repo_name", "title", "created_at"],
+        ["rank", "issue_id", "repo_name", "unique_id", "title", "created_at"],
     )
 
     # Quick printed summary so you can eyeball the balance without opening files
