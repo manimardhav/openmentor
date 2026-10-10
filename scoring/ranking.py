@@ -1,6 +1,11 @@
 """
-ranking.py — Week 5: combine difficulty + skill-match into one ranking
-function, with confidence/threshold tagging.
+ranking.py — combines difficulty + skill-match into one ranking score,
+with a confidence tag.
+
+9-repo update: confidence_tag() is now TWO-valued ("high-confidence" |
+"exploratory"), as required by shared/schemas.md and
+tests/test_ranked_issues_schema.py. It used to also return "low-confidence",
+which violated that contract (13 of 424 issues failed the schema test).
 """
 
 import pandas as pd
@@ -26,10 +31,8 @@ def combined_rank_score(
     taxonomy: dict = None,
 ) -> dict:
     """
-    alpha weights difficulty-fit vs skill-match (tune during Week 5 testing).
-    Returns the combined score plus its components, so you can inspect why
-    an issue ranked where it did (useful for the "match reasoning" you're
-    preparing for Round 1 testers).
+    alpha weights difficulty-fit vs skill-match. Returns the combined score
+    plus its components, so you can inspect why an issue ranked where it did.
     """
     fit = difficulty_fit(predicted_difficulty, contributor_level)
     skill = match_score(contributor_skills, issue_text, taxonomy, metric="cosine")
@@ -44,15 +47,13 @@ def combined_rank_score(
 
 def confidence_tag(combined_score: float, skill_match: float, high_threshold: float = 0.7, low_threshold: float = 0.4) -> str:
     """
-    Simple threshold-based confidence tag (Week 5 addition). Tune thresholds
-    against Round 1 tester feedback rather than treating these as fixed.
+    Two-valued tag per the project's data contract: "high-confidence" | "exploratory".
+    Anything that isn't high-confidence is "exploratory".
+    low_threshold is unused; it stays in the signature only so existing callers don't break.
     """
     if combined_score >= high_threshold and skill_match >= 0.5:
         return "high-confidence"
-    elif combined_score >= low_threshold:
-        return "exploratory"
-    else:
-        return "low-confidence"
+    return "exploratory"
 
 
 def rank_issues_for_contributor_full(
@@ -64,7 +65,7 @@ def rank_issues_for_contributor_full(
 ) -> pd.DataFrame:
     """
     issues: list of dicts with keys 'id', 'body', 'predicted_difficulty'
-    (predicted_difficulty should come from difficulty_model.py's output).
+    ('id' should be the unique_id from issue_loader.py).
     """
     rows = []
     for issue in issues:
@@ -85,15 +86,13 @@ def rank_issues_for_contributor_full(
 
 
 if __name__ == "__main__":
-    # httpie/cli-style toy issues
-    contributor_skills = {"testing", "HTTP/networking"}
+    contributor_skills = {"testing/CI", "packaging/build"}
     contributor_level = 0.3  # relatively new contributor
 
     toy_issues = [
-        {"id": 1, "body": "Add pytest unit tests covering redirect handling for HTTP requests", "predicted_difficulty": 0.25},
-        {"id": 2, "body": "Rewrite the core plugin loading and hook system", "predicted_difficulty": 0.9},
-        {"id": 3, "body": "Fix argparse flag parsing for --auth token", "predicted_difficulty": 0.2},
+        {"id": "demo/repo#1", "body": "Add pytest coverage for the nightly CI wheel build", "predicted_difficulty": 0.25},
+        {"id": "demo/repo#2", "body": "Rewrite the core rendering backend", "predicted_difficulty": 0.9},
+        {"id": "demo/repo#3", "body": "pip install fails on Windows", "predicted_difficulty": 0.2},
     ]
 
-    ranked = rank_issues_for_contributor_full(contributor_level, contributor_skills, toy_issues)
-    print(ranked)
+    print(rank_issues_for_contributor_full(contributor_level, contributor_skills, toy_issues))

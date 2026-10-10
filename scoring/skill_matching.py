@@ -1,25 +1,26 @@
 """
 skill_matching.py — skill tagging + similarity matching.
 
-TAXONOMY REBUILT for matplotlib/matplotlib (pilot repo changed from httpie/cli
-once real data arrived). Tags below are drawn from real issue titles in
-data/issues.csv. Validated: 17/20 real titles matched at least one tag.
+Skill NAMES are loaded from shared/skill_taxonomy.json, the single team-wide source
+of truth that the LLM extraction prompt also uses, so the two can no longer drift
+apart. The KEYWORD patterns that detect each skill in issue text stay in this file.
 
---- PROPOSED EXTENSION (Member 2, for team review before merging) ---
-validate_taxonomy.py showed this taxonomy hit rate was matplotlib-specific:
-matplotlib 84%, pandas 75%, datasets 36%, networkx 47% (i.e. "no tag
-matched" rates of 16% / 25% / 64% / 53%). The 6 new tags below were built
-by sampling real titles from the other 3 repos (same method as the
-original taxonomy) to close that gap — they don't touch or reweight the
-original 10 matplotlib tags, only add to the dict. Re-run
-validate_taxonomy.py after merging to confirm the improvement.
+Known limitation: the keywords were written for the original Python/data-science
+repos. Run validate_taxonomy.py for per-repo hit rates; coverage is much lower on the
+helm, sqlalchemy, vuejs and express repos.
 """
 
+import json
 import re
+from pathlib import Path
 import numpy as np
 import pandas as pd
 
-SKILL_TAXONOMY = {
+SKILL_TAXONOMY_PATH = Path(__file__).resolve().parent.parent / "shared" / "skill_taxonomy.json"
+
+# Keyword patterns per skill. Treated as regex fragments (not escaped) — e.g. "qt5?"
+# and "colou?r" are intentional patterns, not typos.
+SKILL_KEYWORDS = {
     "rendering/backends": ["backend", "cairo", "agg", "qt5?", "wxpython", "webagg", "renderer", "retina", "macos"],
     "text/font rendering": ["font", "freetype", "ft2font", "text shaping", "arabic", "inkscape", "svg", "glyph"],
     "3D plotting": ["3d", "poly3dcollection", "mplot3d", "surface plot"],
@@ -27,7 +28,6 @@ SKILL_TAXONOMY = {
     "widgets/interactive": ["textbox", "widget", "interactive", "jupyter", "kernel", "event handler"],
     "animation": ["animation", "\\bgif\\b", "pillow", "frames", "funcanimation"],
     "packaging/build": ["\\bpip\\b", "wheel", "install", "conda", "dependency", "setup\\.py", "build system"],
-    # --- proposed additions below, drawn from pandas / datasets / networkx titles ---
     "dataframe/series ops": ["dataframe", "\\bseries\\b", "groupby", "\\brolling\\b", "dtype", "nan", "\\bna\\b", "pivot", "merge"],
     "data IO/serialization": ["read_html", "read_csv", "to_csv", "\\bparquet\\b", "\\bpickle\\b", "fsspec", "pyarrow", "\\barrow\\b", "to_timedelta"],
     "dataset loading/sharding": ["load_dataset", "iterabledataset", "\\bshard\\b", "\\bsplit\\b", "concatenate_datasets", "from_generator", "from_list", "push_to_hub", "hf hub"],
@@ -39,6 +39,33 @@ SKILL_TAXONOMY = {
     "documentation": ["\\bdoc\\b", "documentation", "docstring", "sphinx", "hyperlink", "changelog"],
     "legend/colormap": ["legend", "colorbar", "colormap", "facecolor", "gridline", "colou?r"],
 }
+
+
+def load_skill_taxonomy(path: Path = SKILL_TAXONOMY_PATH) -> list:
+    """Loads the shared, team-wide skill list. Raises clearly if missing, rather than silently returning []."""
+    if not path.exists():
+        raise FileNotFoundError(
+            f"Skill taxonomy not found at {path}. This file must exist and be shared across the whole team."
+        )
+    with open(path) as f:
+        taxonomy = json.load(f)
+    return taxonomy["core_skills"]
+
+
+def _build_skill_taxonomy() -> dict:
+    names = load_skill_taxonomy()
+    missing_keywords = [n for n in names if n not in SKILL_KEYWORDS]
+    if missing_keywords:
+        # Don't crash — fall back to a bare word-match on the skill's own name so a
+        # newly-added shared skill is at least matchable, but add real keywords.
+        for name in missing_keywords:
+            SKILL_KEYWORDS[name] = [re.escape(w) for w in name.replace("/", " ").split()]
+        print(f"WARNING: no curated keywords for {missing_keywords} — "
+              f"using a bare name-word fallback. Add real keywords to SKILL_KEYWORDS.")
+    return {name: SKILL_KEYWORDS[name] for name in names}
+
+
+SKILL_TAXONOMY = _build_skill_taxonomy()
 
 
 def tag_issue_skills(issue_text: str, taxonomy: dict = None) -> set:
@@ -94,6 +121,8 @@ def rank_issues_for_contributor(contributor_skills: set, issues: list, taxonomy:
 
 
 if __name__ == "__main__":
+    print(f"Loaded {len(SKILL_TAXONOMY)} skills from shared/skill_taxonomy.json: {list(SKILL_TAXONOMY.keys())}\n")
+
     contributor_skills = {"testing/CI", "packaging/build"}
     toy_issues = [
         {"id": 1, "body": "pip install matplotlib fails on Windows for Python 3.15"},

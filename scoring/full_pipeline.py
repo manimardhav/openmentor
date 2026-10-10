@@ -1,6 +1,9 @@
 """
-full_pipeline.py — the complete recommendation pipeline, rewired for real
-matplotlib data. No more networkx/placeholder graph.
+full_pipeline.py — the complete recommendation pipeline.
+
+9-repo update: issue["id"] and features_df["issue_id"] now both carry unique_id (the
+collision-free key), so the difficulty lookup is correct across repos. repo_name was
+added to the output because issues from different repos can otherwise look identical.
 """
 
 import pandas as pd
@@ -57,6 +60,7 @@ def run_full_pipeline(
         )
         rows.append({
             "issue_id": issue["id"],
+            "repo_name": issue.get("repo_name", ""),
             "title": issue.get("title", "")[:55],
             "predicted_difficulty": round(predicted_difficulty, 3),
             **{k: round(v, 3) for k, v in scores.items()},

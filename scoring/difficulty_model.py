@@ -1,5 +1,5 @@
 """
-difficulty_model.py — Week 2 (weighted formula) and Week 3 (trainable model).
+difficulty_model.py — weighted formula (Week 2) and trainable model (Week 3).
 
 Two scorers are provided so you can compare them directly in the ablation
 work later: a hand-tuned weighted sum (fast, no training data needed) and a
@@ -12,15 +12,17 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import StratifiedKFold, cross_val_predict
 from sklearn.metrics import classification_report, roc_auc_score
 
-FEATURE_COLUMNS = ["centrality", "text_length", "issue_age_days", "first_contribution_label", "referenced_files"]
-# ---------------------------------------------------------------------------
-# Week 2: hand-tuned weighted formula
-# ---------------------------------------------------------------------------
+FEATURE_COLUMNS = [
+    "centrality", "centrality_known", "text_length",
+    "issue_age_days", "first_contribution_label", "referenced_files",
+]
 
-# Starting weights — treat these as a first guess to sanity-check against
-# hand-labeled easy/hard/ambiguous issues (see Week 2 plan), then refine.
+# Starting weights — a first guess. centrality_known gets weight 0 in the hand formula
+# (the trained model learns its own coefficient for it); the column just has to be
+# present so FEATURE_COLUMNS stays consistent between the two scorers.
 DEFAULT_WEIGHTS = {
     "centrality": 0.35,
+    "centrality_known": 0.0,
     "text_length": 0.15,
     "issue_age_days": 0.15,
     "first_contribution_label": -0.20,   # presence of the label should LOWER predicted difficulty
@@ -40,18 +42,12 @@ def add_weighted_scores(df: pd.DataFrame, weights: dict = None) -> pd.DataFrame:
     return df
 
 
-# ---------------------------------------------------------------------------
-# Week 3: trainable, inspectable model
-# ---------------------------------------------------------------------------
-
 class DifficultyModel:
     """
     Thin wrapper around LogisticRegression so the rest of the pipeline can
     treat it interchangeably with the weighted-formula scorer.
 
-    ground_truth_label should be binary for a first pass (e.g. 0 = easy,
-    1 = hard) — you can bucket a continuous difficulty rating into
-    quartiles/median-split if that's what your historical data looks like.
+    ground_truth_label should be binary (0 = easier, 1 = harder).
     """
 
     def __init__(self):
@@ -77,12 +73,7 @@ class DifficultyModel:
         return dict(zip(FEATURE_COLUMNS, self.model.coef_[0]))
 
     def cross_validate(self, df: pd.DataFrame, label_col: str = "ground_truth_label", n_splits: int = 5):
-        """
-        Stratified k-fold cross-validation — use this instead of a single
-        train/test split on small datasets (see Week 3 plan). Returns a
-        classification report plus per-fold AUC so you can report variance,
-        not just a single accuracy number.
-        """
+        """Stratified k-fold cross-validation; returns per-fold AUC and a classification report."""
         X = df[FEATURE_COLUMNS]
         y = df[label_col]
         n_splits = min(n_splits, y.value_counts().min())  # can't have more folds than minority-class examples
@@ -112,12 +103,12 @@ if __name__ == "__main__":
     n = 60
     synthetic = pd.DataFrame({
         "centrality": rng.random(n),
+        "centrality_known": rng.integers(0, 2, n),
         "text_length": rng.random(n),
         "issue_age_days": rng.random(n),
         "first_contribution_label": rng.integers(0, 2, n),
         "referenced_files": rng.random(n),
     })
-    # Fake ground truth correlated with centrality + referenced_files for the smoke test
     synthetic["ground_truth_label"] = (
         (synthetic["centrality"] + synthetic["referenced_files"]) > 1.0
     ).astype(int)
